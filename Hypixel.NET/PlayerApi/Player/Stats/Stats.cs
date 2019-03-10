@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using Hypixel.NET.Player.Stats;
 using Newtonsoft.Json;
 
-namespace Hypixel.NET.Player.Stats
+namespace Hypixel.NET.PlayerApi.Player.Stats
 {
     public class Stats
     {
         [JsonProperty("Arena")]
-        public Dictionary<string, long> Arena { get; set; }
+        public Arena Arena { get; set; }
 
         [JsonProperty("HungerGames")]
         public HungerGames HungerGames { get; set; }
@@ -41,7 +40,7 @@ namespace Hypixel.NET.Player.Stats
         public Arcade Arcade { get; set; }
 
         [JsonProperty("SkyWars")]
-        public Dictionary<string, SkyWarValue> SkyWars { get; set; }
+        public SkyWars SkyWars { get; set; }
 
         [JsonProperty("TrueCombat")]
         public TrueCombat TrueCombat { get; set; }

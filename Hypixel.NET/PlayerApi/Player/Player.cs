@@ -48,7 +48,7 @@ namespace Hypixel.NET.PlayerApi.Player
         public Settings.Settings Settings { get; set; }
 
         [JsonProperty("stats")]
-        public Stats Stats { get; set; }
+        public Stats.Stats Stats { get; set; }
 
         [JsonProperty("timePlaying")]
         public long TimePlaying { get; set; }

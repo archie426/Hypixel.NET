@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using RestSharp.Deserializers;
-
-namespace Hypixel.NET.Player.Stats
+﻿namespace Hypixel.NET.PlayerApi.Player.Stats
 {
     public class Arena
     {

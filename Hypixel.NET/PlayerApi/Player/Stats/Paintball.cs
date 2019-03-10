@@ -1,64 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
-namespace Hypixel.NET.Player.Stats
+namespace Hypixel.NET.PlayerApi.Player.Stats
 {
     public class Paintball
     {
-       /* public long ShotsFired()
-        {
+        [JsonProperty("shots_fired")]
+        public long ShotsFired { get; set; }
 
-        }
+        [JsonProperty("coins")]
+        public long Coins { get; set; }
 
-        public long Coins()
-        {
+        [JsonProperty("deaths")]
+        public long Deaths { get; set; }
 
-        }
+        [JsonProperty("kills")]
+        public long Kills { get; set; }
 
-        public long Deaths()
-        {
+        [JsonProperty("weekly_kills_a")]
+        public long WeeklyKillsA { get; set; }
 
-        }
+        [JsonProperty("monthly_kills_a")]
+        public long MonthlyKillsA { get; set; }
 
-        public long Kills()
-        {
+        [JsonProperty("killstreaks")]
+        public long Killstreaks { get; set; }
 
-        }
+        [JsonProperty("packages")]
+        public List<string> Packages { get; set; }
 
-        public long Weekly_Kills_A()
-        {
+        [JsonProperty("wins")]
+        public long Wins { get; set; }
 
-        }
+        [JsonProperty("favorite_slots")]
+        public string FavoriteSlots { get; set; }
 
-        public long Monthly_Kills_A()
-        {
-
-        }
-
-        public long Killstreaks()
-        {
-
-        }
-
-        public List<string> Packages()
-        {
-
-        }
-
-        public long Wins()
-        {
-
-        }
-
-        public List<string> Favourite_Slots()
-        {
-
-        }
-
-        public bool ShowKillPrefix()
-        {
-
-        }*/
+        [JsonProperty("showKillPrefix")]
+        public bool ShowKillPrefix { get; set; }
     }
 }

@@ -1,60 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace Hypixel.NET.Player.Stats
 {
     public class HungerGames
     {
-        /*public long Coins()
-        {
+        [JsonProperty("coins")]
+        public long Coins { get; set; }
 
-        }
+        [JsonProperty("deaths")]
+        public long Deaths { get; set; }
 
-        public long Deaths()
-        {
+        [JsonProperty("kills")]
+        public long Kills { get; set; }
 
-        }
+        [JsonProperty("monthly_kills_a")]
+        public long MonthlyKillsA { get; set; }
 
-        public long Kills()
-        {
+        [JsonProperty("weekly_kills_b")]
+        public long WeeklyKillsB { get; set; }
 
-        }
+        [JsonProperty("weekly_kills_a")]
+        public long WeeklyKillsA { get; set; }
 
-        public long Monthly_Kills_A()
-        {
+        [JsonProperty("scout")]
+        public long Scout { get; set; }
 
-        }
+        [JsonProperty("packages")]
+        public List<string> Packages { get; set; }
 
-        public long Weekly_Kills_B()
-        {
+        [JsonProperty("armorer")]
+        public long Armorer { get; set; }
 
-        }
+        [JsonProperty("wins")]
+        public long Wins { get; set; }
 
-        public long Weekly_Kills_A()
-        {
-
-        }
-
-        public long Scout()
-        {
-
-        }
-
-        public List<string> Packages()
-        {
-            //TODO: hmm
-        }
-
-        public long Armorer()
-        {
-
-        }
-
-        public long Wins()
-        {
-
-        }
-        */
+        [JsonProperty("lastTourneyAd")]
+        public long LastTourneyAd { get; set; }
     }
 }
