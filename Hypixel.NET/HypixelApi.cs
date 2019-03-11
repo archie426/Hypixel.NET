@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Runtime.Caching;
 using System.Timers;
 using Hypixel.NET.PlayerApi;
 using Newtonsoft.Json;
 using RestSharp;
+
 
 namespace Hypixel.NET
 {
@@ -10,12 +12,23 @@ namespace Hypixel.NET
     {
         private readonly string _apiKey;
         private static int _apiRequests;
+        private readonly MemoryCache _apiMemoryCache = MemoryCache.Default;
 
         public HypixelApi(string apiKey)
         {
             _apiKey = apiKey;
-            var apiResetTimer = new Timer(60000);
+            var apiResetTimer = new Timer(60000); //Hypixel API only allows 120 requests per 60s
             apiResetTimer.Elapsed += ResetApiLimit;
+        }
+
+        private void AddItemToCache(string itemType, string apiResponse)
+        {
+            var cacheItemPolicy = new CacheItemPolicy
+            {
+                AbsoluteExpiration = DateTime.Now.AddSeconds(10),
+            };
+
+            _apiMemoryCache.Add(itemType, apiResponse, cacheItemPolicy);
         }
 
         private void ResetApiLimit(object sender, ElapsedEventArgs e)
@@ -26,8 +39,20 @@ namespace Hypixel.NET
         public PlayerByUuid GetUserByUuid(string uuid)
         {
             ApplicationException hypixelException;
-            //TODO: add caching
-            //Check if cached
+
+            //Check if cached. If so deserialize and return
+            if (_apiMemoryCache.Contains(uuid))
+            {
+                var getCacheItem = _apiMemoryCache.GetCacheItem(uuid);
+
+                //Verify that this isn't null - if is then will do API request as normal
+                if (getCacheItem != null)
+                {
+                    var deserializedResponseCache = JsonConvert.DeserializeObject<PlayerByUuid>(getCacheItem.Value.ToString());
+                    deserializedResponseCache.FromCache = true;
+                    return deserializedResponseCache;
+                }
+            }
 
             //Rate limit check
             RateLimitCheck();
@@ -39,11 +64,13 @@ namespace Hypixel.NET
             //Get the response and Deserialize
             var response = client.Execute(request);
             var responseDeserialized = JsonConvert.DeserializeObject<PlayerByUuid>(response.Content);
-
+            
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful && responseDeserialized.Player != null)
             {
                 _apiRequests = _apiRequests + 1;
+                AddItemToCache(uuid, response.Content);
+                responseDeserialized.FromCache = false;
                 return responseDeserialized;
             }
 
@@ -62,7 +89,19 @@ namespace Hypixel.NET
 
         public PlayerByPlayerName GetUserByPlayerName(string name)
         {
-            //TODO: add caching
+            //Check cache
+            if (_apiMemoryCache.Contains(name))
+            {
+                var getCacheItem = _apiMemoryCache.GetCacheItem(name);
+
+                //Verify that this isn't null - if is then will do API request as normal
+                if (getCacheItem != null)
+                {
+                    var deserializedResponseCache = JsonConvert.DeserializeObject<PlayerByPlayerName>(getCacheItem.Value.ToString());
+                    deserializedResponseCache.FromCache = true;
+                    return deserializedResponseCache;
+                }
+            }
 
             //Check rate limit
             RateLimitCheck();
@@ -79,6 +118,8 @@ namespace Hypixel.NET
             if (responseDeserialized.WasSuccessful && responseDeserialized.Player != null)
             {
                 _apiRequests = _apiRequests + 1;
+                AddItemToCache(name, response.Content);
+                responseDeserialized.FromCache = false;
                 return responseDeserialized;
             }
 

@@ -12,5 +12,7 @@ namespace Hypixel.NET.PlayerApi
 
         [JsonProperty("cause")]
         public string Cause { get; set; }
+
+        public bool FromCache { get; set; }
     }
 }
