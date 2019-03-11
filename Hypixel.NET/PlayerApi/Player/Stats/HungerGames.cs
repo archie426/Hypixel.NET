@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Hypixel.NET.Player.Stats
+namespace Hypixel.NET.PlayerApi.Player.Stats
 {
     public class HungerGames
     {

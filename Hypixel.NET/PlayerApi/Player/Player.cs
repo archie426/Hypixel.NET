@@ -1,12 +1,10 @@
 ﻿using System.Collections.Generic;
-using Hypixel.NET.Player.Stats;
 using Newtonsoft.Json;
 
 namespace Hypixel.NET.PlayerApi.Player
 {
     public class Player
     {
-
         /// <summary>
         /// The tiered achievements that require x wins or x coins to progress
         /// </summary>
@@ -44,24 +42,39 @@ namespace Hypixel.NET.PlayerApi.Player
         [JsonProperty("networkExp")]
         public long NetworkExp { get; set; }
 
+        /// <summary>
+        /// The settings that the requested user has set
+        /// </summary>
         [JsonProperty("settings")]
         public Settings.Settings Settings { get; set; }
 
+        /// <summary>
+        /// The stats of each game that the user has played
+        /// </summary>
         [JsonProperty("stats")]
         public Stats.Stats Stats { get; set; }
 
         [JsonProperty("timePlaying")]
         public long TimePlaying { get; set; }
 
+        /// <summary>
+        /// The UUID of the player
+        /// </summary>
         [JsonProperty("uuid")]
         public string Uuid { get; set; }
 
+        /// <summary>
+        /// The amount of karma that the user has gained
+        /// </summary>
         [JsonProperty("karma")]
         public long Karma { get; set; }
 
         [JsonProperty("vanityTokens")]
         public long VanityTokens { get; set; }
 
+        /// <summary>
+        /// The consumables that the player has for their pets
+        /// </summary>
         [JsonProperty("petConsumables")]
         public Dictionary<string, long> PetConsumables { get; set; }
 
