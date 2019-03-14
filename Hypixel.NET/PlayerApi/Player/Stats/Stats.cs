@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Hypixel.NET.Player.Stats;
 using Newtonsoft.Json;
 
 namespace Hypixel.NET.PlayerApi.Player.Stats

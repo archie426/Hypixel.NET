@@ -47,9 +47,6 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         [JsonProperty("flag_conquer_team")]
         public long FlagConquerTeam { get; set; }
 
-        [JsonProperty("wins_capturetheflag_b")]
-        public long WinsCapturetheflagB { get; set; }
-
         [JsonProperty("deaths")]
         public long Deaths { get; set; }
 

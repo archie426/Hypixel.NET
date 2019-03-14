@@ -14,15 +14,6 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         [JsonProperty("kills")]
         public long Kills { get; set; }
 
-        [JsonProperty("monthly_kills_a")]
-        public long MonthlyKillsA { get; set; }
-
-        [JsonProperty("weekly_kills_b")]
-        public long WeeklyKillsB { get; set; }
-
-        [JsonProperty("weekly_kills_a")]
-        public long WeeklyKillsA { get; set; }
-
         [JsonProperty("scout")]
         public long Scout { get; set; }
 
@@ -35,7 +26,5 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         [JsonProperty("wins")]
         public long Wins { get; set; }
 
-        [JsonProperty("lastTourneyAd")]
-        public long LastTourneyAd { get; set; }
     }
 }

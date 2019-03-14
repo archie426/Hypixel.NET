@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Hypixel.NET.PlayerApi.Player.Stats.SkywarsStats;
 using Newtonsoft.Json;
 
 namespace Hypixel.NET.PlayerApi.Player.Stats
@@ -857,7 +858,7 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         [JsonProperty("heads_eww_solo")]
         public int HeadsEwwSolo { get; set; }
 
-        [JsonProperty("public HeadCollection head_collection")]
+        [JsonProperty("head_collection")]
         public HeadCollection HeadCollection { get; set; }
 
         [JsonProperty("angel_of_death_level")]

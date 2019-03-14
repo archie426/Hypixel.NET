@@ -12,7 +12,7 @@ namespace Hypixel.NET
     {
         private readonly string _apiKey;
         private static int _apiRequests;
-        private readonly MemoryCache _apiMemoryCache = MemoryCache.Default;
+        private static readonly MemoryCache ApiMemoryCache = MemoryCache.Default;
 
         public HypixelApi(string apiKey)
         {
@@ -28,7 +28,7 @@ namespace Hypixel.NET
                 AbsoluteExpiration = DateTime.Now.AddSeconds(10),
             };
 
-            _apiMemoryCache.Add(itemType, apiResponse, cacheItemPolicy);
+            ApiMemoryCache.Add(itemType, apiResponse, cacheItemPolicy);
         }
 
         private void ResetApiLimit(object sender, ElapsedEventArgs e)
@@ -41,9 +41,9 @@ namespace Hypixel.NET
             ApplicationException hypixelException;
 
             //Check if cached. If so deserialize and return
-            if (_apiMemoryCache.Contains(uuid))
+            if (ApiMemoryCache.Contains(uuid))
             {
-                var getCacheItem = _apiMemoryCache.GetCacheItem(uuid);
+                var getCacheItem = ApiMemoryCache.GetCacheItem(uuid);
 
                 //Verify that this isn't null - if is then will do API request as normal
                 if (getCacheItem != null)
@@ -90,9 +90,9 @@ namespace Hypixel.NET
         public PlayerByPlayerName GetUserByPlayerName(string name)
         {
             //Check cache
-            if (_apiMemoryCache.Contains(name))
+            if (ApiMemoryCache.Contains(name))
             {
-                var getCacheItem = _apiMemoryCache.GetCacheItem(name);
+                var getCacheItem = ApiMemoryCache.GetCacheItem(name);
 
                 //Verify that this isn't null - if is then will do API request as normal
                 if (getCacheItem != null)

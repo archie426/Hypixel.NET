@@ -23,26 +23,14 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         [JsonProperty("coins")]
         public long Coins { get; set; }
 
-        [JsonProperty("monthly_coins_a")]
-        public long MonthlyCoinsA { get; set; }
-
-        [JsonProperty("weekly_coins_a")]
-        public long WeeklyCoinsA { get; set; }
-
         [JsonProperty("total_votes")]
         public long TotalVotes { get; set; }
 
         [JsonProperty("correct_guesses")]
         public long CorrectGuesses { get; set; }
 
-        [JsonProperty("weekly_coins_b")]
-        public long WeeklyCoinsB { get; set; }
-
         [JsonProperty("wins_guess_the_build")]
         public long WinsGuessTheBuild { get; set; }
-
-        [JsonProperty("monthly_coins_b")]
-        public long MonthlyCoinsB { get; set; }
 
         [JsonProperty("wins_teams_normal")]
         public long WinsTeamsNormal { get; set; }

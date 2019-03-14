@@ -33,58 +33,46 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         public string JacketActive { get; set; }
 
         [JsonProperty("coins")]
-        public long Coins { get; set; }
+        public int Coins { get; set; }
 
         [JsonProperty("horn")]
         public string Horn { get; set; }
 
-        [JsonProperty("box_pickups_monthly_b")]
-        public long BoxPickupsMonthlyB { get; set; }
-
         [JsonProperty("olympus_plays")]
-        public long OlympusPlays { get; set; }
+        public int OlympusPlays { get; set; }
 
         [JsonProperty("banana_hits_received")]
-        public long BananaHitsReceived { get; set; }
+        public int BananaHitsReceived { get; set; }
 
         [JsonProperty("box_pickups")]
-        public long BoxPickups { get; set; }
+        public int BoxPickups { get; set; }
 
         [JsonProperty("coins_picked_up")]
-        public long CoinsPickedUp { get; set; }
-
-        [JsonProperty("box_pickups_weekly_a")]
-        public long BoxPickupsWeeklyA { get; set; }
+        public int CoinsPickedUp { get; set; }
 
         [JsonProperty("laps_completed")]
-        public long LapsCompleted { get; set; }
+        public int LapsCompleted { get; set; }
 
         [JsonProperty("box_pickups_olympus")]
-        public long BoxPickupsOlympus { get; set; }
+        public int BoxPickupsOlympus { get; set; }
 
         [JsonProperty("banana_hits_sent")]
-        public long BananaHitsSent { get; set; }
+        public int BananaHitsSent { get; set; }
 
         [JsonProperty("box_pickups_hypixelgp")]
-        public long BoxPickupsHypixelgp { get; set; }
-
-        [JsonProperty("silver_trophy_weekly_a")]
-        public long SilverTrophyWeeklyA { get; set; }
+        public int BoxPickupsHypixelgp { get; set; }
 
         [JsonProperty("hypixelgp_plays")]
-        public long HypixelgpPlays { get; set; }
+        public int HypixelgpPlays { get; set; }
 
         [JsonProperty("silver_trophy")]
-        public long SilverTrophy { get; set; }
-
-        [JsonProperty("silver_trophy_monthly_b")]
-        public long SilverTrophyMonthlyB { get; set; }
+        public int TotalSilverTrophy { get; set; }
 
         [JsonProperty("silver_trophy_hypixelgp")]
-        public long SilverTrophyHypixelgp { get; set; }
+        public int SilverTrophyHypixelgp { get; set; }
 
         [JsonProperty("wins")]
-        public long Wins { get; set; }
+        public int Wins { get; set; }
 
         [JsonProperty("parts")]
         public string Parts { get; set; }
@@ -93,46 +81,37 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         public string ParticleTrail { get; set; }
 
         [JsonProperty("bronze_trophy_olympus")]
-        public long BronzeTrophyOlympus { get; set; }
-
-        [JsonProperty("bronze_trophy_weekly_a")]
-        public long BronzeTrophyWeeklyA { get; set; }
+        public int BronzeTrophyOlympus { get; set; }
 
         [JsonProperty("bronze_trophy")]
-        public long BronzeTrophy { get; set; }
+        public int TotalBronzeTrophy { get; set; }
 
         [JsonProperty("bronze_trophy_monthly_b")]
-        public long BronzeTrophyMonthlyB { get; set; }
+        public int BronzeTrophyMonthlyB { get; set; }
 
         [JsonProperty("silver_trophy_olympus")]
-        public long SilverTrophyOlympus { get; set; }
+        public int SilverTrophyOlympus { get; set; }
 
         [JsonProperty("retro_plays")]
-        public long RetroPlays { get; set; }
+        public int RetroPlays { get; set; }
 
         [JsonProperty("box_pickups_retro")]
-        public long BoxPickupsRetro { get; set; }
+        public int BoxPickupsRetro { get; set; }
 
         [JsonProperty("box_pickups_canyon")]
-        public long BoxPickupsCanyon { get; set; }
+        public int BoxPickupsCanyon { get; set; }
 
         [JsonProperty("canyon_plays")]
-        public long CanyonPlays { get; set; }
+        public int CanyonPlays { get; set; }
 
         [JsonProperty("bronze_trophy_canyon")]
-        public long BronzeTrophyCanyon { get; set; }
+        public int BronzeTrophyCanyon { get; set; }
 
         [JsonProperty("gold_trophy")]
-        public long GoldTrophy { get; set; }
+        public int TotalGoldTrophy { get; set; }
 
         [JsonProperty("gold_trophy_olympus")]
         public long GoldTrophyOlympus { get; set; }
-
-        [JsonProperty("gold_trophy_monthly_b")]
-        public long GoldTrophyMonthlyB { get; set; }
-
-        [JsonProperty("gold_trophy_weekly_a")]
-        public long GoldTrophyWeeklyA { get; set; }
 
         [JsonProperty("silver_trophy_canyon")]
         public long SilverTrophyCanyon { get; set; }
@@ -157,27 +136,6 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
 
         [JsonProperty("blue_torpedo_hit")]
         public long BlueTorpedoHit { get; set; }
-
-        [JsonProperty("box_pickups_weekly_b")]
-        public long BoxPickupsWeeklyB { get; set; }
-
-        [JsonProperty("silver_trophy_weekly_b")]
-        public long SilverTrophyWeeklyB { get; set; }
-
-        [JsonProperty("bronze_trophy_weekly_b")]
-        public long BronzeTrophyWeeklyB { get; set; }
-
-        [JsonProperty("gold_trophy_weekly_b")]
-        public long GoldTrophyWeeklyB { get; set; }
-
-        [JsonProperty("box_pickups_monthly_a")]
-        public long BoxPickupsMonthlyA { get; set; }
-
-        [JsonProperty("gold_trophy_monthly_a")]
-        public long GoldTrophyMonthlyA { get; set; }
-
-        [JsonProperty("silver_trophy_monthly_a")]
-        public long SilverTrophyMonthlyA { get; set; }
 
         [JsonProperty("silver_trophy_junglerush")]
         public long SilverTrophyJunglerush { get; set; }

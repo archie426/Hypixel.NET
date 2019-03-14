@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace Hypixel.NET.PlayerApi.Player
@@ -9,7 +10,7 @@ namespace Hypixel.NET.PlayerApi.Player
         /// The tiered achievements that require x wins or x coins to progress
         /// </summary>
         [JsonProperty("achievements")]
-        public Dictionary<string, long> Achievements { get; set; }
+        public Achievements.Achievements Achievements { get; set; }
 
         /// <summary>
         /// General onetime unlock achievements
@@ -21,20 +22,43 @@ namespace Hypixel.NET.PlayerApi.Player
         /// The display name of the player
         /// </summary>
         [JsonProperty("displayname")]
-        public string Displayname { get; set; }
-
+        public string DisplayName { get; set; }
 
         /// <summary>
         /// The First time the player logged into Hypixel
         /// </summary>
         [JsonProperty("firstLogin")]
-        public long FirstLogin { get; set; }
+        private readonly long _firstLogin;
+        public DateTime FirstLogin
+        {
+            get
+            {
+                var dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+                dtDateTime = dtDateTime.AddMilliseconds(_firstLogin).ToLocalTime();
+                return dtDateTime;
+            }
+        }
 
         /// <summary>
         /// The last time the player logged into Hypixel
         /// </summary>
         [JsonProperty("lastLogin")]
-        public long LastLogin { get; set; }
+        //
+        private readonly long _lastLogin;
+        public DateTime LastLogin
+        {
+            get
+            {
+                var dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+                dtDateTime = dtDateTime.AddMilliseconds(_lastLogin).ToLocalTime();
+                return dtDateTime;
+            }
+        }
+        /// <summary>
+        /// Known previous usernames that the player has had
+        /// </summary>
+        [JsonProperty("knownAliasesLower")]
+        public List<string> KnownAliases { get; set; }
 
         /// <summary>
         /// The players total xp on the server
