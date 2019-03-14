@@ -17,12 +17,6 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         [JsonProperty("kills")]
         public long Kills { get; set; }
 
-        [JsonProperty("weekly_kills_a")]
-        public long WeeklyKillsA { get; set; }
-
-        [JsonProperty("monthly_kills_a")]
-        public long MonthlyKillsA { get; set; }
-
         [JsonProperty("killstreaks")]
         public long Killstreaks { get; set; }
 
