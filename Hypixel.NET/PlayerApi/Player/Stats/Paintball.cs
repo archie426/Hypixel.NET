@@ -5,31 +5,53 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
 {
     public class Paintball
     {
-        [JsonProperty("shots_fired")]
-        public long ShotsFired { get; set; }
-
+        #region general stats
         [JsonProperty("coins")]
-        public long Coins { get; set; }
+        public int Coins { get; set; }
 
         [JsonProperty("deaths")]
-        public long Deaths { get; set; }
+        public int Deaths { get; set; }
 
         [JsonProperty("kills")]
-        public long Kills { get; set; }
+        public int Kills { get; set; }
 
         [JsonProperty("killstreaks")]
-        public long Killstreaks { get; set; }
+        public int Killstreaks { get; set; }
 
         [JsonProperty("packages")]
         public List<string> Packages { get; set; }
 
+        [JsonProperty("shots_fired")]
+        public int ShotsFired { get; set; }
+
         [JsonProperty("wins")]
-        public long Wins { get; set; }
+        public int Wins { get; set; }
 
-        [JsonProperty("favorite_slots")]
-        public string FavoriteSlots { get; set; }
+        [JsonProperty("hat")]
+        public string Hat { get; set; }
+        #endregion
 
-        [JsonProperty("showKillPrefix")]
-        public bool ShowKillPrefix { get; set; }
+        #region upgrades
+        [JsonProperty("adrenaline")]
+        public int AdrenalineLevel { get; set; }
+
+        [JsonProperty("endurance")]
+        public int EnduranceLevel { get; set; }
+
+        [JsonProperty("forcefieldTime")]
+        public int ForcefieldTime { get; set; }
+
+        [JsonProperty("fortune")]
+        public int FortuneLevel { get; set; }
+
+        [JsonProperty("godfather")]
+        public int GodfatherLevel { get; set; }
+
+        [JsonProperty("superluck")]
+        public int SuperluckLevel { get; set; }
+
+        [JsonProperty("transfusion")]
+        public int TransfusionLevel { get; set; }
+        #endregion
     }
 }

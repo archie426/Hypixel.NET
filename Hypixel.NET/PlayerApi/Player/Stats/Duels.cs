@@ -62,6 +62,24 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
 
         [JsonProperty("packages")]
         public List<string> Packages { get; set; }
+
+        [JsonProperty("meters_travelled")]
+        public int MetersTravelled { get; set; }
+
+        [JsonProperty("duels_chests")]
+        public int DuelsChests { get; set; }
+
+        [JsonProperty("Duels_openedRares")]
+        public int DuelsOpenedRares { get; set; }
+
+        [JsonProperty("Duels_openedChests")]
+        public int DuelsOpenedChests { get; set; }
+
+        [JsonProperty("Duels_openedCommons")]
+        public int DuelsOpenedCommons { get; set; }
+
+        [JsonProperty("equipped_custom_titles")]
+        public string EquippedCustomTitles { get; set; }
         #endregion
 
         #region Uhc
@@ -274,6 +292,21 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
 
         [JsonProperty("uhc_meetup_kills")]
         public int UhcMeetupKills { get; set; }
+
+        [JsonProperty("duels_winstreak_uhc_duel")]
+        public int DuelsWinstreakUhcDuel { get; set; }
+
+        [JsonProperty("uhc_four_wins")]
+        public int UhcFourWins { get; set; }
+
+        [JsonProperty("uhc_four_kills")]
+        public int UhcFourKills { get; set; }
+
+        [JsonProperty("uhc_four_deaths")]
+        public int UhcFourDeaths { get; set; }
+
+        [JsonProperty("uhc_four_losses")]
+        public int UhcFourLosses { get; set; }
         #endregion
 
         #region skywars duels
@@ -336,6 +369,58 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
 
         [JsonProperty("sw_duel_blocks_placed")]
         public int SwDuelBlocksPlaced { get; set; }
+
+        [JsonProperty("sw_duel_armorer_kit_wins")]
+        public int SwDuelArmorerKitWins { get; set; }
+
+        [JsonProperty("sw_duel_kills")]
+        public int SwDuelKills { get; set; }
+
+        [JsonProperty("armorer_kit_wins")]
+        public int ArmorerKitWins { get; set; }
+
+        [JsonProperty("sw_tournament_health_regenerated")]
+        public int SwTournamentHealthRegenerated { get; set; }
+
+        [JsonProperty("sw_tournament_damage_dealt")]
+        public int SwTournamentDamageDealt { get; set; }
+
+        [JsonProperty("sw_duel_losses")]
+        public int SwDuelLosses { get; set; }
+
+        [JsonProperty("sw_duel_deaths")]
+        public int SwDuelDeaths { get; set; }
+
+        [JsonProperty("sw_duel_bow_hits")]
+        public int SwDuelBowHits { get; set; }
+
+        [JsonProperty("scout_kit_wins")]
+        public int ScoutKitWins { get; set; }
+
+        [JsonProperty("sw_duel_scout_kit_wins")]
+        public int SwDuelScoutKitWins { get; set; }
+
+        [JsonProperty("sw_duel_bow_shots")]
+        public int SwDuelBowShots { get; set; }
+
+        [JsonProperty("sw_tournament_bow_hits")]
+        public int SwTournamentBowHits { get; set; }
+
+        [JsonProperty("sw_tournament_bow_shots")]
+        public int SwTournamentBowShots { get; set; }
+
+        [JsonProperty("sw_duels_kit_new")]
+        public string SwDuelsKitNew { get; set; }
+
+        [JsonProperty("skywars_rookie_title_prestige")]
+        public int SkywarsRookieTitlePrestige { get; set; }
+
+        [JsonProperty("sw_tournament_kills")]
+        public int SwTournamentKills { get; set; }
+
+        [JsonProperty("sw_tournament_deaths")]
+        public int SwTournamentDeaths { get; set; }
+
         #endregion
 
         #region classic duels
@@ -365,6 +450,30 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
 
         [JsonProperty("classic_duel_melee_swings")]
         public int ClassicDuelMeleeSwings { get; set; }
+
+        [JsonProperty("current_classic_winstreak")]
+        public int CurrentClassicWinstreak { get; set; }
+
+        [JsonProperty("best_classic_winstreak")]
+        public int BestClassicWinstreak { get; set; }
+
+        [JsonProperty("classic_duel_kills")]
+        public int ClassicDuelKills { get; set; }
+
+        [JsonProperty("classic_duel_wins")]
+        public int ClassicDuelWins { get; set; }
+
+        [JsonProperty("classic_duel_losses")]
+        public int ClassicDuelLosses { get; set; }
+
+        [JsonProperty("classic_duel_deaths")]
+        public int ClassicDuelDeaths { get; set; }
+
+        [JsonProperty("best_winstreak_mode_classic_duel")]
+        public int BestWinstreakModeClassicDuel { get; set; }
+
+        [JsonProperty("current_winstreak_mode_classic_duel")]
+        public int CurrentWinstreakModeClassicDuel { get; set; }
         #endregion
 
         #region mega walls duels
@@ -376,6 +485,54 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
 
         [JsonProperty("duels_winstreak_best_mw_duel")]
         public int DuelsWinstreakBestMwDuel { get; set; }
+
+        [JsonProperty("mw_duel_melee_swings")]
+        public int MwDuelMeleeSwings { get; set; }
+
+        [JsonProperty("mw_duel_melee_hits")]
+        public int MwDuelMeleeHits { get; set; }
+
+        [JsonProperty("mw_duel_health_regenerated")]
+        public int MwDuelHealthRegenerated { get; set; }
+
+        [JsonProperty("mw_duel_rounds_played")]
+        public int MwDuelRoundsPlayed { get; set; }
+
+        [JsonProperty("mw_duel_damage_dealt")]
+        public int MwDuelDamageDealt { get; set; }
+
+        [JsonProperty("mw_duel_bow_shots")]
+        public int MwDuelBowShots { get; set; }
+
+        [JsonProperty("mw_duel_bow_hits")]
+        public int MwDuelBowHits { get; set; }
+
+        [JsonProperty("current_mega_walls_winstreak")]
+        public int CurrentMegaWallsWinstreak { get; set; }
+
+        [JsonProperty("best_mega_walls_winstreak")]
+        public int BestMegaWallsWinstreak { get; set; }
+
+        [JsonProperty("mw_duel_herobrine_kit_wins")]
+        public int MwDuelHerobrineKitWins { get; set; }
+
+        [JsonProperty("herobrine_kit_wins")]
+        public int HerobrineKitWins { get; set; }
+
+        [JsonProperty("mw_duel_kit_wins")]
+        public int MwDuelKitWins { get; set; }
+
+        [JsonProperty("mw_duel_kills")]
+        public int MwDuelKills { get; set; }
+
+        [JsonProperty("mw_duel_wins")]
+        public int MwDuelWins { get; set; }
+
+        [JsonProperty("mw_duel_losses")]
+        public int MwDuelLosses { get; set; }
+
+        [JsonProperty("mw_duel_deaths")]
+        public int MwDuelDeaths { get; set; }
         #endregion
 
         #region bow duels
@@ -399,6 +556,24 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
 
         [JsonProperty("bow_duel_rounds_played")]
         public int BowDuelRoundsPlayed { get; set; }
+
+        [JsonProperty("best_bow_winstreak")]
+        public int BestBowWinstreak { get; set; }
+
+        [JsonProperty("current_bow_winstreak")]
+        public int CurrentBowWinstreak { get; set; }
+
+        [JsonProperty("bow_duel_wins")]
+        public int BowDuelWins { get; set; }
+
+        [JsonProperty("bow_duel_deaths")]
+        public int BowDuelDeaths { get; set; }
+
+        [JsonProperty("bow_duel_losses")]
+        public int BowDuelLosses { get; set; }
+
+        [JsonProperty("bow_duel_kills")]
+        public int BowDuelKills { get; set; }
         #endregion
 
         #region op duels
@@ -430,6 +605,27 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
 
         [JsonProperty("combo_duel_golden_apples_eaten")]
         public int ComboDuelGoldenApplesEaten { get; set; }
+
+        [JsonProperty("best_combo_winstreak")]
+        public int BestComboWinstreak { get; set; }
+
+        [JsonProperty("current_combo_winstreak")]
+        public int CurrentComboWinstreak { get; set; }
+
+        [JsonProperty("combo_duel_wins")]
+        public int ComboDuelWins { get; set; }
+
+        [JsonProperty("combo_duel_damage_dealt")]
+        public int ComboDuelDamageDealt { get; set; }
+
+        [JsonProperty("combo_duel_kills")]
+        public int ComboDuelKills { get; set; }
+
+        [JsonProperty("combo_duel_losses")]
+        public int ComboDuelLosses { get; set; }
+
+        [JsonProperty("combo_duel_deaths")]
+        public int ComboDuelDeaths { get; set; }
         #endregion
 
         #region sumo
@@ -482,86 +678,7 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         public int BridgeFourMeleeHits { get; set; }
         #endregion
 
- 
-
-
-        [JsonProperty("duels_winstreak_uhc_duel")]
-        public int DuelsWinstreakUhcDuel { get; set; }
-
-        [JsonProperty("mw_duel_melee_swings")]
-        public int MwDuelMeleeSwings { get; set; }
-
-        [JsonProperty("mw_duel_melee_hits")]
-        public int MwDuelMeleeHits { get; set; }
-
-        [JsonProperty("mw_duel_health_regenerated")]
-        public int MwDuelHealthRegenerated { get; set; }
-
-        [JsonProperty("mw_duel_rounds_played")]
-        public int MwDuelRoundsPlayed { get; set; }
-
-        [JsonProperty("mw_duel_damage_dealt")]
-        public int MwDuelDamageDealt { get; set; }
-
-        [JsonProperty("mw_duel_bow_shots")]
-        public int MwDuelBowShots { get; set; }
-
-        [JsonProperty("mw_duel_bow_hits")]
-        public int MwDuelBowHits { get; set; }
-
-        [JsonProperty("enderman_a_meters_travelled_standard")]
-        public int EndermanAMetersTravelledStandard { get; set; }
-
-        [JsonProperty("enderman_a_meters_travelled")]
-        public int EndermanAMetersTravelled { get; set; }
-
-        [JsonProperty("meters_travelled_standard")]
-        public int MetersTravelledStandard { get; set; }
-
-        [JsonProperty("enderman_meters_travelled")]
-        public int EndermanMetersTravelled { get; set; }
-
-        [JsonProperty("meters_travelled")]
-        public int MetersTravelled { get; set; }
-
-        [JsonProperty("enderman_meters_travelled_standard")]
-        public int EndermanMetersTravelledStandard { get; set; }
-
-
-        [JsonProperty("sw_duel_armorer_kit_wins")]
-        public int SwDuelArmorerKitWins { get; set; }
-
-        [JsonProperty("sw_duel_kills")]
-        public int SwDuelKills { get; set; }
-
-        [JsonProperty("armorer_kit_wins")]
-        public int ArmorerKitWins { get; set; }
-
-       
-        [JsonProperty("sw_tournament_health_regenerated")]
-        public int SwTournamentHealthRegenerated { get; set; }
-
-        [JsonProperty("sw_tournament_damage_dealt")]
-        public int SwTournamentDamageDealt { get; set; }
-
-        [JsonProperty("sw_duel_losses")]
-        public int SwDuelLosses { get; set; }
-
-        [JsonProperty("sw_duel_deaths")]
-        public int SwDuelDeaths { get; set; }
-
-        [JsonProperty("sw_duel_bow_hits")]
-        public int SwDuelBowHits { get; set; }
-
-        [JsonProperty("scout_kit_wins")]
-        public int ScoutKitWins { get; set; }
-
-        [JsonProperty("sw_duel_scout_kit_wins")]
-        public int SwDuelScoutKitWins { get; set; }
-
-        [JsonProperty("sw_duel_bow_shots")]
-        public int SwDuelBowShots { get; set; }
-
+        #region blitz
         [JsonProperty("blitz_duels_kit")]
         public string BlitzDuelsKit { get; set; }
 
@@ -607,126 +724,6 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         [JsonProperty("blitz_duel_bow_hits")]
         public int BlitzDuelBowHits { get; set; }
 
-        [JsonProperty("sw_tournament_bow_hits")]
-        public int SwTournamentBowHits { get; set; }
-
-        [JsonProperty("sw_tournament_bow_shots")]
-        public int SwTournamentBowShots { get; set; }
-
-        [JsonProperty("best_combo_winstreak")]
-        public int BestComboWinstreak { get; set; }
-
-        [JsonProperty("current_combo_winstreak")]
-        public int CurrentComboWinstreak { get; set; }
-
- 
-        [JsonProperty("combo_duel_wins")]
-        public int ComboDuelWins { get; set; }
-
-        [JsonProperty("combo_duel_damage_dealt")]
-        public int ComboDuelDamageDealt { get; set; }
-
-        [JsonProperty("combo_duel_kills")]
-        public int ComboDuelKills { get; set; }
-
-        [JsonProperty("uhc_four_wins")]
-        public int UhcFourWins { get; set; }
-
-        [JsonProperty("uhc_four_kills")]
-        public int UhcFourKills { get; set; }
-
-        [JsonProperty("current_mega_walls_winstreak")]
-        public int CurrentMegaWallsWinstreak { get; set; }
-
-        [JsonProperty("best_mega_walls_winstreak")]
-        public int BestMegaWallsWinstreak { get; set; }
-
-        [JsonProperty("mw_duel_herobrine_kit_wins")]
-        public int MwDuelHerobrineKitWins { get; set; }
-
-        [JsonProperty("herobrine_kit_wins")]
-        public int HerobrineKitWins { get; set; }
-
-        [JsonProperty("mw_duel_kit_wins")]
-        public int MwDuelKitWins { get; set; }
-
-        [JsonProperty("mw_duel_kills")]
-        public int MwDuelKills { get; set; }
-
-        [JsonProperty("mw_duel_wins")]
-        public int MwDuelWins { get; set; }
-
-        [JsonProperty("mw_duel_losses")]
-        public int MwDuelLosses { get; set; }
-
-        [JsonProperty("mw_duel_deaths")]
-        public int MwDuelDeaths { get; set; }
-
-        [JsonProperty("sw_tournament_kills")]
-        public int SwTournamentKills { get; set; }
-
-        [JsonProperty("sw_tournament_deaths")]
-        public int SwTournamentDeaths { get; set; }
-
-      
-        [JsonProperty("duels_winstreak_best_null")]
-        public int DuelsWinstreakBestNull { get; set; }
-
-        [JsonProperty("potion_duel_heal_pots_used")]
-        public int PotionDuelHealPotsUsed { get; set; }
-
-        [JsonProperty("potion_duel_melee_swings")]
-        public int PotionDuelMeleeSwings { get; set; }
-
-        [JsonProperty("potion_duel_rounds_played")]
-        public int PotionDuelRoundsPlayed { get; set; }
-
-        [JsonProperty("potion_duel_melee_hits")]
-        public int PotionDuelMeleeHits { get; set; }
-
-        [JsonProperty("potion_duel_health_regenerated")]
-        public int PotionDuelHealthRegenerated { get; set; }
-
-        [JsonProperty("potion_duel_damage_dealt")]
-        public int PotionDuelDamageDealt { get; set; }
-
-        [JsonProperty("heal_pots_used")]
-        public int HealPotsUsed { get; set; }
-
-        [JsonProperty("sumo_duel_melee_swings")]
-        public int SumoDuelMeleeSwings { get; set; }
-
-        [JsonProperty("sumo_duel_rounds_played")]
-        public int SumoDuelRoundsPlayed { get; set; }
-
-        [JsonProperty("sumo_duel_melee_hits")]
-        public int SumoDuelMeleeHits { get; set; }
-
-        [JsonProperty("sw_duels_kit_new")]
-        public string SwDuelsKitNew { get; set; }
-
-        [JsonProperty("chat_enabled")]
-        public string ChatEnabled { get; set; }
-
-        [JsonProperty("current_classic_winstreak")]
-        public int CurrentClassicWinstreak { get; set; }
-
-        [JsonProperty("best_classic_winstreak")]
-        public int BestClassicWinstreak { get; set; }
-
-   
-        [JsonProperty("classic_duel_kills")]
-        public int ClassicDuelKills { get; set; }
-
-        [JsonProperty("classic_duel_wins")]
-        public int ClassicDuelWins { get; set; }
-
-        [JsonProperty("classic_duel_losses")]
-        public int ClassicDuelLosses { get; set; }
-
-        [JsonProperty("classic_duel_deaths")]
-        public int ClassicDuelDeaths { get; set; }
-
         [JsonProperty("blitz_duel_kit_wins")]
         public int BlitzDuelKitWins { get; set; }
 
@@ -739,147 +736,14 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         [JsonProperty("blitz_duel_armorer_kit_wins")]
         public int BlitzDuelArmorerKitWins { get; set; }
 
-      
         [JsonProperty("special_challenger")]
         public bool SpecialChallenger { get; set; }
-
-        [JsonProperty("all_modes_diamond_title_prestige")]
-        public int AllModesDiamondTitlePrestige { get; set; }
-
-        [JsonProperty("classic_rookie_title_prestige")]
-        public int ClassicRookieTitlePrestige { get; set; }
-
-        [JsonProperty("op_rookie_title_prestige")]
-        public int OpRookieTitlePrestige { get; set; }
-
-        [JsonProperty("tournament_rookie_title_prestige")]
-        public int TournamentRookieTitlePrestige { get; set; }
-
-        [JsonProperty("combo_rookie_title_prestige")]
-        public int ComboRookieTitlePrestige { get; set; }
-
-        [JsonProperty("sumo_rookie_title_prestige")]
-        public int SumoRookieTitlePrestige { get; set; }
-
-        [JsonProperty("skywars_rookie_title_prestige")]
-        public int SkywarsRookieTitlePrestige { get; set; }
-
-        [JsonProperty("tnt_games_rookie_title_prestige")]
-        public int TntGamesRookieTitlePrestige { get; set; }
-
-        [JsonProperty("bow_rookie_title_prestige")]
-        public int BowRookieTitlePrestige { get; set; }
-
-        [JsonProperty("mega_walls_rookie_title_prestige")]
-        public int MegaWallsRookieTitlePrestige { get; set; }
-
-        [JsonProperty("blitz_master_title_prestige")]
-        public int BlitzMasterTitlePrestige { get; set; }
-
-        [JsonProperty("no_debuff_rookie_title_prestige")]
-        public int NoDebuffRookieTitlePrestige { get; set; }
-
-        [JsonProperty("uhc_rookie_title_prestige")]
-        public int UhcRookieTitlePrestige { get; set; }
-
-        [JsonProperty("progress_mode")]
-        public string ProgressMode { get; set; }
-
-        [JsonProperty("current_sumo_winstreak")]
-        public int CurrentSumoWinstreak { get; set; }
-
-        [JsonProperty("sumo_duel_losses")]
-        public int SumoDuelLosses { get; set; }
-
-        [JsonProperty("sumo_duel_deaths")]
-        public int SumoDuelDeaths { get; set; }
-
-        [JsonProperty("best_sumo_winstreak")]
-        public int BestSumoWinstreak { get; set; }
-
-        [JsonProperty("sumo_duel_kills")]
-        public int SumoDuelKills { get; set; }
-
-        [JsonProperty("sumo_duel_wins")]
-        public int SumoDuelWins { get; set; }
-
-        [JsonProperty("duels_winstreak_best_sumo_duel")]
-        public int DuelsWinstreakBestSumoDuel { get; set; }
 
         [JsonProperty("blitz_duel_blocks_placed")]
         public int BlitzDuelBlocksPlaced { get; set; }
 
-        [JsonProperty("current_no_debuff_winstreak")]
-        public int CurrentNoDebuffWinstreak { get; set; }
-
-        [JsonProperty("potion_duel_deaths")]
-        public int PotionDuelDeaths { get; set; }
-
-        [JsonProperty("potion_duel_losses")]
-        public int PotionDuelLosses { get; set; }
-
-        [JsonProperty("best_no_debuff_winstreak")]
-        public int BestNoDebuffWinstreak { get; set; }
-
-        [JsonProperty("potion_duel_kills")]
-        public int PotionDuelKills { get; set; }
-
-        [JsonProperty("potion_duel_wins")]
-        public int PotionDuelWins { get; set; }
-
-        [JsonProperty("duels_winstreak_best_potion_duel")]
-        public int DuelsWinstreakBestPotionDuel { get; set; }
-
-
-        [JsonProperty("best_bow_winstreak")]
-        public int BestBowWinstreak { get; set; }
-
-        [JsonProperty("current_bow_winstreak")]
-        public int CurrentBowWinstreak { get; set; }
-
-      
-        [JsonProperty("bow_duel_wins")]
-        public int BowDuelWins { get; set; }
-
-     
-        [JsonProperty("bow_duel_kills")]
-        public int BowDuelKills { get; set; }
-
-
-        [JsonProperty("combo_duel_losses")]
-        public int ComboDuelLosses { get; set; }
-
-        [JsonProperty("combo_duel_deaths")]
-        public int ComboDuelDeaths { get; set; }
-
-        [JsonProperty("bow_duel_deaths")]
-        public int BowDuelDeaths { get; set; }
-
-        [JsonProperty("bow_duel_losses")]
-        public int BowDuelLosses { get; set; }
-
         [JsonProperty("blitz_duel")]
         public bool BlitzDuel { get; set; }
-        
-        [JsonProperty("duels_chests")]
-        public int DuelsChests { get; set; }
-
-        [JsonProperty("Duels_openedRares")]
-        public int DuelsOpenedRares { get; set; }
-
-        [JsonProperty("Duels_openedChests")]
-        public int DuelsOpenedChests { get; set; }
-
-        [JsonProperty("Duels_openedCommons")]
-        public int DuelsOpenedCommons { get; set; }
-
-        [JsonProperty("uhc_four_deaths")]
-        public int UhcFourDeaths { get; set; }
-
-        [JsonProperty("uhc_four_losses")]
-        public int UhcFourLosses { get; set; }
-
-     
 
         [JsonProperty("blitz_duel_baker_kit_wins")]
         public int BlitzDuelBakerKitWins { get; set; }
@@ -923,9 +787,6 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         [JsonProperty("astronaut_kit_wins")]
         public int AstronautKitWins { get; set; }
 
-        [JsonProperty("blitz_duel_layout_armorer_5")]
-        public Dictionary<string, string> BlitzDuelLayoutArmorer5 { get; set; }
-
         [JsonProperty("blitz_duel_jockey_kit_wins")]
         public int BlitzDuelJockeyKitWins { get; set; }
 
@@ -944,18 +805,141 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         [JsonProperty("blitz_duel_archer_kit_wins")]
         public int BlitzDuelArcherKitWins { get; set; }
 
+        #endregion
+
+        #region potion duel
+        [JsonProperty("potion_duel_heal_pots_used")]
+        public int PotionDuelHealPotsUsed { get; set; }
+
+        [JsonProperty("potion_duel_melee_swings")]
+        public int PotionDuelMeleeSwings { get; set; }
+
+        [JsonProperty("potion_duel_rounds_played")]
+        public int PotionDuelRoundsPlayed { get; set; }
+
+        [JsonProperty("potion_duel_melee_hits")]
+        public int PotionDuelMeleeHits { get; set; }
+
+        [JsonProperty("potion_duel_health_regenerated")]
+        public int PotionDuelHealthRegenerated { get; set; }
+
+        [JsonProperty("potion_duel_damage_dealt")]
+        public int PotionDuelDamageDealt { get; set; }
+
+        [JsonProperty("heal_pots_used")]
+        public int HealPotsUsed { get; set; }
+
+        [JsonProperty("potion_duel_deaths")]
+        public int PotionDuelDeaths { get; set; }
+
+        [JsonProperty("potion_duel_losses")]
+        public int PotionDuelLosses { get; set; }
+
+        [JsonProperty("potion_duel_kills")]
+        public int PotionDuelKills { get; set; }
+
+        [JsonProperty("potion_duel_wins")]
+        public int PotionDuelWins { get; set; }
+
+        [JsonProperty("duels_winstreak_best_potion_duel")]
+        public int DuelsWinstreakBestPotionDuel { get; set; }
+        #endregion
+
+        #region sumo duel
+        [JsonProperty("sumo_duel_melee_swings")]
+        public int SumoDuelMeleeSwings { get; set; }
+
+        [JsonProperty("sumo_duel_rounds_played")]
+        public int SumoDuelRoundsPlayed { get; set; }
+
+        [JsonProperty("sumo_duel_melee_hits")]
+        public int SumoDuelMeleeHits { get; set; }
+
+        [JsonProperty("current_sumo_winstreak")]
+        public int CurrentSumoWinstreak { get; set; }
+
+        [JsonProperty("sumo_duel_losses")]
+        public int SumoDuelLosses { get; set; }
+
+        [JsonProperty("sumo_duel_deaths")]
+        public int SumoDuelDeaths { get; set; }
+
+        [JsonProperty("best_sumo_winstreak")]
+        public int BestSumoWinstreak { get; set; }
+
+        [JsonProperty("sumo_duel_kills")]
+        public int SumoDuelKills { get; set; }
+
+        [JsonProperty("sumo_duel_wins")]
+        public int SumoDuelWins { get; set; }
+
+        [JsonProperty("duels_winstreak_best_sumo_duel")]
+        public int DuelsWinstreakBestSumoDuel { get; set; }
+
+        [JsonProperty("current_winstreak_mode_sumo_duel")]
+        public int CurrentWinstreakModeSumoDuel { get; set; }
+        #endregion
+
+        #region prestige
+        [JsonProperty("all_modes_diamond_title_prestige")]
+        public int AllModesDiamondTitlePrestige { get; set; }
+
+        [JsonProperty("classic_rookie_title_prestige")]
+        public int ClassicRookieTitlePrestige { get; set; }
+
+        [JsonProperty("op_rookie_title_prestige")]
+        public int OpRookieTitlePrestige { get; set; }
+
+        [JsonProperty("tournament_rookie_title_prestige")]
+        public int TournamentRookieTitlePrestige { get; set; }
+
+        [JsonProperty("combo_rookie_title_prestige")]
+        public int ComboRookieTitlePrestige { get; set; }
+
+        [JsonProperty("sumo_rookie_title_prestige")]
+        public int SumoRookieTitlePrestige { get; set; }
+
+        [JsonProperty("tnt_games_rookie_title_prestige")]
+        public int TntGamesRookieTitlePrestige { get; set; }
+
+        [JsonProperty("bow_rookie_title_prestige")]
+        public int BowRookieTitlePrestige { get; set; }
+
+        [JsonProperty("mega_walls_rookie_title_prestige")]
+        public int MegaWallsRookieTitlePrestige { get; set; }
+
+        [JsonProperty("blitz_master_title_prestige")]
+        public int BlitzMasterTitlePrestige { get; set; }
+
+        [JsonProperty("no_debuff_rookie_title_prestige")]
+        public int NoDebuffRookieTitlePrestige { get; set; }
+
+        [JsonProperty("uhc_rookie_title_prestige")]
+        public int UhcRookieTitlePrestige { get; set; }
+
+        [JsonProperty("bridge_rookie_title_prestige")]
+        public int BridgeRookieTitlePrestige { get; set; }
+
         [JsonProperty("all_modes_master_title_prestige")]
         public int AllModesMasterTitlePrestige { get; set; }
 
         [JsonProperty("blitz_legend_title_prestige")]
         public int BlitzLegendTitlePrestige { get; set; }
 
-        [JsonProperty("equipped_custom_titles")]
-        public string EquippedCustomTitles { get; set; }
+        [JsonProperty("bridge_diamond_title_prestige")]
+        public int BridgeDiamondTitlePrestige { get; set; }
+        #endregion
 
-        [JsonProperty("bridge_rookie_title_prestige")]
-        public int BridgeRookieTitlePrestige { get; set; }
+        #region no debuff duels
+        [JsonProperty("current_no_debuff_winstreak")]
+        public int CurrentNoDebuffWinstreak { get; set; }
 
+        [JsonProperty("best_no_debuff_winstreak")]
+        public int BestNoDebuffWinstreak { get; set; }
+
+        #endregion
+
+        #region the bridge
         [JsonProperty("bridge_duel_wins")]
         public int BridgeDuelWins { get; set; }
 
@@ -1210,16 +1194,9 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
 
         [JsonProperty("bridge_3v3v3v3_bow_hits")]
         public int Bridge3V3V3V3BowHits { get; set; }
+        #endregion
 
-        [JsonProperty("collected_reward_season_1")]
-        public bool CollectedRewardSeason1 { get; set; }
-
-        [JsonProperty("best_winstreak_mode_classic_duel")]
-        public int BestWinstreakModeClassicDuel { get; set; }
-
-        [JsonProperty("current_winstreak_mode_classic_duel")]
-        public int CurrentWinstreakModeClassicDuel { get; set; }
-
+        #region op duels
         [JsonProperty("op_duel_health_regenerated")]
         public int OpDuelHealthRegenerated { get; set; }
 
@@ -1234,11 +1211,6 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
 
         [JsonProperty("op_duel_melee_hits")]
         public int OpDuelMeleeHits { get; set; }
-
-        [JsonProperty("current_winstreak_mode_sumo_duel")]
-        public int CurrentWinstreakModeSumoDuel { get; set; }
-
-        [JsonProperty("bridge_diamond_title_prestige")]
-        public int BridgeDiamondTitlePrestige { get; set; }
+        #endregion
     }
 }
