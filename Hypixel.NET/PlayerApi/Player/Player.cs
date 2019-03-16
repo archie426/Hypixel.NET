@@ -7,16 +7,10 @@ namespace Hypixel.NET.PlayerApi.Player
     public class Player
     {
         /// <summary>
-        /// The tiered achievements that require x wins or x coins to progress
-        /// </summary>
-        [JsonProperty("achievements")]
-        public Achievements.Achievements Achievements { get; set; }
-
-        /// <summary>
         /// General onetime unlock achievements
         /// </summary>
         [JsonProperty("achievementsOneTime")]
-        public List<string> AchievementsOneTime { get; set; }
+        public List<object> AchievementsOneTime { get; set; }
 
         /// <summary>
         /// The display name of the player

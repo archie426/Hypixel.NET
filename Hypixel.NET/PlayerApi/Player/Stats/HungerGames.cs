@@ -33,7 +33,7 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         public string ChosenTaunt { get; set; }
 
         [JsonProperty("coins")]
-        public int Coins { get; set; }
+        public double Coins { get; set; }
 
         [JsonProperty("creepertamer")]
         public int CreeperTamerLevel { get; set; }

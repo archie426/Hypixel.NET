@@ -34,9 +34,6 @@ namespace Hypixel.NET.PlayerApi.Player.Stats.Battlegrounds
         [JsonProperty("material")]
         public string Material { get; set; }
 
-        [JsonProperty("id")]
-        public int Id { get; set; }
-
         [JsonProperty("crafted")]
         public bool Crafted { get; set; }
 

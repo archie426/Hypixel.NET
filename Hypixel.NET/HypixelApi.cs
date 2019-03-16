@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Runtime.Caching;
 using System.Timers;
 using Hypixel.NET.BoosterApi;
@@ -121,7 +122,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = client.Execute(request);
-            var responseDeserialized = JsonConvert.DeserializeObject<GetPlayerData>(response.Content);
+            var responseDeserialized = JsonConvert.DeserializeObject<GetPlayerData>(response.Content.Replace(".0", ""));
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful && responseDeserialized.Player != null)
