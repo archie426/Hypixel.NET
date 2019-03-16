@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 using System.Runtime.Caching;
 using System.Timers;
 using Hypixel.NET.BoosterApi;
@@ -53,12 +52,12 @@ namespace Hypixel.NET
             //Check if cached. If so deserialize and return
             if (ApiMemoryCache.Contains(cacheUuid))
             {
-                var getCacheItem = ApiMemoryCache.GetCacheItem(uuid);
+                var getCacheItem = ApiMemoryCache.GetCacheItem(cacheUuid);
 
                 //Verify that this isn't null - if is then will do API request as normal
                 if (getCacheItem != null)
                 {
-                    var deserializedResponseCache = JsonConvert.DeserializeObject<GetPlayerData>(getCacheItem.Value.ToString());
+                    var deserializedResponseCache = JsonConvert.DeserializeObject<GetPlayerData>(getCacheItem.Value.ToString().Replace(".0", ""));
                     deserializedResponseCache.FromCache = true;
                     return deserializedResponseCache;
                 }
@@ -73,7 +72,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = client.Execute(request);
-            var responseDeserialized = JsonConvert.DeserializeObject<GetPlayerData>(response.Content);
+            var responseDeserialized = JsonConvert.DeserializeObject<GetPlayerData>(response.Content.Replace(".0", ""));
             
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful && responseDeserialized.Player != null)
@@ -107,7 +106,7 @@ namespace Hypixel.NET
                 //Verify that this isn't null - if is then will do API request as normal
                 if (getCacheItem != null)
                 {
-                    var deserializedResponseCache = JsonConvert.DeserializeObject<GetPlayerData>(getCacheItem.Value.ToString());
+                    var deserializedResponseCache = JsonConvert.DeserializeObject<GetPlayerData>(getCacheItem.Value.ToString().Replace(".0", ""));
                     deserializedResponseCache.FromCache = true;
                     return deserializedResponseCache;
                 }
@@ -148,7 +147,7 @@ namespace Hypixel.NET
             throw hypixelException;
         }
 
-        public GetFriendsUuid GetPlayerFriendsByUuid(string uuid)
+        public GetFriends GetPlayerFriendsByUuid(string uuid)
         {
             var cacheUuid = uuid + "Type:Friends";
 
@@ -160,7 +159,7 @@ namespace Hypixel.NET
                 //Verify that this isn't null - if is then will do API request as normal
                 if (getCacheItem != null)
                 {
-                    var deserializedResponseCache = JsonConvert.DeserializeObject<GetFriendsUuid>(getCacheItem.Value.ToString());
+                    var deserializedResponseCache = JsonConvert.DeserializeObject<GetFriends>(getCacheItem.Value.ToString());
                     deserializedResponseCache.FromCache = true;
                     return deserializedResponseCache;
                 }
@@ -175,7 +174,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = client.Execute(request);
-            var responseDeserialized = JsonConvert.DeserializeObject<GetFriendsUuid>(response.Content);
+            var responseDeserialized = JsonConvert.DeserializeObject<GetFriends>(response.Content);
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)
@@ -190,6 +189,12 @@ namespace Hypixel.NET
             var message = $"{responseDeserialized.Cause} Please double check your request information";
             var hypixelException = new ApplicationException(message, response.ErrorException);
             throw hypixelException;
+        }
+
+        public GetFriends GetPlayerFriendsByPlayerName(string playerName)
+        {
+            var playerUuid = GetUuidFromPlayerName(playerName);
+            return GetPlayerFriendsByUuid(playerUuid);
         }
 
         public GetGuild GetGuildByGuildName(string guildName)
@@ -386,7 +391,7 @@ namespace Hypixel.NET
             throw hypixelException;
         }
 
-        public void RateLimitCheck()
+        private static void RateLimitCheck()
         {
             if (_apiRequests != 120)
             {

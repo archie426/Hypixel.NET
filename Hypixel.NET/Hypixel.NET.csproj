@@ -1,19 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFrameworks>netcoreapp2.0;net452</TargetFrameworks>
+    <Authors>Benjamin Regan</Authors>
+    <Product />
+    <Company>Bregan</Company>
+    <Description>C# API Wrapper for the Minecraft server Hypixel.net</Description>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     <PackageReference Include="RestSharp" Version="106.6.9" />
     <PackageReference Include="System.Runtime.Caching" Version="4.5.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="RestSharp">
-      <HintPath>..\..\..\..\.nuget\packages\restsharp\106.6.9\lib\netstandard2.0\RestSharp.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
   <ItemGroup>

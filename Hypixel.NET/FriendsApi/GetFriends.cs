@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace Hypixel.NET.FriendsApi
 {
-    public class GetFriendsUuid
+    public class GetFriends
     {
         public bool FromCache { get; set; }
 
