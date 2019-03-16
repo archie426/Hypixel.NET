@@ -16,4 +16,15 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="LeaderboardsApi\Leaderboard\BedWars\" />
+    <Folder Include="LeaderboardsApi\Leaderboard\BuildBattle\" />
+    <Folder Include="LeaderboardsApi\Leaderboard\NewFolder\" />
+    <Folder Include="LeaderboardsApi\Leaderboard\PaintBall\" />
+    <Folder Include="LeaderboardsApi\Leaderboard\SkyClash\" />
+    <Folder Include="LeaderboardsApi\Leaderboard\SkyWars\" />
+    <Folder Include="LeaderboardsApi\Leaderboard\Quake\" />
+    <Folder Include="LeaderboardsApi\Leaderboard\TntGames\" />
+  </ItemGroup>
+
 </Project>

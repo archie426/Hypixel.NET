@@ -27,7 +27,7 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         public VampireZ VampireZ { get; set; }
 
         [JsonProperty("Walls")]
-        public Dictionary<string, long> Walls { get; set; }
+        public Walls Walls { get; set; }
 
         [JsonProperty("Walls3")]
         public Walls3 Walls3 { get; set; }

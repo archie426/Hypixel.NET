@@ -7,7 +7,7 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
     {
         #region general
         [JsonProperty("Experience")]
-        public int Experience { get; set; }
+        public double Experience { get; set; }
 
         [JsonProperty("spray_glyph_field")]
         public string SprayGlyphField { get; set; }

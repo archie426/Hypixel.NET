@@ -65,7 +65,7 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         public int DamageDealtNormal { get; set; }
 
         [JsonProperty("xp_THE_BULK")]
-        public int XpTheBulk { get; set; }
+        public double XpTheBulk { get; set; }
 
         [JsonProperty("smash_level_total")]
         public int SmashLevelTotal { get; set; }
@@ -81,9 +81,6 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
 
         [JsonProperty("FRIENDS_gamesDay")]
         public int FriendsGamesDay { get; set; }
-
-        [JsonProperty("FRIENDS_firstGame")]
-        public int FriendsFirstGame { get; set; }
 
         [JsonProperty("friend_losses")]
         public int FriendLosses { get; set; }
@@ -107,7 +104,7 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         public int FriendLossesNormal { get; set; }
 
         [JsonProperty("xp_CAKE_MONSTER")]
-        public int XpCakeMonster { get; set; }
+        public double XpCakeMonster { get; set; }
 
         [JsonProperty("lastLevel_CAKE_MONSTER")]
         public int LastLevelCakeMonster { get; set; }
@@ -128,7 +125,7 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         public int DamageDealt2V2 { get; set; }
 
         [JsonProperty("xp_GENERAL_CLUCK")]
-        public int XpGeneralCluck { get; set; }
+        public double XpGeneralCluck { get; set; }
 
         [JsonProperty("lastLevel_GENERAL_CLUCK")]
         public int LastLevelGeneralCluck { get; set; }
@@ -143,7 +140,7 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         public int Losses2V2 { get; set; }
 
         [JsonProperty("xp_BOTMUN")]
-        public int XpBotmun { get; set; }
+        public double XpBotmun { get; set; }
 
         [JsonProperty("lastLevel_BOTMUN")]
         public int LastLevelBotmun { get; set; }
@@ -173,13 +170,13 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         public int LossesTeams { get; set; }
 
         [JsonProperty("xp_FROSTY")]
-        public int XpFrosty { get; set; }
+        public double XpFrosty { get; set; }
 
         [JsonProperty("lastLevel_FROSTY")]
         public int LastLevelFrosty { get; set; }
 
         [JsonProperty("xp_TINMAN")]
-        public int XpTinman { get; set; }
+        public double XpTinman { get; set; }
 
         [JsonProperty("lastLevel_TINMAN")]
         public int LastLevelTinman { get; set; }
@@ -188,22 +185,22 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         public int LastLevelMarauder { get; set; }
 
         [JsonProperty("xp_MARAUDER")]
-        public int XpMarauder { get; set; }
+        public double XpMarauder { get; set; }
 
         [JsonProperty("xp_GOKU")]
-        public int XpGoku { get; set; }
+        public double XpGoku { get; set; }
 
         [JsonProperty("lastLevel_GOKU")]
         public int LastLevelGoku { get; set; }
 
         [JsonProperty("xp_SPODERMAN")]
-        public int XpSpoderman { get; set; }
+        public double XpSpoderman { get; set; }
 
         [JsonProperty("lastLevel_SPODERMAN")]
         public int LastLevelSpoderman { get; set; }
 
         [JsonProperty("xp_PUG")]
-        public int XpPug { get; set; }
+        public double XpPug { get; set; }
 
         [JsonProperty("lastLevel_PUG")]
         public int LastLevelPug { get; set; }
@@ -215,7 +212,7 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         public int VotesGunmetal { get; set; }
 
         [JsonProperty("xp_SKULLFIRE")]
-        public int XpSkullfire { get; set; }
+        public double XpSkullfire { get; set; }
 
         [JsonProperty("lastLevel_SKULLFIRE")]
         public int LastLevelSkullfire { get; set; }
@@ -230,7 +227,7 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         public bool MasterArmorFrosty { get; set; }
 
         [JsonProperty("xp_SHOOP_DA_WHOOP")]
-        public int XpShoopDaWhoop { get; set; }
+        public double XpShoopDaWhoop { get; set; }
 
         [JsonProperty("lastLevel_SHOOP_DA_WHOOP")]
         public int LastLevelShoopDaWhoop { get; set; }
@@ -248,7 +245,7 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         public bool MasterArmorTheBulk { get; set; }
 
         [JsonProperty("xp_DUSK_CRAWLER")]
-        public int XpDuskCrawler { get; set; }
+        public double XpDuskCrawler { get; set; }
 
         [JsonProperty("lastLevel_DUSK_CRAWLER")]
         public int LastLevelDuskCrawler { get; set; }
@@ -284,16 +281,16 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         public int LastLevelSergeantShield { get; set; }
 
         [JsonProperty("xp_SERGEANT_SHIELD")]
-        public int XpSergeantShield { get; set; }
+        public double XpSergeantShield { get; set; }
 
         [JsonProperty("xp_SANIC")]
-        public int XpSanic { get; set; }
+        public double XpSanic { get; set; }
 
         [JsonProperty("lastLevel_SANIC")]
         public int LastLevelSanic { get; set; }
 
         [JsonProperty("xp_GREEN_HOOD")]
-        public int XpGreenHood { get; set; }
+        public double XpGreenHood { get; set; }
 
         [JsonProperty("lastLevel_GREEN_HOOD")]
         public int LastLevelGreenHood { get; set; }
@@ -351,9 +348,6 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
 
         [JsonProperty("masterArmor_SPODERMAN")]
         public bool MasterArmorSpoderman { get; set; }
-
-        [JsonProperty("ONE_V_JUAN_firstGame")]
-        public int OneVJuanFirstGame { get; set; }
 
         [JsonProperty("ONE_V_JUAN_gamesDay")]
         public int OneVJuanGamesDay { get; set; }

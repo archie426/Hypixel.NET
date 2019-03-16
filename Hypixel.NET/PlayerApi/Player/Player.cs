@@ -33,9 +33,9 @@ namespace Hypixel.NET.PlayerApi.Player
         {
             get
             {
-                var dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
-                dtDateTime = dtDateTime.AddMilliseconds(_firstLogin).ToLocalTime();
-                return dtDateTime;
+                var convertToDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+                convertToDateTime = convertToDateTime.AddMilliseconds(_firstLogin).ToLocalTime();
+                return convertToDateTime;
             }
         }
 
@@ -49,9 +49,9 @@ namespace Hypixel.NET.PlayerApi.Player
         {
             get
             {
-                var dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
-                dtDateTime = dtDateTime.AddMilliseconds(_lastLogin).ToLocalTime();
-                return dtDateTime;
+                var convertToDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+                convertToDateTime = convertToDateTime.AddMilliseconds(_lastLogin).ToLocalTime();
+                return convertToDateTime;
             }
         }
         /// <summary>
@@ -87,9 +87,6 @@ namespace Hypixel.NET.PlayerApi.Player
         [JsonProperty("uuid")]
         public string Uuid { get; set; }
 
-        /// <summary>
-        /// The amount of karma that the user has gained
-        /// </summary>
         [JsonProperty("karma")]
         public long Karma { get; set; }
 
@@ -97,31 +94,25 @@ namespace Hypixel.NET.PlayerApi.Player
         public long VanityTokens { get; set; }
 
         /// <summary>
-        /// The consumables that the player has for their pets
+        /// cosmetic packages
         /// </summary>
-        [JsonProperty("petConsumables")]
-        public Dictionary<string, long> PetConsumables { get; set; }
-
         [JsonProperty("vanityMeta")]
         public VanityMeta.VanityMeta VanityMeta { get; set; }
 
-        [JsonProperty("parkourCompletions")]
-        public Dictionary<string, List<ParkourCompletion.ParkourCompletions>> ParkourCompletions { get; set; }
-
         [JsonProperty("totalRewards")]
-        public long TotalRewards { get; set; }
+        public int TotalRewards { get; set; }
 
         [JsonProperty("totalDailyRewards")]
-        public long TotalDailyRewards { get; set; }
+        public int TotalDailyRewards { get; set; }
 
         [JsonProperty("rewardStreak")]
-        public long RewardStreak { get; set; }
+        public int RewardStreak { get; set; }
 
         [JsonProperty("rewardScore")]
-        public long RewardScore { get; set; }
+        public int RewardScore { get; set; }
 
         [JsonProperty("rewardHighScore")]
-        public long RewardHighScore { get; set; }
+        public int RewardHighScore { get; set; }
 
         [JsonProperty("currentPet")]
         public string CurrentPet { get; set; }
@@ -130,16 +121,21 @@ namespace Hypixel.NET.PlayerApi.Player
         public GiftingMeta.GiftingMeta GiftingMeta { get; set; }
 
         [JsonProperty("lastLogout")]
-        public long LastLogout { get; set; }
+        private readonly long _lastLogout;
+        public DateTime LastLogout
+        {
+            get
+            {
+                var convertToDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+                convertToDateTime = convertToDateTime.AddMilliseconds(_lastLogout).ToLocalTime();
+                return convertToDateTime;
+            }
+        }
 
         [JsonProperty("rankPlusColor")]
         public string RankPlusColor { get; set; }
 
         [JsonProperty("voting")]
-        public Dictionary<string, long> Voting { get; set; }
-
-        [JsonProperty("achievementTracking")]
-        public List<string> AchievementTracking { get; set; }
-
+        public Voting.Voting Voting;
     }
 }

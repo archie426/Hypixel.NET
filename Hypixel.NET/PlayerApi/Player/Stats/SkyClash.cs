@@ -429,255 +429,379 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         public int DeathsPerkSharpenedSword { get; set; }
 
         [JsonProperty("deaths_perk_witch")]
-        public int deaths_perk_witch { get; set; }
+        public int DeathsPerkWitch { get; set; }
+
         [JsonProperty("deaths_perk_hearty_start")]
-        public int deaths_perk_hearty_start { get; set; }
+        public int DeathsPerkHeartyStart { get; set; }
+
         [JsonProperty("deaths_perk_tripleshot")]
-        public int deaths_perk_tripleshot { get; set; }
+        public int DeathsPerkTripleshot { get; set; }
+
         [JsonProperty("losses_perk_tripleshot")]
-        public int losses_perk_tripleshot { get; set; }
+        public int LossesPerkTripleshot { get; set; }
+
         [JsonProperty("kills_perk_hearty_start")]
-        public int kills_perk_hearty_start { get; set; }
+        public int KillsPerkHeartyStart { get; set; }
+
         [JsonProperty("losses_perk_hearty_start")]
-        public int losses_perk_hearty_start { get; set; }
+        public int LossesPerkHeartyStart { get; set; }
+
         [JsonProperty("kills_perk_tripleshot")]
-        public int kills_perk_tripleshot { get; set; }
+        public int KillsPerkTripleshot { get; set; }
+
         [JsonProperty("deaths_perk_invisibility")]
-        public int deaths_perk_invisibility { get; set; }
+        public int DeathsPerkInvisibility { get; set; }
+
         [JsonProperty("losses_perk_fruit_finder")]
-        public int losses_perk_fruit_finder { get; set; }
+        public int LossesPerkFruitFinder { get; set; }
+
         [JsonProperty("deaths_perk_chicken_bow")]
-        public int deaths_perk_chicken_bow { get; set; }
+        public int DeathsPerkChickenBow { get; set; }
+
         [JsonProperty("kills_perk_fruit_finder")]
-        public int kills_perk_fruit_finder { get; set; }
+        public int KillsPerkFruitFinder { get; set; }
+
         [JsonProperty("deaths_perk_fruit_finder")]
-        public int deaths_perk_fruit_finder { get; set; }
+        public int DeathsPerkFruitFinder { get; set; }
+
         [JsonProperty("losses_perk_chicken_bow")]
-        public int losses_perk_chicken_bow { get; set; }
+        public int LossesPerkChickenBow { get; set; }
+
         [JsonProperty("kills_perk_invisibility")]
-        public int kills_perk_invisibility { get; set; }
+        public int KillsPerkInvisibility { get; set; }
+
         [JsonProperty("losses_perk_invisibility")]
-        public int losses_perk_invisibility { get; set; }
+        public int LossesPerkInvisibility { get; set; }
+
         [JsonProperty("kills_perk_chicken_bow")]
-        public int kills_perk_chicken_bow { get; set; }
+        public int KillsPerkChickenBow { get; set; }
+
         [JsonProperty("losses_perk_skeleton_jockey")]
-        public int losses_perk_skeleton_jockey { get; set; }
+        public int LossesPerkSkeletonJockey { get; set; }
+
         [JsonProperty("kills_perk_skeleton_jockey")]
-        public int kills_perk_skeleton_jockey { get; set; }
+        public int KillsPerkSkeletonJockey { get; set; }
+
         [JsonProperty("deaths_perk_skeleton_jockey")]
-        public int deaths_perk_skeleton_jockey { get; set; }
+        public int DeathsPerkSkeletonJockey { get; set; }
+
         [JsonProperty("losses_perk_enderman")]
-        public int losses_perk_enderman { get; set; }
+        public int LossesPerkEnderman { get; set; }
+
         [JsonProperty("deaths_perk_enderman")]
-        public int deaths_perk_enderman { get; set; }
+        public int DeathsPerkEnderman { get; set; }
+
         [JsonProperty("deaths_perk_creeper")]
-        public int deaths_perk_creeper { get; set; }
+        public int DeathsPerkCreeper { get; set; }
+
         [JsonProperty("deaths_perk_guardian")]
-        public int deaths_perk_guardian { get; set; }
+        public int DeathsPerkGuardian { get; set; }
+
         [JsonProperty("losses_perk_guardian")]
-        public int losses_perk_guardian { get; set; }
+        public int LossesPerkGuardian { get; set; }
+
         [JsonProperty("losses_perk_creeper")]
-        public int losses_perk_creeper { get; set; }
+        public int LossesPerkCreeper { get; set; }
+
         [JsonProperty("kills_perk_enderman")]
-        public int kills_perk_enderman { get; set; }
+        public int KillsPerkEnderman { get; set; }
+
         [JsonProperty("kills_perk_creeper")]
-        public int kills_perk_creeper { get; set; }
+        public int KillsPerkCreeper { get; set; }
+
         [JsonProperty("kills_perk_guardian")]
-        public int kills_perk_guardian { get; set; }
+        public int KillsPerkGuardian { get; set; }
+
         [JsonProperty("wins_perk_guardian")]
-        public int wins_perk_guardian { get; set; }
+        public int WinsPerkGuardian { get; set; }
+
         [JsonProperty("wins_perk_creeper")]
-        public int wins_perk_creeper { get; set; }
+        public int WinsPerkCreeper { get; set; }
+
         [JsonProperty("wins_perk_enderman")]
-        public int wins_perk_enderman { get; set; }
+        public int WinsPerkEnderman { get; set; }
+
         [JsonProperty("perk_nuclear_solution_duplicates")]
-        public int perk_nuclear_solution_duplicates { get; set; }
+        public int PerkNuclearSolutionDuplicates { get; set; }
+
         [JsonProperty("deaths_perk_pearl_absorption")]
-        public int deaths_perk_pearl_absorption { get; set; }
+        public int DeathsPerkPearlAbsorption { get; set; }
+
         [JsonProperty("losses_perk_pearl_absorption")]
-        public int losses_perk_pearl_absorption { get; set; }
+        public int LossesPerkPearlAbsorption { get; set; }
+
         [JsonProperty("kills_perk_pearl_absorption")]
-        public int kills_perk_pearl_absorption { get; set; }
+        public int KillsPerkPearlAbsorption { get; set; }
+
         [JsonProperty("deaths_perk_bigger_bangs")]
-        public int deaths_perk_bigger_bangs { get; set; }
+        public int DeathsPerkBiggerBangs { get; set; }
+
         [JsonProperty("deaths_perk_snow_golem")]
-        public int deaths_perk_snow_golem { get; set; }
+        public int DeathsPerkSnowGolem { get; set; }
+
         [JsonProperty("losses_perk_bigger_bangs")]
-        public int losses_perk_bigger_bangs { get; set; }
+        public int LossesPerkBiggerBangs { get; set; }
+
         [JsonProperty("kills_perk_bigger_bangs")]
-        public int kills_perk_bigger_bangs { get; set; }
+        public int KillsPerkBiggerBangs { get; set; }
+
         [JsonProperty("losses_perk_snow_golem")]
-        public int losses_perk_snow_golem { get; set; }
+        public int LossesPerkSnowGolem { get; set; }
+
         [JsonProperty("kills_perk_snow_golem")]
-        public int kills_perk_snow_golem { get; set; }
+        public int KillsPerkSnowGolem { get; set; }
+
         [JsonProperty("losses_perk_explosive_bow")]
-        public int losses_perk_explosive_bow { get; set; }
+        public int LossesPerkExplosiveBow { get; set; }
+
         [JsonProperty("kills_perk_explosive_bow")]
-        public int kills_perk_explosive_bow { get; set; }
+        public int KillsPerkExplosiveBow { get; set; }
+
         [JsonProperty("deaths_perk_explosive_bow")]
-        public int deaths_perk_explosive_bow { get; set; }
+        public int DeathsPerkExplosiveBow { get; set; }
+
         [JsonProperty("kills_perk_honed_bow")]
-        public int kills_perk_honed_bow { get; set; }
+        public int KillsPerkHonedBow { get; set; }
+
         [JsonProperty("wins_perk_marksman")]
-        public int wins_perk_marksman { get; set; }
+        public int WinsPerkMarksman { get; set; }
+
         [JsonProperty("kills_perk_marksman")]
-        public int kills_perk_marksman { get; set; }
+        public int KillsPerkMarksman { get; set; }
+
         [JsonProperty("wins_perk_honed_bow")]
-        public int wins_perk_honed_bow { get; set; }
+        public int WinsPerkHonedBow { get; set; }
+
         [JsonProperty("losses_perk_arrow_deflection")]
-        public int losses_perk_arrow_deflection { get; set; }
+        public int LossesPerkArrowDeflection { get; set; }
+
         [JsonProperty("deaths_perk_arrow_deflection")]
-        public int deaths_perk_arrow_deflection { get; set; }
+        public int DeathsPerkArrowDeflection { get; set; }
+
         [JsonProperty("kills_perk_blast_protection")]
-        public int kills_perk_blast_protection { get; set; }
+        public int KillsPerkBlastProtection { get; set; }
+
         [JsonProperty("losses_perk_blast_protection")]
-        public int losses_perk_blast_protection { get; set; }
+        public int LossesPerkBlastProtection { get; set; }
+
         [JsonProperty("deaths_perk_blast_protection")]
-        public int deaths_perk_blast_protection { get; set; }
+        public int DeathsPerkBlastProtection { get; set; }
+
         [JsonProperty("wins_perk_explosive_bow")]
-        public int wins_perk_explosive_bow { get; set; }
+        public int WinsPerkExplosiveBow { get; set; }
+
         [JsonProperty("wins_perk_hearty_start")]
-        public int wins_perk_hearty_start { get; set; }
+        public int WinsPerkHeartyStart { get; set; }
+
         [JsonProperty("deaths_perk_hit_and_run")]
-        public int deaths_perk_hit_and_run { get; set; }
+        public int DeathsPerkHitAndRun { get; set; }
+
         [JsonProperty("losses_perk_hit_and_run")]
-        public int losses_perk_hit_and_run { get; set; }
+        public int LossesPerkHitAndRun { get; set; }
+
         [JsonProperty("deaths_perk_marksman")]
-        public int deaths_perk_marksman { get; set; }
+        public int DeathsPerkMarksman { get; set; }
+
         [JsonProperty("losses_perk_marksman")]
-        public int losses_perk_marksman { get; set; }
+        public int LossesPerkMarksman { get; set; }
+
         [JsonProperty("wins_perk_invisibility")]
-        public int wins_perk_invisibility { get; set; }
+        public int WinsPerkInvisibility { get; set; }
+
         [JsonProperty("wins_perk_fruit_finder")]
-        public int wins_perk_fruit_finder { get; set; }
+        public int WinsPerkFruitFinder { get; set; }
+
         [JsonProperty("losses_perk_elven_archer")]
-        public int losses_perk_elven_archer { get; set; }
+        public int LossesPerkElvenArcher { get; set; }
+
         [JsonProperty("deaths_perk_elven_archer")]
-        public int deaths_perk_elven_archer { get; set; }
+        public int DeathsPerkElvenArcher { get; set; }
+
         [JsonProperty("kills_perk_elven_archer")]
-        public int kills_perk_elven_archer { get; set; }
+        public int KillsPerkElvenArcher { get; set; }
+
         [JsonProperty("wins_perk_flower_power")]
-        public int wins_perk_flower_power { get; set; }
+        public int WinsPerkFlowerPower { get; set; }
+
         [JsonProperty("kills_perk_flower_power")]
-        public int kills_perk_flower_power { get; set; }
+        public int KillsPerkFlowerPower { get; set; }
+
         [JsonProperty("kills_perk_arrow_deflection")]
-        public int kills_perk_arrow_deflection { get; set; }
+        public int KillsPerkArrowDeflection { get; set; }
+
         [JsonProperty("wins_perk_tripleshot")]
-        public int wins_perk_tripleshot { get; set; }
+        public int WinsPerkTripleshot { get; set; }
+
         [JsonProperty("wins_perk_bat_shield")]
-        public int wins_perk_bat_shield { get; set; }
+        public int WinsPerkBatShield { get; set; }
+
         [JsonProperty("wins_perk_blast_protection")]
-        public int wins_perk_blast_protection { get; set; }
+        public int WinsPerkBlastProtection { get; set; }
+
         [JsonProperty("kills_perk_bat_shield")]
-        public int kills_perk_bat_shield { get; set; }
+        public int KillsPerkBatShield { get; set; }
+
         [JsonProperty("losses_perk_honed_bow")]
-        public int losses_perk_honed_bow { get; set; }
+        public int LossesPerkHonedBow { get; set; }
+
         [JsonProperty("deaths_perk_honed_bow")]
-        public int deaths_perk_honed_bow { get; set; }
+        public int DeathsPerkHonedBow { get; set; }
+
         [JsonProperty("deaths_perk_nuclear_solution")]
-        public int deaths_perk_nuclear_solution { get; set; }
+        public int DeathsPerkNuclearSolution { get; set; }
+
         [JsonProperty("kills_perk_nuclear_solution")]
-        public int kills_perk_nuclear_solution { get; set; }
+        public int KillsPerkNuclearSolution { get; set; }
+
         [JsonProperty("losses_perk_nuclear_solution")]
-        public int losses_perk_nuclear_solution { get; set; }
+        public int LossesPerkNuclearSolution { get; set; }
+
         [JsonProperty("kills_solo_perk_archer_challenge")]
-        public int kills_solo_perk_archer_challenge { get; set; }
+        public int KillsSoloPerkArcherChallenge { get; set; }
+
         [JsonProperty("deaths_perk_bat_shield")]
-        public int deaths_perk_bat_shield { get; set; }
+        public int DeathsPerkBatShield { get; set; }
+
         [JsonProperty("kills_perk_nutritious")]
-        public int kills_perk_nutritious { get; set; }
+        public int KillsPerkNutritious { get; set; }
+
         [JsonProperty("losses_perk_bat_shield")]
-        public int losses_perk_bat_shield { get; set; }
+        public int LossesPerkBatShield { get; set; }
+
         [JsonProperty("deaths_perk_nutritious")]
-        public int deaths_perk_nutritious { get; set; }
+        public int DeathsPerkNutritious { get; set; }
+
         [JsonProperty("losses_perk_nutritious")]
-        public int losses_perk_nutritious { get; set; }
+        public int LossesPerkNutritious { get; set; }
+
         [JsonProperty("wins_perk_arrow_deflection")]
-        public int wins_perk_arrow_deflection { get; set; }
+        public int WinsPerkArrowDeflection { get; set; }
+
         [JsonProperty("deaths_perk_sugar_rush")]
-        public int deaths_perk_sugar_rush { get; set; }
+        public int DeathsPerkSugarRush { get; set; }
+
         [JsonProperty("losses_perk_sugar_rush")]
-        public int losses_perk_sugar_rush { get; set; }
+        public int LossesPerkSugarRush { get; set; }
+
         [JsonProperty("deaths_perk_rampage")]
-        public int deaths_perk_rampage { get; set; }
+        public int DeathsPerkRampage { get; set; }
+
         [JsonProperty("losses_perk_rampage")]
-        public int losses_perk_rampage { get; set; }
+        public int LossesPerkRampage { get; set; }
+
         [JsonProperty("kills_perk_rampage")]
-        public int kills_perk_rampage { get; set; }
+        public int KillsPerkRampage { get; set; }
+
         [JsonProperty("kills_perk_alchemy")]
-        public int kills_perk_alchemy { get; set; }
+        public int KillsPerkAlchemy { get; set; }
+
         [JsonProperty("losses_perk_alchemy")]
-        public int losses_perk_alchemy { get; set; }
+        public int LossesPerkAlchemy { get; set; }
+
         [JsonProperty("deaths_perk_alchemy")]
-        public int deaths_perk_alchemy { get; set; }
+        public int DeathsPerkAlchemy { get; set; }
+
         [JsonProperty("kills_perk_energy_drink")]
-        public int kills_perk_energy_drink { get; set; }
+        public int KillsPerkEnergyDrink { get; set; }
+
         [JsonProperty("deaths_perk_energy_drink")]
-        public int deaths_perk_energy_drink { get; set; }
+        public int DeathsPerkEnergyDrink { get; set; }
+
         [JsonProperty("losses_perk_energy_drink")]
-        public int losses_perk_energy_drink { get; set; }
+        public int LossesPerkEnergyDrink { get; set; }
+
         [JsonProperty("losses_perk_blazing_arrows")]
-        public int losses_perk_blazing_arrows { get; set; }
+        public int LossesPerkBlazingArrows { get; set; }
+
         [JsonProperty("kills_perk_blazing_arrows")]
-        public int kills_perk_blazing_arrows { get; set; }
+        public int KillsPerkBlazingArrows { get; set; }
+
         [JsonProperty("deaths_perk_blazing_arrows")]
-        public int deaths_perk_blazing_arrows { get; set; }
+        public int DeathsPerkBlazingArrows { get; set; }
+
         [JsonProperty("kills_perk_iron_golem")]
-        public int kills_perk_iron_golem { get; set; }
+        public int KillsPerkIronGolem { get; set; }
+
         [JsonProperty("deaths_perk_iron_golem")]
-        public int deaths_perk_iron_golem { get; set; }
+        public int DeathsPerkIronGolem { get; set; }
+
         [JsonProperty("losses_perk_iron_golem")]
-        public int losses_perk_iron_golem { get; set; }
+        public int LossesPerkIronGolem { get; set; }
+
         [JsonProperty("wins_perk_nuclear_solution")]
-        public int wins_perk_nuclear_solution { get; set; }
+        public int WinsPerkNuclearSolution { get; set; }
+
         [JsonProperty("kills_perk_sugar_rush")]
-        public int kills_perk_sugar_rush { get; set; }
+        public int KillsPerkSugarRush { get; set; }
+
         [JsonProperty("wins_perk_sugar_rush")]
-        public int wins_perk_sugar_rush { get; set; }
+        public int WinsPerkSugarRush { get; set; }
+
         [JsonProperty("wins_perk_elven_archer")]
-        public int wins_perk_elven_archer { get; set; }
+        public int WinsPerkElvenArcher { get; set; }
+
         [JsonProperty("wins_perk_alchemy")]
-        public int wins_perk_alchemy { get; set; }
+        public int WinsPerkAlchemy { get; set; }
+
         [JsonProperty("wins_perk_chicken_bow")]
-        public int wins_perk_chicken_bow { get; set; }
+        public int WinsPerkChickenBow { get; set; }
+
         [JsonProperty("wins_perk_energy_drink")]
-        public int wins_perk_energy_drink { get; set; }
+        public int WinsPerkEnergyDrink { get; set; }
+
         [JsonProperty("wins_perk_bigger_bangs")]
-        public int wins_perk_bigger_bangs { get; set; }
+        public int WinsPerkBiggerBangs { get; set; }
+
         [JsonProperty("wins_perk_snow_golem")]
-        public int wins_perk_snow_golem { get; set; }
+        public int WinsPerkSnowGolem { get; set; }
+
         [JsonProperty("deaths_perk_flower_power")]
-        public int deaths_perk_flower_power { get; set; }
+        public int DeathsPerkFlowerPower { get; set; }
+
         [JsonProperty("losses_perk_flower_power")]
-        public int losses_perk_flower_power { get; set; }
+        public int LossesPerkFlowerPower { get; set; }
+
         [JsonProperty("wins_perk_endless_quiver")]
-        public int wins_perk_endless_quiver { get; set; }
+        public int WinsPerkEndlessQuiver { get; set; }
+
         [JsonProperty("deaths_perk_supply_drop")]
-        public int deaths_perk_supply_drop { get; set; }
+        public int DeathsPerkSupplyDrop { get; set; }
+
         [JsonProperty("kills_perk_supply_drop")]
-        public int kills_perk_supply_drop { get; set; }
+        public int KillsPerkSupplyDrop { get; set; }
+
         [JsonProperty("losses_perk_supply_drop")]
-        public int losses_perk_supply_drop { get; set; }
+        public int LossesPerkSupplyDrop { get; set; }
+
         [JsonProperty("wins_perk_blazing_arrows")]
-        public int wins_perk_blazing_arrows { get; set; }
+        public int WinsPerkBlazingArrows { get; set; }
+
         [JsonProperty("wins_perk_skeleton_jockey")]
-        public int wins_perk_skeleton_jockey { get; set; }
+        public int WinsPerkSkeletonJockey { get; set; }
+
         [JsonProperty("wins_perk_rampage")]
-        public int wins_perk_rampage { get; set; }
+        public int WinsPerkRampage { get; set; }
+
         [JsonProperty("wins_perk_pearl_absorption")]
-        public int wins_perk_pearl_absorption { get; set; }
+        public int WinsPerkPearlAbsorption { get; set; }
+
         [JsonProperty("wins_perk_nutritious")]
-        public int wins_perk_nutritious { get; set; }
+        public int WinsPerkNutritious { get; set; }
+
         [JsonProperty("perk_monster_hunter")]
-        public int perk_monster_hunter { get; set; }
+        public int PerkMonsterHunter { get; set; }
+
         [JsonProperty("perk_lifesteal")]
-        public int perk_lifesteal { get; set; }
+        public int PerkLifesteal { get; set; }
+
         [JsonProperty("perk_void_chest")]
-        public int perk_void_chest { get; set; }
+        public int PerkVoidChest { get; set; }
+
         [JsonProperty("perk_bounty_hunter")]
-        public int perk_bounty_hunter { get; set; }
+        public int PerkBountyHunter { get; set; }
+
         [JsonProperty("perk_double_jump")]
-        public int perk_double_jump { get; set; }
+        public int PerkDoubleJump { get; set; }
         #endregion
 
         #region frostnight kit
@@ -801,6 +925,655 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         public int MobsKilledKitJumpman { get; set; }
         #endregion
 
+        #region swordman kit
+        [JsonProperty("fastest_win_solo_kit_swordsman")]
+        public int FastestWinSoloKitSwordsman { get; set; }
 
+        [JsonProperty("kills_kit_swordsman")]
+        public int KillsKitSwordsman { get; set; }
+
+        [JsonProperty("void_kills_kit_swordsman")]
+        public int VoidKillsKitSwordsman { get; set; }
+
+        [JsonProperty("games_played_kit_swordsman")]
+        public int GamesPlayedKitSwordsman { get; set; }
+
+        [JsonProperty("melee_kills_kit_swordsman")]
+        public int MeleeKillsKitSwordsman { get; set; }
+
+        [JsonProperty("solo_wins_kit_swordsman")]
+        public int SoloWinsKitSwordsman { get; set; }
+
+        [JsonProperty("most_kills_game_kit_swordsman")]
+        public int MostKillsGameKitSwordsman { get; set; }
+
+        [JsonProperty("deaths_kit_swordsman")]
+        public int DeathsKitSwordsman { get; set; }
+
+        [JsonProperty("mobs_killed_kit_swordsman")]
+        public int MobsKilledKitSwordsman { get; set; }
+
+        [JsonProperty("longest_bow_shot_kit_swordsman")]
+        public int LongestBowShotKitSwordsman { get; set; }
+
+        [JsonProperty("bow_shots_kit_swordsman")]
+        public int BowShotsKitSwordsman { get; set; }
+
+        [JsonProperty("bow_hits_kit_swordsman")]
+        public int BowHitsKitSwordsman { get; set; }
+
+        [JsonProperty("enderchests_opened_kit_swordsman")]
+        public int EnderchestsOpenedKitSwordsman { get; set; }
+
+        [JsonProperty("assists_kit_swordsman")]
+        public int AssistsKitSwordsman { get; set; }
+
+        [JsonProperty("kit_swordsman_minor")]
+        public int KitSwordsmanMinor { get; set; }
+
+        [JsonProperty("mob_kills_kit_swordsman")]
+        public int MobKillsKitSwordsman { get; set; }
+
+        [JsonProperty("longest_bow_kill_kit_swordsman")]
+        public int LongestBowKillKitSwordsman { get; set; }
+
+        [JsonProperty("bow_kills_kit_swordsman")]
+        public int BowKillsKitSwordsman { get; set; }
+
+        [JsonProperty("fastest_win_team_war_kit_swordsman")]
+        public int FastestWinTeamWarKitSwordsman { get; set; }
+
+        [JsonProperty("team_war_wins_kit_swordsman")]
+        public int TeamWarWinsKitSwordsman { get; set; }
+
+        [JsonProperty("fastest_win_doubles_kit_swordsman")]
+        public int FastestWinDoublesKitSwordsman { get; set; }
+
+        [JsonProperty("doubles_wins_kit_swordsman")]
+        public int DoublesWinsKitSwordsman { get; set; }
+
+        [JsonProperty("kit_swordsman_master")]
+        public int KitSwordsmanMaster { get; set; }
+
+        [JsonProperty("mobs_spawned_kit_swordsman")]
+        public int MobsSpawnedKitSwordsman { get; set; }
+
+        [JsonProperty("cute_pants_found_kit_swordsman")]
+        public int CutePantsFoundKitSwordsman { get; set; }
+        #endregion
+
+        #region assassin kit
+        [JsonProperty("games_played_kit_assassin")]
+        public int GamesPlayedKitAssassin { get; set; }
+
+        [JsonProperty("deaths_kit_assassin")]
+        public int DeathsKitAssassin { get; set; }
+
+        [JsonProperty("assists_kit_assassin")]
+        public int AssistsKitAssassin { get; set; }
+
+        [JsonProperty("most_kills_game_kit_assassin")]
+        public int MostKillsGameKitAssassin { get; set; }
+
+        [JsonProperty("mobs_killed_kit_assassin")]
+        public int MobsKilledKitAssassin { get; set; }
+
+        [JsonProperty("melee_kills_kit_assassin")]
+        public int MeleeKillsKitAssassin { get; set; }
+
+        [JsonProperty("kills_kit_assassin")]
+        public int KillsKitAssassin { get; set; }
+
+        [JsonProperty("bow_shots_kit_assassin")]
+        public int BowShotsKitAssassin { get; set; }
+
+        [JsonProperty("void_kills_kit_assassin")]
+        public int VoidKillsKitAssassin { get; set; }
+
+        [JsonProperty("longest_bow_shot_kit_assassin")]
+        public int LongestBowShotKitAssassin { get; set; }
+
+        [JsonProperty("bow_hits_kit_assassin")]
+        public int BowHitsKitAssassin { get; set; }
+
+        [JsonProperty("enderchests_opened_kit_assassin")]
+        public int EnderchestsOpenedKitAssassin { get; set; }
+
+        [JsonProperty("fastest_win_solo_kit_assassin")]
+        public int FastestWinSoloKitAssassin { get; set; }
+
+        [JsonProperty("solo_wins_kit_assassin")]
+        public int SoloWinsKitAssassin { get; set; }
+
+        [JsonProperty("mob_kills_kit_assassin")]
+        public int MobKillsKitAssassin { get; set; }
+
+        [JsonProperty("kit_assassin_minor")]
+        public int KitAssassinMinor { get; set; }
+
+        [JsonProperty("fastest_win_team_war_kit_assassin")]
+        public int FastestWinTeamWarKitAssassin { get; set; }
+
+        [JsonProperty("team_war_wins_kit_assassin")]
+        public int TeamWarWinsKitAssassin { get; set; }
+
+        [JsonProperty("kit_assassin_master")]
+        public int KitAssassinMaster { get; set; }
+
+        [JsonProperty("longest_bow_kill_kit_assassin")]
+        public int LongestBowKillKitAssassin { get; set; }
+
+        [JsonProperty("bow_kills_kit_assassin")]
+        public int BowKillsKitAssassin { get; set; }
+
+        [JsonProperty("mobs_spawned_kit_assassin")]
+        public int MobsSpawnedKitAssassin { get; set; }
+
+        [JsonProperty("cute_pants_found_kit_assassin")]
+        public int CutePantsFoundKitAssassin { get; set; }
+        #endregion
+
+        #region necromancer
+        [JsonProperty("kit_necromancer_minor")]
+        public int KitNecromancerMinor { get; set; }
+
+        [JsonProperty("longest_bow_shot_kit_necromancer")]
+        public int LongestBowShotKitNecromancer { get; set; }
+
+        [JsonProperty("void_kills_kit_necromancer")]
+        public int VoidKillsKitNecromancer { get; set; }
+
+        [JsonProperty("bow_hits_kit_necromancer")]
+        public int BowHitsKitNecromancer { get; set; }
+
+        [JsonProperty("games_played_kit_necromancer")]
+        public int GamesPlayedKitNecromancer { get; set; }
+
+        [JsonProperty("bow_shots_kit_necromancer")]
+        public int BowShotsKitNecromancer { get; set; }
+
+        [JsonProperty("deaths_kit_necromancer")]
+        public int DeathsKitNecromancer { get; set; }
+
+        [JsonProperty("most_kills_game_kit_necromancer")]
+        public int MostKillsGameKitNecromancer { get; set; }
+
+        [JsonProperty("melee_kills_kit_necromancer")]
+        public int MeleeKillsKitNecromancer { get; set; }
+
+        [JsonProperty("kills_kit_necromancer")]
+        public int KillsKitNecromancer { get; set; }
+
+        [JsonProperty("mobs_killed_kit_necromancer")]
+        public int MobsKilledKitNecromancer { get; set; }
+
+        [JsonProperty("assists_kit_necromancer")]
+        public int AssistsKitNecromancer { get; set; }
+
+        [JsonProperty("mob_kills_kit_necromancer")]
+        public int MobKillsKitNecromancer { get; set; }
+
+        [JsonProperty("enderchests_opened_kit_necromancer")]
+        public int EnderchestsOpenedKitNecromancer { get; set; }
+
+        [JsonProperty("fastest_win_solo_kit_necromancer")]
+        public int FastestWinSoloKitNecromancer { get; set; }
+
+        [JsonProperty("solo_wins_kit_necromancer")]
+        public int SoloWinsKitNecromancer { get; set; }
+
+        [JsonProperty("kit_necromancer_master")]
+        public int KitNecromancerMaster { get; set; }
+
+        [JsonProperty("longest_bow_kill_kit_necromancer")]
+        public int LongestBowKillKitNecromancer { get; set; }
+
+        [JsonProperty("bow_kills_kit_necromancer")]
+        public int BowKillsKitNecromancer { get; set; }
+
+        [JsonProperty("mobs_spawned_kit_necromancer")]
+        public int MobsSpawnedKitNecromancer { get; set; }
+
+        [JsonProperty("cute_pants_found_kit_necromancer")]
+        public int CutePantsFoundKitNecromancer { get; set; }
+        #endregion
+
+        #region cleric kit
+        [JsonProperty("kit_cleric_minor")]
+        public int KitClericMinor { get; set; }
+
+        [JsonProperty("deaths_kit_cleric")]
+        public int DeathsKitCleric { get; set; }
+
+        [JsonProperty("games_played_kit_cleric")]
+        public int GamesPlayedKitCleric { get; set; }
+
+        [JsonProperty("kills_kit_cleric")]
+        public int KillsKitCleric { get; set; }
+
+        [JsonProperty("melee_kills_kit_cleric")]
+        public int MeleeKillsKitCleric { get; set; }
+
+        [JsonProperty("most_kills_game_kit_cleric")]
+        public int MostKillsGameKitCleric { get; set; }
+
+        [JsonProperty("void_kills_kit_cleric")]
+        public int VoidKillsKitCleric { get; set; }
+
+        [JsonProperty("enderchests_opened_kit_cleric")]
+        public int EnderchestsOpenedKitCleric { get; set; }
+
+        [JsonProperty("mobs_killed_kit_cleric")]
+        public int MobsKilledKitCleric { get; set; }
+
+        [JsonProperty("mob_kills_kit_cleric")]
+        public int MobKillsKitCleric { get; set; }
+
+        [JsonProperty("assists_kit_cleric")]
+        public int AssistsKitCleric { get; set; }
+
+        [JsonProperty("longest_bow_shot_kit_cleric")]
+        public int LongestBowShotKitCleric { get; set; }
+
+        [JsonProperty("bow_hits_kit_cleric")]
+        public int BowHitsKitCleric { get; set; }
+
+        [JsonProperty("bow_shots_kit_cleric")]
+        public int BowShotsKitCleric { get; set; }
+
+        [JsonProperty("fastest_win_solo_kit_cleric")]
+        public int FastestWinSoloKitCleric { get; set; }
+
+        [JsonProperty("solo_wins_kit_cleric")]
+        public int SoloWinsKitCleric { get; set; }
+
+        [JsonProperty("fastest_win_doubles_kit_cleric")]
+        public int FastestWinDoublesKitCleric { get; set; }
+
+        [JsonProperty("doubles_wins_kit_cleric")]
+        public int DoublesWinsKitCleric { get; set; }
+
+        [JsonProperty("kit_cleric_master")]
+        public int KitClericMaster { get; set; }
+
+        [JsonProperty("longest_bow_kill_kit_cleric")]
+        public int LongestBowKillKitCleric { get; set; }
+
+        [JsonProperty("bow_kills_kit_cleric")]
+        public int BowKillsKitCleric { get; set; }
+
+        [JsonProperty("fastest_win_team_war_kit_cleric")]
+        public int FastestWinTeamWarKitCleric { get; set; }
+
+        [JsonProperty("team_war_wins_kit_cleric")]
+        public int TeamWarWinsKitCleric { get; set; }
+
+        [JsonProperty("mobs_spawned_kit_cleric")]
+        public int MobsSpawnedKitCleric { get; set; }
+
+        [JsonProperty("cute_pants_found_kit_cleric")]
+        public int CutePantsFoundKitCleric { get; set; }
+        #endregion
+
+        #region scout kit
+        [JsonProperty("games_played_kit_scout")]
+        public int GamesPlayedKitScout { get; set; }
+
+        [JsonProperty("deaths_kit_scout")]
+        public int DeathsKitScout { get; set; }
+
+        [JsonProperty("kit_scout_minor")]
+        public int KitScoutMinor { get; set; }
+
+        [JsonProperty("kills_kit_scout")]
+        public int KillsKitScout { get; set; }
+
+        [JsonProperty("melee_kills_kit_scout")]
+        public int MeleeKillsKitScout { get; set; }
+
+        [JsonProperty("most_kills_game_kit_scout")]
+        public int MostKillsGameKitScout { get; set; }
+
+        [JsonProperty("void_kills_kit_scout")]
+        public int VoidKillsKitScout { get; set; }
+
+        [JsonProperty("assists_kit_scout")]
+        public int AssistsKitScout { get; set; }
+
+        [JsonProperty("kit_scout_master")]
+        public int KitScoutMaster { get; set; }
+
+        [JsonProperty("mobs_killed_kit_scout")]
+        public int MobsKilledKitScout { get; set; }
+
+        [JsonProperty("longest_bow_shot_kit_scout")]
+        public int LongestBowShotKitScout { get; set; }
+
+        [JsonProperty("fastest_win_solo_kit_scout")]
+        public int FastestWinSoloKitScout { get; set; }
+
+        [JsonProperty("enderchests_opened_kit_scout")]
+        public int EnderchestsOpenedKitScout { get; set; }
+
+        [JsonProperty("solo_wins_kit_scout")]
+        public int SoloWinsKitScout { get; set; }
+
+        [JsonProperty("bow_shots_kit_scout")]
+        public int BowShotsKitScout { get; set; }
+
+        [JsonProperty("bow_hits_kit_scout")]
+        public int BowHitsKitScout { get; set; }
+
+        [JsonProperty("fastest_win_team_war_kit_scout")]
+        public int FastestWinTeamWarKitScout { get; set; }
+
+        [JsonProperty("team_war_wins_kit_scout")]
+        public int TeamWarWinsKitScout { get; set; }
+
+        [JsonProperty("longest_bow_kill_kit_scout")]
+        public int LongestBowKillKitScout { get; set; }
+
+        [JsonProperty("bow_kills_kit_scout")]
+        public int BowKillsKitScout { get; set; }
+
+        [JsonProperty("fastest_win_doubles_kit_scout")]
+        public int FastestWinDoublesKitScout { get; set; }
+
+        [JsonProperty("doubles_wins_kit_scout")]
+        public int DoublesWinsKitScout { get; set; }
+
+        [JsonProperty("mob_kills_kit_scout")]
+        public int MobKillsKitScout { get; set; }
+
+        [JsonProperty("cute_pants_found_kit_scout")]
+        public int CutePantsFoundKitScout { get; set; }
+
+        [JsonProperty("mobs_spawned_kit_scout")]
+        public int MobsSpawnedKitScout { get; set; }
+        #endregion
+
+        #region guardian kit
+        [JsonProperty("kit_guardian_minor")]
+        public int KitGuardianMinor { get; set; }
+
+        [JsonProperty("games_played_kit_guardian")]
+        public int GamesPlayedKitGuardian { get; set; }
+
+        [JsonProperty("most_kills_game_kit_guardian")]
+        public int MostKillsGameKitGuardian { get; set; }
+
+        [JsonProperty("void_kills_kit_guardian")]
+        public int VoidKillsKitGuardian { get; set; }
+
+        [JsonProperty("kills_kit_guardian")]
+        public int KillsKitGuardian { get; set; }
+
+        [JsonProperty("deaths_kit_guardian")]
+        public int DeathsKitGuardian { get; set; }
+
+        [JsonProperty("melee_kills_kit_guardian")]
+        public int MeleeKillsKitGuardian { get; set; }
+
+        [JsonProperty("assists_kit_guardian")]
+        public int AssistsKitGuardian { get; set; }
+
+        [JsonProperty("bow_shots_kit_guardian")]
+        public int BowShotsKitGuardian { get; set; }
+
+        [JsonProperty("fastest_win_solo_kit_guardian")]
+        public int FastestWinSoloKitGuardian { get; set; }
+
+        [JsonProperty("enderchests_opened_kit_guardian")]
+        public int EnderchestsOpenedKitGuardian { get; set; }
+
+        [JsonProperty("solo_wins_kit_guardian")]
+        public int SoloWinsKitGuardian { get; set; }
+
+        [JsonProperty("mobs_killed_kit_guardian")]
+        public int MobsKilledKitGuardian { get; set; }
+
+        [JsonProperty("longest_bow_shot_kit_guardian")]
+        public int LongestBowShotKitGuardian { get; set; }
+
+        [JsonProperty("bow_hits_kit_guardian")]
+        public int BowHitsKitGuardian { get; set; }
+
+        [JsonProperty("kit_guardian_master")]
+        public int KitGuardianMaster { get; set; }
+
+        [JsonProperty("mob_kills_kit_guardian")]
+        public int MobKillsKitGuardian { get; set; }
+
+        [JsonProperty("longest_bow_kill_kit_guardian")]
+        public int LongestBowKillKitGuardian { get; set; }
+
+        [JsonProperty("bow_kills_kit_guardian")]
+        public int BowKillsKitGuardian { get; set; }
+
+        [JsonProperty("fastest_win_doubles_kit_guardian")]
+        public int FastestWinDoublesKitGuardian { get; set; }
+
+        [JsonProperty("doubles_wins_kit_guardian")]
+        public int DoublesWinsKitGuardian { get; set; }
+
+        [JsonProperty("fastest_win_team_war_kit_guardian")]
+        public int FastestWinTeamWarKitGuardian { get; set; }
+
+        [JsonProperty("team_war_wins_kit_guardian")]
+        public int TeamWarWinsKitGuardian { get; set; }
+
+        [JsonProperty("mobs_spawned_kit_guardian")]
+        public int MobsSpawnedKitGuardian { get; set; }
+        #endregion
+
+        #region berserker kit
+        [JsonProperty("most_kills_game_kit_berserker")]
+        public int MostKillsGameKitBerserker { get; set; }
+
+        [JsonProperty("games_played_kit_berserker")]
+        public int GamesPlayedKitBerserker { get; set; }
+
+        [JsonProperty("kills_kit_berserker")]
+        public int KillsKitBerserker { get; set; }
+
+        [JsonProperty("deaths_kit_berserker")]
+        public int DeathsKitBerserker { get; set; }
+
+        [JsonProperty("kit_berserker_minor")]
+        public int KitBerserkerMinor { get; set; }
+
+        [JsonProperty("melee_kills_kit_berserker")]
+        public int MeleeKillsKitBerserker { get; set; }
+
+        [JsonProperty("mobs_killed_kit_berserker")]
+        public int MobsKilledKitBerserker { get; set; }
+
+        [JsonProperty("void_kills_kit_berserker")]
+        public int VoidKillsKitBerserker { get; set; }
+
+        [JsonProperty("kit_berserker_master")]
+        public int KitBerserkerMaster { get; set; }
+
+        [JsonProperty("bow_shots_kit_berserker")]
+        public int BowShotsKitBerserker { get; set; }
+
+        [JsonProperty("enderchests_opened_kit_berserker")]
+        public int EnderchestsOpenedKitBerserker { get; set; }
+
+        [JsonProperty("assists_kit_berserker")]
+        public int AssistsKitBerserker { get; set; }
+
+        [JsonProperty("fastest_win_solo_kit_berserker")]
+        public int FastestWinSoloKitBerserker { get; set; }
+
+        [JsonProperty("solo_wins_kit_berserker")]
+        public int SoloWinsKitBerserker { get; set; }
+
+        [JsonProperty("mob_kills_kit_berserker")]
+        public int MobKillsKitBerserker { get; set; }
+
+        [JsonProperty("mobs_spawned_kit_berserker")]
+        public int MobsSpawnedKitBerserker { get; set; }
+
+        [JsonProperty("longest_bow_shot_kit_berserker")]
+        public int LongestBowShotKitBerserker { get; set; }
+
+        [JsonProperty("bow_hits_kit_berserker")]
+        public int BowHitsKitBerserker { get; set; }
+
+        [JsonProperty("longest_bow_kill_kit_berserker")]
+        public int LongestBowKillKitBerserker { get; set; }
+
+        [JsonProperty("bow_kills_kit_berserker")]
+        public int BowKillsKitBerserker { get; set; }
+        #endregion
+
+        #region archer kit
+        [JsonProperty("kit_archer_minor")]
+        public int KitArcherMinor { get; set; }
+
+        [JsonProperty("longest_bow_shot_kit_archer")]
+        public int LongestBowShotKitArcher { get; set; }
+
+        [JsonProperty("void_kills_kit_archer")]
+        public int VoidKillsKitArcher { get; set; }
+
+        [JsonProperty("bow_hits_kit_archer")]
+        public int BowHitsKitArcher { get; set; }
+
+        [JsonProperty("kills_kit_archer")]
+        public int KillsKitArcher { get; set; }
+
+        [JsonProperty("bow_shots_kit_archer")]
+        public int BowShotsKitArcher { get; set; }
+
+        [JsonProperty("games_played_kit_archer")]
+        public int GamesPlayedKitArcher { get; set; }
+
+        [JsonProperty("most_kills_game_kit_archer")]
+        public int MostKillsGameKitArcher { get; set; }
+
+        [JsonProperty("deaths_kit_archer")]
+        public int DeathsKitArcher { get; set; }
+
+        [JsonProperty("enderchests_opened_kit_archer")]
+        public int EnderchestsOpenedKitArcher { get; set; }
+
+        [JsonProperty("melee_kills_kit_archer")]
+        public int MeleeKillsKitArcher { get; set; }
+
+        [JsonProperty("assists_kit_archer")]
+        public int AssistsKitArcher { get; set; }
+
+        [JsonProperty("mobs_killed_kit_archer")]
+        public int MobsKilledKitArcher { get; set; }
+
+        [JsonProperty("longest_bow_kill_kit_archer")]
+        public int LongestBowKillKitArcher { get; set; }
+
+        [JsonProperty("bow_kills_kit_archer")]
+        public int BowKillsKitArcher { get; set; }
+
+        [JsonProperty("fastest_win_solo_kit_archer")]
+        public int FastestWinSoloKitArcher { get; set; }
+
+        [JsonProperty("solo_wins_kit_archer")]
+        public int SoloWinsKitArcher { get; set; }
+
+        [JsonProperty("kit_archer_master")]
+        public int KitArcherMaster { get; set; }
+
+        [JsonProperty("mobs_spawned_kit_archer")]
+        public int MobsSpawnedKitArcher { get; set; }
+
+        [JsonProperty("cute_pants_found_kit_archer")]
+        public int CutePantsFoundKitArcher { get; set; }
+
+        [JsonProperty("mob_kills_kit_archer")]
+        public int MobKillsKitArcher { get; set; }
+
+        [JsonProperty("fastest_win_doubles_kit_archer")]
+        public int FastestWinDoublesKitArcher { get; set; }
+
+        [JsonProperty("doubles_wins_kit_archer")]
+        public int DoublesWinsKitArcher { get; set; }
+        #endregion
+
+        #region treasure hunter kit
+        [JsonProperty("kit_treasure_hunter_minor")]
+        public int KitTreasureHunterMinor { get; set; }
+
+        [JsonProperty("fastest_win_solo_kit_treasure_hunter")]
+        public int FastestWinSoloKitTreasureHunter { get; set; }
+
+        [JsonProperty("games_played_kit_treasure_hunter")]
+        public int GamesPlayedKitTreasureHunter { get; set; }
+
+        [JsonProperty("enderchests_opened_kit_treasure_hunter")]
+        public int EnderchestsOpenedKitTreasureHunter { get; set; }
+
+        [JsonProperty("mobs_spawned_kit_treasure_hunter")]
+        public int MobsSpawnedKitTreasureHunter { get; set; }
+
+        [JsonProperty("solo_wins_kit_treasure_hunter")]
+        public int SoloWinsKitTreasureHunter { get; set; }
+
+        [JsonProperty("kills_kit_treasure_hunter")]
+        public int KillsKitTreasureHunter { get; set; }
+
+        [JsonProperty("void_kills_kit_treasure_hunter")]
+        public int VoidKillsKitTreasureHunter { get; set; }
+
+        [JsonProperty("assists_kit_treasure_hunter")]
+        public int AssistsKitTreasureHunter { get; set; }
+
+        [JsonProperty("most_kills_game_kit_treasure_hunter")]
+        public int MostKillsGameKitTreasureHunter { get; set; }
+
+        [JsonProperty("melee_kills_kit_treasure_hunter")]
+        public int MeleeKillsKitTreasureHunter { get; set; }
+
+        [JsonProperty("deaths_kit_treasure_hunter")]
+        public int DeathsKitTreasureHunter { get; set; }
+
+        [JsonProperty("longest_bow_shot_kit_treasure_hunter")]
+        public int LongestBowShotKitTreasureHunter { get; set; }
+
+        [JsonProperty("bow_shots_kit_treasure_hunter")]
+        public int BowShotsKitTreasureHunter { get; set; }
+
+        [JsonProperty("bow_hits_kit_treasure_hunter")]
+        public int BowHitsKitTreasureHunter { get; set; }
+
+        [JsonProperty("cute_pants_found_kit_treasure_hunter")]
+        public int CutePantsFoundKitTreasureHunter { get; set; }
+
+        [JsonProperty("kit_treasure_hunter_master")]
+        public int KitTreasureHunterMaster { get; set; }
+
+        [JsonProperty("mob_kills_kit_treasure_hunter")]
+        public int MobKillsKitTreasureHunter { get; set; }
+
+        [JsonProperty("mobs_killed_kit_treasure_hunter")]
+        public int MobsKilledKitTreasureHunter { get; set; }
+
+        [JsonProperty("fastest_win_team_war_kit_treasure_hunter")]
+        public int FastestWinTeamWarKitTreasureHunter { get; set; }
+
+        [JsonProperty("team_war_wins_kit_treasure_hunter")]
+        public int TeamWarWinsKitTreasureHunter { get; set; }
+
+        [JsonProperty("fastest_win_doubles_kit_treasure_hunter")]
+        public int FastestWinDoublesKitTreasureHunter { get; set; }
+
+        [JsonProperty("doubles_wins_kit_treasure_hunter")]
+        public int DoublesWinsKitTreasureHunter { get; set; }
+
+        [JsonProperty("longest_bow_kill_kit_treasure_hunter")]
+        public int LongestBowKillKitTreasureHunter { get; set; }
+
+        [JsonProperty("bow_kills_kit_treasure_hunter")]
+        public int BowKillsKitTreasureHunter { get; set; }
+        #endregion
     }
 }

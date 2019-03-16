@@ -2,7 +2,7 @@
 
 namespace Hypixel.NET.PlayerApi
 {
-    public class PlayerByPlayerName
+    public class GetPlayerData
     {
         [JsonProperty("player")]
         public Player.Player Player { get; set; }
