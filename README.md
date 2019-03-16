@@ -2,6 +2,9 @@ Hypixel.NET C# Wrapper
 ======
 This is my C# implmentation of the Hypixel API
 
+### NuGet Package
+The NuGet package can be found at https://www.nuget.org/packages/Hypixel.NET/
+
 ### Examples
 
 Here are some examples from the Example project
