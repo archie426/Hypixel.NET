@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.WebSockets;
 using Hypixel.NET;
 
 namespace Examples
