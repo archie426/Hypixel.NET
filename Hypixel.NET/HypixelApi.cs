@@ -17,12 +17,14 @@ namespace Hypixel.NET
     public class HypixelApi
     {
         private readonly string _apiKey;
+        private readonly int _cacheStoreTime;
         private static int _apiRequests;
         private static readonly MemoryCache ApiMemoryCache = MemoryCache.Default;
 
-        public HypixelApi(string apiKey)
+        public HypixelApi(string apiKey, int cacheTimeInSeconds)
         {
             _apiKey = apiKey;
+            _cacheStoreTime = cacheTimeInSeconds;
             var apiResetTimer = new Timer(60000); //Hypixel API only allows 120 requests per 60s
             apiResetTimer.Elapsed += ResetApiLimit;
         }
@@ -31,7 +33,7 @@ namespace Hypixel.NET
         {
             var cacheItemPolicy = new CacheItemPolicy
             {
-                AbsoluteExpiration = DateTime.Now.AddSeconds(10),
+                AbsoluteExpiration = DateTime.Now.AddSeconds(_cacheStoreTime),
             };
 
             ApiMemoryCache.Add(itemType, apiResponse, cacheItemPolicy);
