@@ -19,7 +19,7 @@ namespace Examples
     {
         static void Main(string[] args)
         {
-            var hypixel = new HypixelApi("YOUR API KEY");
+            var hypixel = new HypixelApi("YOUR API KEY", 600);
 
             var playerRequest = hypixel.GetUserByPlayerName("barrows");
             Console.WriteLine(playerRequest.Player.Stats.SkyWars.Kills);
