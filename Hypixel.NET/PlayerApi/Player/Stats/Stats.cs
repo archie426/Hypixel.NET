@@ -73,5 +73,9 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
 
         [JsonProperty("BuildBattle")]
         public BuildBattle BuildBattle { get; set; }
+
+        [JsonProperty("Pit")]
+        public Pit Pit { get; set; }
+
+        }
     }
-}
