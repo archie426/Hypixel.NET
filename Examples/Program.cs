@@ -15,7 +15,7 @@ namespace Examples
             var playerUuidRequest = hypixel.GetUserByUuid("4c38f0a6-a36f-4f06-985c-7851b3853ccb");
             Console.WriteLine(playerUuidRequest.Player.Stats.SkyWars.ArrowsShot);
 
-            var guildByGuildName = hypixel.GetGuildByGuildName("The Scrobobboplers");
+            var guildByGuildName = hypixel.GetGuildByGuildName("Develop");
             Console.WriteLine(guildByGuildName.Guild.Coins);
 
             var guildByPlayerName = hypixel.GetGuildByPlayerName("barrows");
@@ -41,6 +41,9 @@ namespace Examples
 
             var getLeaderboards = hypixel.GetLeaderboards();
             Console.WriteLine(getLeaderboards.Leaderboards.SkyWars.Count);
+
+            var getGameCounts = hypixel.GetGameCounts();
+            Console.WriteLine(getGameCounts.Games.Limbo);
         }
 
     }

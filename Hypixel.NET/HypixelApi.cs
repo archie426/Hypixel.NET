@@ -7,6 +7,7 @@ using Hypixel.NET.GuildApi;
 using Hypixel.NET.KeyApi;
 using Hypixel.NET.LeaderboardsApi;
 using Hypixel.NET.PlayerApi;
+using Hypixel.NET.PlayerApi.Player.GameCounts;
 using Hypixel.NET.WatchdogStatsApi;
 using Newtonsoft.Json;
 using RestSharp;
@@ -228,6 +229,16 @@ namespace Hypixel.NET
             var response = client.Execute(request);
             var responseDeserialized = JsonConvert.DeserializeObject<GetGuild>(response.Content);
 
+            string message;
+            ApplicationException hypixelException;
+
+            //Throw expection
+            if (responseDeserialized.Guild == null)
+            {
+                message = $"{responseDeserialized.Cause} That guild does not exist";
+                hypixelException = new ApplicationException(message, response.ErrorException);
+                throw hypixelException;
+            }
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)
             {
@@ -238,8 +249,8 @@ namespace Hypixel.NET
             }
 
             //If the response wasn't successful, an exception will be thrown
-            var message = $"{responseDeserialized.Cause} Please double check your request information";
-            var hypixelException = new ApplicationException(message, response.ErrorException);
+            message = $"{responseDeserialized.Cause} Please double check your request information";
+            hypixelException = new ApplicationException(message, response.ErrorException);
             throw hypixelException;
         }
 
@@ -379,6 +390,30 @@ namespace Hypixel.NET
             //Get the response and Deserialize
             var response = client.Execute(request);
             var responseDeserialized = JsonConvert.DeserializeObject<GetLeaderboards>(response.Content);
+
+            //Verify that the request was successful
+            if (responseDeserialized.WasSuccessful)
+            {
+                _apiRequests = _apiRequests + 1;
+                return responseDeserialized;
+            }
+
+            //If the response wasn't successful, an exception will be thrown
+            var message = $"{responseDeserialized.Cause} Please double check your request information";
+            var hypixelException = new ApplicationException(message, response.ErrorException);
+            throw hypixelException;
+        }
+
+        public GetGameCounts GetGameCounts()
+        {
+            RateLimitCheck();
+            //Create the request
+            var client = new RestClient("https://api.hypixel.net/");
+            var request = new RestRequest($"gamecounts?key={_apiKey}", Method.GET);
+
+            //Get the response and Deserialize
+            var response = client.Execute(request);
+            var responseDeserialized = JsonConvert.DeserializeObject<GetGameCounts>(response.Content);
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)
