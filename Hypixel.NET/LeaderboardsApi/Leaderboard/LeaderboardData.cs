@@ -6,15 +6,15 @@ namespace Hypixel.NET.LeaderboardsApi.Leaderboard
     public class LeaderboardData
     {
         [JsonProperty("prefix")]
-        public string Prefix { get; set; }
+        public string Prefix { get; private set; }
 
         [JsonProperty("count")]
-        public long Count { get; set; }
+        public long Count { get; private set; }
 
         [JsonProperty("leaders")]
-        public List<string> Leaders { get; set; }
+        public List<string> Leaders { get; private set; }
 
         [JsonProperty("title")]
-        public string Title { get; set; }
+        public string Title { get; private set; }
     }
 }

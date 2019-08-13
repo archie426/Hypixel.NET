@@ -7,80 +7,80 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
     {
         #region general stats	
         [JsonProperty("kills")]
-        public long Kills { get; set; }
+        public long Kills { get; private set; }
 
         [JsonProperty("score")]
-        public long Score { get; set; }
+        public long Score { get; private set; }
 
         [JsonProperty("coins")]
-        public long Coins { get; set; }
+        public long Coins { get; private set; }
 
         [JsonProperty("deaths")]
-        public long Deaths { get; set; }
+        public long Deaths { get; private set; }
 
         [JsonProperty("heads_eaten")]
-        public long HeadsEaten { get; set; }
+        public long HeadsEaten { get; private set; }
 
         [JsonProperty("packages")]
-        public List<string> Packages { get; set; }
+        public List<string> Packages { get; private set; }
 
         [JsonProperty("equippedKit")]
-        public string EquippedKit { get; set; }
+        public string EquippedKit { get; private set; }
 
         [JsonProperty("wins")]
-        public long Wins { get; set; }
+        public long Wins { get; private set; }
         #endregion
 
         #region solo	
         [JsonProperty("deaths_solo")]
-        public long DeathsSolo { get; set; }
+        public long DeathsSolo { get; private set; }
 
         [JsonProperty("wins_solo")]
-        public long WinsSolo { get; set; }
+        public long WinsSolo { get; private set; }
 
         [JsonProperty("kills_solo")]
-        public long KillsSolo { get; set; }
+        public long KillsSolo { get; private set; }
 
         [JsonProperty("heads_eaten_solo")]
-        public long HeadsEatenSolo { get; set; }
+        public long HeadsEatenSolo { get; private set; }
         #endregion
 
         #region brawl	
         [JsonProperty("deaths_brawl")]
-        public long DeathsBrawl { get; set; }
+        public long DeathsBrawl { get; private set; }
 
         [JsonProperty("heads_eaten_brawl")]
-        public long HeadsEatenBrawl { get; set; }
+        public long HeadsEatenBrawl { get; private set; }
 
         [JsonProperty("kills_brawl")]
-        public long KillsBrawl { get; set; }
+        public long KillsBrawl { get; private set; }
 
         [JsonProperty("wins_brawl")]
-        public long WinsBrawl { get; set; }
+        public long WinsBrawl { get; private set; }
 
         [JsonProperty("kills_solo brawl")]
-        public long KillsSoloBrawl { get; set; }
+        public long KillsSoloBrawl { get; private set; }
 
         [JsonProperty("deaths_solo brawl")]
-        public long DeathsSoloBrawl { get; set; }
+        public long DeathsSoloBrawl { get; private set; }
 
         [JsonProperty("heads_eaten_solo brawl")]
-        public long HeadsEatenSoloBrawl { get; set; }
+        public long HeadsEatenSoloBrawl { get; private set; }
 
         [JsonProperty("wins_solo brawl")]
-        public long WinsSoloBrawl { get; set; }
+        public long WinsSoloBrawl { get; private set; }
 
         [JsonProperty("kills_duo brawl")]
-        public long KillsDuoBrawl { get; set; }
+        public long KillsDuoBrawl { get; private set; }
 
         [JsonProperty("deaths_duo brawl")]
-        public long DeathsDuoBrawl { get; set; }
+        public long DeathsDuoBrawl { get; private set; }
 
         [JsonProperty("heads_eaten_duo brawl")]
-        public long HeadsEatenDuoBrawl { get; set; }
+        public long HeadsEatenDuoBrawl { get; private set; }
 
         [JsonProperty("wins_duo brawl")]
-        public long WinsDuoBrawl { get; set; }
+        public long WinsDuoBrawl { get; private set; }
         #endregion
     }
 }

@@ -8,27 +8,27 @@ namespace Hypixel.NET.PlayerApi.Player.Settings
     public class Settings
     {
         [JsonProperty("bloodVisibility")]
-        public bool BloodVisibility { get; set; }
+        public bool BloodVisibility { get; private set; }
 
         [JsonProperty("partyInvitePrivacy")]
-        public string PartyInvitePrivacy { get; set; }
+        public string PartyInvitePrivacy { get; private set; }
 
         [JsonProperty("profanityLevel_PM")]
-        public string ProfanityLevelPm { get; set; }
+        public string ProfanityLevelPm { get; private set; }
 
         [JsonProperty("profanityLevel_GUILD")]
-        public string ProfanityLevelGuild { get; set; }
+        public string ProfanityLevelGuild { get; private set; }
 
         [JsonProperty("profanityLevel_PARTY")]
-        public string ProfanityLevelParty { get; set; }
+        public string ProfanityLevelParty { get; private set; }
 
         [JsonProperty("profanityLevel")]
-        public string ProfanityLevel { get; set; }
+        public string ProfanityLevel { get; private set; }
 
         [JsonProperty("duelInvitePrivacy")]
-        public string DuelInvitePrivacy { get; set; }
+        public string DuelInvitePrivacy { get; private set; }
 
         [JsonProperty("guildOnlineList")]
-        public bool GuildOnlineList { get; set; }
+        public bool GuildOnlineList { get; private set; }
     }
 }

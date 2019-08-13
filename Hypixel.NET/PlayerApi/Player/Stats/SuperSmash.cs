@@ -8,360 +8,360 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
     public class SuperSmash
     {
         [JsonProperty("lastLevel_THE_BULK")]
-        public int LastLevelTheBulk { get; set; }
+        public int LastLevelTheBulk { get; private set; }
 
         [JsonProperty("active_class")]
-        public string ActiveClass { get; set; }
+        public string ActiveClass { get; private set; }
 
         [JsonProperty("win_streak")]
-        public int WinStreak { get; set; }
+        public int WinStreak { get; private set; }
 
         [JsonProperty("class_stats")]
-        public ClassStats ClassStats { get; set; }
+        public ClassStats ClassStats { get; private set; }
 
         [JsonProperty("smasher")]
-        public int Smasher { get; set; }
+        public int Smasher { get; private set; }
 
         [JsonProperty("coins")]
-        public int Coins { get; set; }
+        public int Coins { get; private set; }
 
         [JsonProperty("smasher_normal")]
-        public int SmasherNormal { get; set; }
+        public int SmasherNormal { get; private set; }
 
         [JsonProperty("losses_normal")]
-        public int LossesNormal { get; set; }
+        public int LossesNormal { get; private set; }
 
         [JsonProperty("kills")]
-        public int Kills { get; set; }
+        public int Kills { get; private set; }
 
         [JsonProperty("damage_dealt")]
-        public int DamageDealt { get; set; }
+        public int DamageDealt { get; private set; }
 
         [JsonProperty("losses")]
-        public int Losses { get; set; }
+        public int Losses { get; private set; }
 
         [JsonProperty("smashed_normal")]
-        public int SmashedNormal { get; set; }
+        public int SmashedNormal { get; private set; }
 
         [JsonProperty("deaths_normal")]
-        public int DeathsNormal { get; set; }
+        public int DeathsNormal { get; private set; }
 
         [JsonProperty("games_normal")]
-        public int GamesNormal { get; set; }
+        public int GamesNormal { get; private set; }
 
         [JsonProperty("smashed")]
-        public int Smashed { get; set; }
+        public int Smashed { get; private set; }
 
         [JsonProperty("kills_normal")]
-        public int KillsNormal { get; set; }
+        public int KillsNormal { get; private set; }
 
         [JsonProperty("deaths")]
-        public int Deaths { get; set; }
+        public int Deaths { get; private set; }
 
         [JsonProperty("games")]
-        public int Games { get; set; }
+        public int Games { get; private set; }
 
         [JsonProperty("damage_dealt_normal")]
-        public int DamageDealtNormal { get; set; }
+        public int DamageDealtNormal { get; private set; }
 
         [JsonProperty("xp_THE_BULK")]
-        public int XpTheBulk { get; set; }
+        public int XpTheBulk { get; private set; }
 
         [JsonProperty("smash_level_total")]
-        public int SmashLevelTotal { get; set; }
+        public int SmashLevelTotal { get; private set; }
 
         [JsonProperty("smashLevel")]
-        public int SmashLevel { get; set; }
+        public int SmashLevel { get; private set; }
 
         [JsonProperty("wins")]
-        public int Wins { get; set; }
+        public int Wins { get; private set; }
 
         [JsonProperty("wins_normal")]
-        public int WinsNormal { get; set; }
+        public int WinsNormal { get; private set; }
 
         [JsonProperty("FRIENDS_gamesDay")]
-        public int FriendsGamesDay { get; set; }
+        public int FriendsGamesDay { get; private set; }
 
         [JsonProperty("friend_losses")]
-        public int FriendLosses { get; set; }
+        public int FriendLosses { get; private set; }
 
         [JsonProperty("friend_wins")]
-        public int FriendWins { get; set; }
+        public int FriendWins { get; private set; }
 
         [JsonProperty("friend_wins_normal")]
-        public int FriendWinsNormal { get; set; }
+        public int FriendWinsNormal { get; private set; }
 
         [JsonProperty("assists")]
-        public int Assists { get; set; }
+        public int Assists { get; private set; }
 
         [JsonProperty("assists_normal")]
-        public int AssistsNormal { get; set; }
+        public int AssistsNormal { get; private set; }
 
         [JsonProperty("quits")]
-        public int Quits { get; set; }
+        public int Quits { get; private set; }
 
         [JsonProperty("friend_losses_normal")]
-        public int FriendLossesNormal { get; set; }
+        public int FriendLossesNormal { get; private set; }
 
         [JsonProperty("xp_CAKE_MONSTER")]
-        public int XpCakeMonster { get; set; }
+        public int XpCakeMonster { get; private set; }
 
         [JsonProperty("lastLevel_CAKE_MONSTER")]
-        public int LastLevelCakeMonster { get; set; }
+        public int LastLevelCakeMonster { get; private set; }
 
         [JsonProperty("deaths_2v2")]
-        public int Deaths2V2 { get; set; }
+        public int Deaths2V2 { get; private set; }
 
         [JsonProperty("wins_2v2")]
-        public int Wins2V2 { get; set; }
+        public int Wins2V2 { get; private set; }
 
         [JsonProperty("kills_2v2")]
-        public int Kills2V2 { get; set; }
+        public int Kills2V2 { get; private set; }
 
         [JsonProperty("games_2v2")]
-        public int Games2V2 { get; set; }
+        public int Games2V2 { get; private set; }
 
         [JsonProperty("damage_dealt_2v2")]
-        public int DamageDealt2V2 { get; set; }
+        public int DamageDealt2V2 { get; private set; }
 
         [JsonProperty("xp_GENERAL_CLUCK")]
-        public int XpGeneralCluck { get; set; }
+        public int XpGeneralCluck { get; private set; }
 
         [JsonProperty("lastLevel_GENERAL_CLUCK")]
-        public int LastLevelGeneralCluck { get; set; }
+        public int LastLevelGeneralCluck { get; private set; }
 
         [JsonProperty("smashed_2v2")]
-        public int Smashed2V2 { get; set; }
+        public int Smashed2V2 { get; private set; }
 
         [JsonProperty("smasher_2v2")]
-        public int Smasher2V2 { get; set; }
+        public int Smasher2V2 { get; private set; }
 
         [JsonProperty("losses_2v2")]
-        public int Losses2V2 { get; set; }
+        public int Losses2V2 { get; private set; }
 
         [JsonProperty("xp_BOTMUN")]
-        public int XpBotmun { get; set; }
+        public int XpBotmun { get; private set; }
 
         [JsonProperty("lastLevel_BOTMUN")]
-        public int LastLevelBotmun { get; set; }
+        public int LastLevelBotmun { get; private set; }
 
         [JsonProperty("damage_dealt_teams")]
-        public int DamageDealtTeams { get; set; }
+        public int DamageDealtTeams { get; private set; }
 
         [JsonProperty("wins_teams")]
-        public int WinsTeams { get; set; }
+        public int WinsTeams { get; private set; }
 
         [JsonProperty("smashed_teams")]
-        public int SmashedTeams { get; set; }
+        public int SmashedTeams { get; private set; }
 
         [JsonProperty("kills_teams")]
-        public int KillsTeams { get; set; }
+        public int KillsTeams { get; private set; }
 
         [JsonProperty("smasher_teams")]
-        public int SmasherTeams { get; set; }
+        public int SmasherTeams { get; private set; }
 
         [JsonProperty("deaths_teams")]
-        public int DeathsTeams { get; set; }
+        public int DeathsTeams { get; private set; }
 
         [JsonProperty("games_teams")]
-        public int GamesTeams { get; set; }
+        public int GamesTeams { get; private set; }
 
         [JsonProperty("losses_teams")]
-        public int LossesTeams { get; set; }
+        public int LossesTeams { get; private set; }
 
         [JsonProperty("xp_FROSTY")]
-        public int XpFrosty { get; set; }
+        public int XpFrosty { get; private set; }
 
         [JsonProperty("lastLevel_FROSTY")]
-        public int LastLevelFrosty { get; set; }
+        public int LastLevelFrosty { get; private set; }
 
         [JsonProperty("xp_TINMAN")]
-        public int XpTinman { get; set; }
+        public int XpTinman { get; private set; }
 
         [JsonProperty("lastLevel_TINMAN")]
-        public int LastLevelTinman { get; set; }
+        public int LastLevelTinman { get; private set; }
 
         [JsonProperty("lastLevel_MARAUDER")]
-        public int LastLevelMarauder { get; set; }
+        public int LastLevelMarauder { get; private set; }
 
         [JsonProperty("xp_MARAUDER")]
-        public int XpMarauder { get; set; }
+        public int XpMarauder { get; private set; }
 
         [JsonProperty("xp_GOKU")]
-        public int XpGoku { get; set; }
+        public int XpGoku { get; private set; }
 
         [JsonProperty("lastLevel_GOKU")]
-        public int LastLevelGoku { get; set; }
+        public int LastLevelGoku { get; private set; }
 
         [JsonProperty("xp_SPODERMAN")]
-        public int XpSpoderman { get; set; }
+        public int XpSpoderman { get; private set; }
 
         [JsonProperty("lastLevel_SPODERMAN")]
-        public int LastLevelSpoderman { get; set; }
+        public int LastLevelSpoderman { get; private set; }
 
         [JsonProperty("xp_PUG")]
-        public int XpPug { get; set; }
+        public int XpPug { get; private set; }
 
         [JsonProperty("lastLevel_PUG")]
-        public int LastLevelPug { get; set; }
+        public int LastLevelPug { get; private set; }
 
         [JsonProperty("pg_FROSTY")]
-        public int PgFrosty { get; set; }
+        public int PgFrosty { get; private set; }
 
         [JsonProperty("votes_Gunmetal")]
-        public int VotesGunmetal { get; set; }
+        public int VotesGunmetal { get; private set; }
 
         [JsonProperty("xp_SKULLFIRE")]
-        public int XpSkullfire { get; set; }
+        public int XpSkullfire { get; private set; }
 
         [JsonProperty("lastLevel_SKULLFIRE")]
-        public int LastLevelSkullfire { get; set; }
+        public int LastLevelSkullfire { get; private set; }
 
         [JsonProperty("votes_Equinox")]
-        public int VotesEquinox { get; set; }
+        public int VotesEquinox { get; private set; }
 
         [JsonProperty("pg_THE_BULK")]
-        public int PgTheBulk { get; set; }
+        public int PgTheBulk { get; private set; }
 
         [JsonProperty("masterArmor_FROSTY")]
-        public bool MasterArmorFrosty { get; set; }
+        public bool MasterArmorFrosty { get; private set; }
 
         [JsonProperty("xp_SHOOP_DA_WHOOP")]
-        public int XpShoopDaWhoop { get; set; }
+        public int XpShoopDaWhoop { get; private set; }
 
         [JsonProperty("lastLevel_SHOOP_DA_WHOOP")]
-        public int LastLevelShoopDaWhoop { get; set; }
+        public int LastLevelShoopDaWhoop { get; private set; }
 
         [JsonProperty("pg_TINMAN")]
-        public int PgTinman { get; set; }
+        public int PgTinman { get; private set; }
 
         [JsonProperty("pg_SHOOP_DA_WHOOP")]
-        public int PgShoopDaWhoop { get; set; }
+        public int PgShoopDaWhoop { get; private set; }
 
         [JsonProperty("pg_BOTMUN")]
-        public int PgBotmun { get; set; }
+        public int PgBotmun { get; private set; }
 
         [JsonProperty("masterArmor_THE_BULK")]
-        public bool MasterArmorTheBulk { get; set; }
+        public bool MasterArmorTheBulk { get; private set; }
 
         [JsonProperty("xp_DUSK_CRAWLER")]
-        public int XpDuskCrawler { get; set; }
+        public int XpDuskCrawler { get; private set; }
 
         [JsonProperty("lastLevel_DUSK_CRAWLER")]
-        public int LastLevelDuskCrawler { get; set; }
+        public int LastLevelDuskCrawler { get; private set; }
 
         [JsonProperty("pg_DUSK_CRAWLER")]
-        public int PgDuskCrawler { get; set; }
+        public int PgDuskCrawler { get; private set; }
 
         [JsonProperty("pg_PUG")]
-        public int PgPug { get; set; }
+        public int PgPug { get; private set; }
 
         [JsonProperty("votes_Dojo")]
-        public int VotesDojo { get; set; }
+        public int VotesDojo { get; private set; }
 
         [JsonProperty("pg_CAKE_MONSTER")]
-        public int PgCakeMonster { get; set; }
+        public int PgCakeMonster { get; private set; }
 
         [JsonProperty("masterArmor_TINMAN")]
-        public bool MasterArmorTinman { get; set; }
+        public bool MasterArmorTinman { get; private set; }
 
         [JsonProperty("pg_SKULLFIRE")]
-        public int PgSkullfire { get; set; }
+        public int PgSkullfire { get; private set; }
 
         [JsonProperty("masterArmor_BOTMUN")]
-        public bool MasterArmorBotmun { get; set; }
+        public bool MasterArmorBotmun { get; private set; }
 
         [JsonProperty("pg_GENERAL_CLUCK")]
-        public int PgGeneralCluck { get; set; }
+        public int PgGeneralCluck { get; private set; }
 
         [JsonProperty("pg_SPODERMAN")]
-        public int PgSpoderman { get; set; }
+        public int PgSpoderman { get; private set; }
 
         [JsonProperty("lastLevel_SERGEANT_SHIELD")]
-        public int LastLevelSergeantShield { get; set; }
+        public int LastLevelSergeantShield { get; private set; }
 
         [JsonProperty("xp_SERGEANT_SHIELD")]
-        public int XpSergeantShield { get; set; }
+        public int XpSergeantShield { get; private set; }
 
         [JsonProperty("xp_SANIC")]
-        public int XpSanic { get; set; }
+        public int XpSanic { get; private set; }
 
         [JsonProperty("lastLevel_SANIC")]
-        public int LastLevelSanic { get; set; }
+        public int LastLevelSanic { get; private set; }
 
         [JsonProperty("xp_GREEN_HOOD")]
-        public int XpGreenHood { get; set; }
+        public int XpGreenHood { get; private set; }
 
         [JsonProperty("lastLevel_GREEN_HOOD")]
-        public int LastLevelGreenHood { get; set; }
+        public int LastLevelGreenHood { get; private set; }
 
         [JsonProperty("pg_SERGEANT_SHIELD")]
-        public int PgSergeantShield { get; set; }
+        public int PgSergeantShield { get; private set; }
 
         [JsonProperty("packages")]
-        public List<object> Packages { get; set; }
+        public List<object> Packages { get; private set; }
 
         [JsonProperty("masterArmor_SERGEANT_SHIELD")]
-        public bool MasterArmorSergeantShield { get; set; }
+        public bool MasterArmorSergeantShield { get; private set; }
 
         [JsonProperty("pg_GOKU")]
-        public int PgGoku { get; set; }
+        public int PgGoku { get; private set; }
 
         [JsonProperty("masterArmor_GENERAL_CLUCK")]
-        public bool MasterArmorGeneralCluck { get; set; }
+        public bool MasterArmorGeneralCluck { get; private set; }
 
         [JsonProperty("pg_MARAUDER")]
-        public int PgMarauder { get; set; }
+        public int PgMarauder { get; private set; }
 
         [JsonProperty("pg_SANIC")]
-        public int PgSanic { get; set; }
+        public int PgSanic { get; private set; }
 
         [JsonProperty("pg_GREEN_HOOD")]
-        public int PgGreenHood { get; set; }
+        public int PgGreenHood { get; private set; }
 
         [JsonProperty("masterArmor_PUG")]
-        public bool MasterArmorPug { get; set; }
+        public bool MasterArmorPug { get; private set; }
 
         [JsonProperty("masterArmor_CAKE_MONSTER")]
-        public bool MasterArmorCakeMonster { get; set; }
+        public bool MasterArmorCakeMonster { get; private set; }
 
         [JsonProperty("masterArmor_GOKU")]
-        public bool MasterArmorGoku { get; set; }
+        public bool MasterArmorGoku { get; private set; }
 
         [JsonProperty("masterArmor_SHOOP_DA_WHOOP")]
-        public bool MasterArmorShoopDaWhoop { get; set; }
+        public bool MasterArmorShoopDaWhoop { get; private set; }
 
         [JsonProperty("masterArmor_SANIC")]
-        public bool MasterArmorSanic { get; set; }
+        public bool MasterArmorSanic { get; private set; }
 
         [JsonProperty("masterArmor_SKULLFIRE")]
-        public bool MasterArmorSkullfire { get; set; }
+        public bool MasterArmorSkullfire { get; private set; }
 
         [JsonProperty("masterArmor_GREEN_HOOD")]
-        public bool MasterArmorGreenHood { get; set; }
+        public bool MasterArmorGreenHood { get; private set; }
 
         [JsonProperty("masterArmor_DUSK_CRAWLER")]
-        public bool MasterArmorDuskCrawler { get; set; }
+        public bool MasterArmorDuskCrawler { get; private set; }
 
         [JsonProperty("masterArmor_MARAUDER")]
-        public bool MasterArmorMarauder { get; set; }
+        public bool MasterArmorMarauder { get; private set; }
 
         [JsonProperty("masterArmor_SPODERMAN")]
-        public bool MasterArmorSpoderman { get; set; }
+        public bool MasterArmorSpoderman { get; private set; }
 
         [JsonProperty("ONE_V_JUAN_gamesDay")]
-        public int OneVJuanGamesDay { get; set; }
+        public int OneVJuanGamesDay { get; private set; }
 
         [JsonProperty("one_v_one_losses_normal")]
-        public int OneVOneLossesNormal { get; set; }
+        public int OneVOneLossesNormal { get; private set; }
 
         [JsonProperty("one_v_one_losses")]
-        public int OneVOneLosses { get; set; }
+        public int OneVOneLosses { get; private set; }
 
         [JsonProperty("one_v_one_wins_normal")]
-        public int OneVOneWinsNormal { get; set; }
+        public int OneVOneWinsNormal { get; private set; }
 
         [JsonProperty("one_v_one_wins")]
-        public int OneVOneWins { get; set; }
+        public int OneVOneWins { get; private set; }
     }
 }

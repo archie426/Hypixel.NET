@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Hypixel.NET;
 
 namespace Examples

@@ -6,10 +6,10 @@ namespace Hypixel.NET.GuildApi.Guild.Member
     public class Member
     {
         [JsonProperty("uuid")]
-        public string Uuid { get; set; }
+        public string Uuid { get; private set; }
 
         [JsonProperty("rank")]
-        public string Rank { get; set; }
+        public string Rank { get; private set; }
 
         [JsonProperty("joined")]
         private readonly long _joined;

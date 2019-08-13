@@ -5,24 +5,24 @@ namespace Hypixel.NET.WatchdogStatsApi
     public class GetWatchdogStats
     {
         [JsonProperty("success")]
-        public bool WasSuccessful { get; set; }
+        public bool WasSuccessful { get; private set; }
 
         [JsonProperty("cause")]
-        public string Cause { get; set; }
+        public string Cause { get; private set; }
 
         [JsonProperty("watchdog_lastMinute")]
-        public int WatchdogLastMinute { get; set; }
+        public int WatchdogLastMinute { get; private set; }
 
         [JsonProperty("staff_rollingDaily")]
-        public int StaffRollingDaily { get; set; }
+        public int StaffRollingDaily { get; private set; }
 
         [JsonProperty("watchdog_total")]
-        public int WatchdogTotal { get; set; }
+        public int WatchdogTotal { get; private set; }
 
         [JsonProperty("watchdog_rollingDaily")]
-        public int WatchdogRollingDaily { get; set; }
+        public int WatchdogRollingDaily { get; private set; }
 
         [JsonProperty("staff_total")]
-        public int StaffTotal { get; set; }
+        public int StaffTotal { get; private set; }
     }
 }

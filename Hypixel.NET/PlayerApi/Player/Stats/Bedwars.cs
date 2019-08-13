@@ -7,1086 +7,1086 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
     {
         #region general
         [JsonProperty("Experience")]
-        public int Experience { get; set; }
+        public int Experience { get; private set; }
 
         [JsonProperty("spray_glyph_field")]
-        public string SprayGlyphField { get; set; }
+        public string SprayGlyphField { get; private set; }
 
         [JsonProperty("activeDeathCry")]
-        public string ActiveDeathCry { get; set; }
+        public string ActiveDeathCry { get; private set; }
 
         [JsonProperty("activeKillEffect")]
-        public string ActiveKillEffect { get; set; }
+        public string ActiveKillEffect { get; private set; }
 
         [JsonProperty("packages")]
-        public List<string> Packages { get; set; }
+        public List<string> Packages { get; private set; }
 
         [JsonProperty("activeVictoryDance")]
-        public string ActiveVictoryDance { get; set; }
+        public string ActiveVictoryDance { get; private set; }
 
         [JsonProperty("spray_storage_new")]
-        public string SprayStorage { get; set; }
+        public string SprayStorage { get; private set; }
 
         [JsonProperty("winstreak")]
-        public int Winstreak { get; set; }
+        public int Winstreak { get; private set; }
 
         [JsonProperty("coins")]
-        public int Coins { get; set; }
+        public int Coins { get; private set; }
 
         [JsonProperty("activeNPCSkin")]
-        public string ActiveNpcSkin { get; set; }
+        public string ActiveNpcSkin { get; private set; }
 
         [JsonProperty("activeIslandTopper")]
-        public string ActiveIslandTopper { get; set; }
+        public string ActiveIslandTopper { get; private set; }
 
         [JsonProperty("activeProjectileTrail")]
-        public string ActiveProjectileTrail { get; set; }
+        public string ActiveProjectileTrail { get; private set; }
 
         [JsonProperty("glyph_storage_new")]
-        public string GlyphStorage { get; set; }
+        public string GlyphStorage { get; private set; }
 
         [JsonProperty("activeSprays")]
-        public string ActiveSprays { get; set; }
+        public string ActiveSprays { get; private set; }
 
         [JsonProperty("activeBedDestroy")]
-        public string ActiveBedDestroySound { get; set; }
+        public string ActiveBedDestroySound { get; private set; }
 
         [JsonProperty("activeGlyph")]
-        public string ActiveGlyph { get; set; }
+        public string ActiveGlyph { get; private set; }
         #endregion
 
         #region loot boxes
         [JsonProperty("bedwars_boxes")]
-        public int BedwarsBoxes { get; set; }
+        public int BedwarsBoxes { get; private set; }
 
         [JsonProperty("bedwars_box")]
-        public int BedwarsBox { get; set; }
+        public int BedwarsBox { get; private set; }
 
         [JsonProperty("chest_history")]
-        public string ChestHistory { get; set; }
+        public string ChestHistory { get; private set; }
 
         [JsonProperty("bedwars_box_commons")]
-        public int BedwarsBoxCommons { get; set; }
+        public int BedwarsBoxCommons { get; private set; }
 
         [JsonProperty("bedwars_box_rares")]
-        public int BedwarsBoxRares { get; set; }
+        public int BedwarsBoxRares { get; private set; }
 
         [JsonProperty("chest_history_new")]
-        public List<string> ChestHistoryNew { get; set; }
+        public List<string> ChestHistoryNew { get; private set; }
 
         [JsonProperty("bedwars_box_legendaries")]
-        public int BedwarsBoxLegendaries { get; set; }
+        public int BedwarsBoxLegendaries { get; private set; }
 
         [JsonProperty("bedwars_box_epics")]
-        public int BedwarsBoxEpics { get; set; }
+        public int BedwarsBoxEpics { get; private set; }
 
         [JsonProperty("Bedwars_openedChests")]
-        public int BedwarsOpenedChests { get; set; }
+        public int BedwarsOpenedChests { get; private set; }
 
         [JsonProperty("Bedwars_openedCommons")]
-        public int BedwarsOpenedCommons { get; set; }
+        public int BedwarsOpenedCommons { get; private set; }
 
         [JsonProperty("Bedwars_openedRares")]
-        public int BedwarsOpenedRares { get; set; }
+        public int BedwarsOpenedRares { get; private set; }
 
         [JsonProperty("Bedwars_openedEpics")]
-        public int BedwarsOpenedEpics { get; set; }
+        public int BedwarsOpenedEpics { get; private set; }
 
         [JsonProperty("Bedwars_openedLegendaries")]
-        public int BedwarsOpenedLegendaries { get; set; }
+        public int BedwarsOpenedLegendaries { get; private set; }
 
         [JsonProperty("bedwars_lunar_boxes")]
-        public int BedwarsLunarBoxes { get; set; }
+        public int BedwarsLunarBoxes { get; private set; }
 
         [JsonProperty("bedwars_easter_boxes")]
-        public int BedwarsEasterBoxes { get; set; }
+        public int BedwarsEasterBoxes { get; private set; }
 
         #endregion
 
         #region overall stats
         [JsonProperty("final_deaths_bedwars")]
-        public int FinalDeathsBedwars { get; set; }
+        public int FinalDeathsBedwars { get; private set; }
 
         [JsonProperty("gold_resources_collected_bedwars")]
-        public int GoldResourcesCollectedBedwars { get; set; }
+        public int GoldResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("emerald_resources_collected_bedwars")]
-        public int EmeraldResourcesCollectedBedwars { get; set; }
+        public int EmeraldResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("resources_collected_bedwars")]
-        public int ResourcesCollectedBedwars { get; set; }
+        public int ResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("games_played_bedwars")]
-        public int GamesPlayedBedwars { get; set; }
+        public int GamesPlayedBedwars { get; private set; }
 
         [JsonProperty("entity_attack_final_kills_bedwars")]
-        public int EntityAttackFinalKillsBedwars { get; set; }
+        public int EntityAttackFinalKillsBedwars { get; private set; }
 
         [JsonProperty("beds_lost_bedwars")]
-        public int BedsLostBedwars { get; set; }
+        public int BedsLostBedwars { get; private set; }
 
         [JsonProperty("kills_bedwars")]
-        public int KillsBedwars { get; set; }
+        public int KillsBedwars { get; private set; }
 
         [JsonProperty("entity_attack_kills_bedwars")]
-        public int EntityAttackKillsBedwars { get; set; }
+        public int EntityAttackKillsBedwars { get; private set; }
 
         [JsonProperty("fall_final_deaths_bedwars")]
-        public int FallFinalDeathsBedwars { get; set; }
+        public int FallFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("losses_bedwars")]
-        public int LossesBedwars { get; set; }
+        public int LossesBedwars { get; private set; }
 
         [JsonProperty("items_purchased_bedwars")]
-        public int BedwarsItemsPurchasedBedwars { get; set; }
+        public int BedwarsItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("final_kills_bedwars")]
-        public int FinalKillsBedwars { get; set; }
+        public int FinalKillsBedwars { get; private set; }
 
         [JsonProperty("iron_resources_collected_bedwars")]
-        public int IronResourcesCollectedBedwars { get; set; }
+        public int IronResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("beds_broken_bedwars")]
-        public int BedsBrokenBedwars { get; set; }
+        public int BedsBrokenBedwars { get; private set; }
 
         [JsonProperty("_items_purchased_bedwars")]
-        public int ItemsPurchasedBedwars { get; set; }
+        public int ItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("void_kills_bedwars")]
-        public int VoidKillsBedwars { get; set; }
+        public int VoidKillsBedwars { get; private set; }
 
         [JsonProperty("deaths_bedwars")]
-        public int DeathsBedwars { get; set; }
+        public int DeathsBedwars { get; private set; }
 
         [JsonProperty("fall_deaths_bedwars")]
-        public int FallDeathsBedwars { get; set; }
+        public int FallDeathsBedwars { get; private set; }
 
         [JsonProperty("permanent _items_purchased_bedwars")]
-        public int PermanentItemsPurchasedBedwars { get; set; }
+        public int PermanentItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("wins_bedwars")]
-        public int WinsBedwars { get; set; }
+        public int WinsBedwars { get; private set; }
 
         [JsonProperty("void_final_kills_bedwars")]
-        public int VoidFinalKillsBedwars { get; set; }
+        public int VoidFinalKillsBedwars { get; private set; }
 
         [JsonProperty("entity_attack_deaths_bedwars")]
-        public int EntityAttackDeathsBedwars { get; set; }
+        public int EntityAttackDeathsBedwars { get; private set; }
 
         [JsonProperty("diamond_resources_collected_bedwars")]
-        public int DiamondResourcesCollectedBedwars { get; set; }
+        public int DiamondResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("entity_attack_final_deaths_bedwars")]
-        public int EntityAttackFinalDeathsBedwars { get; set; }
+        public int EntityAttackFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("void_deaths_bedwars")]
-        public int VoidDeathsBedwars { get; set; }
+        public int VoidDeathsBedwars { get; private set; }
 
         [JsonProperty("entity_explosion_final_kills_bedwars")]
-        public int EntityExplosionFinalKillsBedwars { get; set; }
+        public int EntityExplosionFinalKillsBedwars { get; private set; }
 
         [JsonProperty("entity_explosion_kills_bedwars")]
-        public int EntityExplosionKillsBedwars { get; set; }
+        public int EntityExplosionKillsBedwars { get; private set; }
 
         [JsonProperty("void_final_deaths_bedwars")]
-        public int VoidFinalDeathsBedwars { get; set; }
+        public int VoidFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("fall_kills_bedwars")]
-        public int FallKillsBedwars { get; set; }
+        public int FallKillsBedwars { get; private set; }
 
         [JsonProperty("fall_final_kills_bedwars")]
-        public int FallFinalKillsBedwars { get; set; }
+        public int FallFinalKillsBedwars { get; private set; }
 
         [JsonProperty("projectile_deaths_bedwars")]
-        public int ProjectileDeathsBedwars { get; set; }
+        public int ProjectileDeathsBedwars { get; private set; }
 
         [JsonProperty("projectile_kills_bedwars")]
-        public int ProjectileKillsBedwars { get; set; }
+        public int ProjectileKillsBedwars { get; private set; }
 
         [JsonProperty("entity_explosion_deaths_bedwars")]
-        public int EntityExplosionDeathsBedwars { get; set; }
+        public int EntityExplosionDeathsBedwars { get; private set; }
 
         [JsonProperty("projectile_final_kills_bedwars")]
-        public int ProjectileFinalKillsBedwars { get; set; }
+        public int ProjectileFinalKillsBedwars { get; private set; }
 
         [JsonProperty("entity_explosion_final_deaths_bedwars")]
-        public int EntityExplosionFinalDeathsBedwars { get; set; }
+        public int EntityExplosionFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("projectile_final_deaths_bedwars")]
-        public int ProjectileFinalDeathsBedwars { get; set; }
+        public int ProjectileFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("fire_tick_deaths_bedwars")]
-        public int FireTickDeathsBedwars { get; set; }
+        public int FireTickDeathsBedwars { get; private set; }
 
         [JsonProperty("wrapped_present_resources_collected_bedwars")]
-        public int WrappedPresentResourcesCollectedBedwars { get; set; }
+        public int WrappedPresentResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("fire_tick_kills_bedwars")]
-        public int FireTickKillsBedwars { get; set; }
+        public int FireTickKillsBedwars { get; private set; }
 
         [JsonProperty("fire_kills_bedwars")]
-        public int FireKillsBedwars { get; set; }
+        public int FireKillsBedwars { get; private set; }
 
         [JsonProperty("fire_tick_final_kills_bedwars")]
-        public int FireTickFinalKillsBedwars { get; set; }
+        public int FireTickFinalKillsBedwars { get; private set; }
         #endregion
 
         #region solos
         [JsonProperty("eight_one_beds_lost_bedwars")]
-        public int SolosBedsLostBedwars { get; set; }
+        public int SolosBedsLostBedwars { get; private set; }
 
         [JsonProperty("eight_one_entity_attack_final_kills_bedwars")]
-        public int SolosEntityAttackFinalKillsBedwars { get; set; }
+        public int SolosEntityAttackFinalKillsBedwars { get; private set; }
 
         [JsonProperty("eight_one_deaths_bedwars")]
-        public int SolosDeathsBedwars { get; set; }
+        public int SolosDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_one_void_deaths_bedwars")]
-        public int SolosVoidDeathsBedwars { get; set; }
+        public int SolosVoidDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_one_games_played_bedwars")]
-        public int SolosGamesPlayedBedwars { get; set; }
+        public int SolosGamesPlayedBedwars { get; private set; }
 
         [JsonProperty("eight_one_final_kills_bedwars")]
-        public int SolosFinalKillsBedwars { get; set; }
+        public int SolosFinalKillsBedwars { get; private set; }
 
         [JsonProperty("eight_one_beds_broken_bedwars")]
-        public int SolosBedsBrokenBedwars { get; set; }
+        public int SolosBedsBrokenBedwars { get; private set; }
 
         [JsonProperty("eight_one_iron_resources_collected_bedwars")]
-        public int SolosIronResourcesCollectedBedwars { get; set; }
+        public int SolosIronResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_one_emerald_resources_collected_bedwars")]
-        public int SolosEmeraldResourcesCollectedBedwars { get; set; }
+        public int SolosEmeraldResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_one_items_purchased_bedwars")]
-        public int SolosItemsPurchasedBedwars { get; set; }
+        public int SolosItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("eight_one_diamond_resources_collected_bedwars")]
-        public int SolosDiamondResourcesCollectedBedwars { get; set; }
+        public int SolosDiamondResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_one_permanent _items_purchased_bedwars")]
-        public int SolosPermanentItemsPurchasedBedwars { get; set; }
+        public int SolosPermanentItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("eight_one_entity_attack_kills_bedwars")]
-        public int SolosEntityAttackKillsBedwars { get; set; }
+        public int SolosEntityAttackKillsBedwars { get; private set; }
 
         [JsonProperty("eight_one_void_final_kills_bedwars")]
-        public int SolosVoidFinalKillsBedwars { get; set; }
+        public int SolosVoidFinalKillsBedwars { get; private set; }
 
         [JsonProperty("eight_one_wins_bedwars")]
-        public int SolosWinsBedwars { get; set; }
+        public int SolosWinsBedwars { get; private set; }
 
         [JsonProperty("eight_one_kills_bedwars")]
-        public int SolosKillsBedwars { get; set; }
+        public int SolosKillsBedwars { get; private set; }
 
         [JsonProperty("eight_one_resources_collected_bedwars")]
-        public int SolosResourcesCollectedBedwars { get; set; }
+        public int SolosResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_one_gold_resources_collected_bedwars")]
-        public int SolosGoldResourcesCollectedBedwars { get; set; }
+        public int SolosGoldResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_one_final_deaths_bedwars")]
-        public int SolosFinalDeathsBedwars { get; set; }
+        public int SolosFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_one_entity_attack_final_deaths_bedwars")]
-        public int SolosEntityAttackFinalDeathsBedwars { get; set; }
+        public int SolosEntityAttackFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_one_losses_bedwars")]
-        public int SolosLossesBedwars { get; set; }
+        public int SolosLossesBedwars { get; private set; }
 
         [JsonProperty("eight_one_fall_kills_bedwars")]
-        public int SolosFallKillsBedwars { get; set; }
+        public int SolosFallKillsBedwars { get; private set; }
 
         [JsonProperty("eight_one_projectile_kills_bedwars")]
-        public int SolosProjectileKillsBedwars { get; set; }
+        public int SolosProjectileKillsBedwars { get; private set; }
 
         [JsonProperty("eight_one_void_kills_bedwars")]
-        public int SolosVoidKillsBedwars { get; set; }
+        public int SolosVoidKillsBedwars { get; private set; }
 
         [JsonProperty("eight_one_void_final_deaths_bedwars")]
-        public int SolosVoidFinalDeathsBedwars { get; set; }
+        public int SolosVoidFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_one_entity_attack_deaths_bedwars")]
-        public int SolosEntityAttackDeathsBedwars { get; set; }
+        public int SolosEntityAttackDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_one_fall_final_kills_bedwars")]
-        public int SolosFallFinalKillsBedwars { get; set; }
+        public int SolosFallFinalKillsBedwars { get; private set; }
 
         [JsonProperty("eight_one_fall_deaths_bedwars")]
-        public int SolosFallDeathsBedwars { get; set; }
+        public int SolosFallDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_one_projectile_final_kills_bedwars")]
-        public int SolosProjectileFinalKillsBedwars { get; set; }
+        public int SolosProjectileFinalKillsBedwars { get; private set; }
 
         [JsonProperty("eight_one_entity_explosion_kills_bedwars")]
-        public int SolosEntityExplosionKillsBedwars { get; set; }
+        public int SolosEntityExplosionKillsBedwars { get; private set; }
 
         [JsonProperty("eight_one_projectile_deaths_bedwars")]
-        public int SolosProjectileDeathsBedwars { get; set; }
+        public int SolosProjectileDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_one_winstreak")]
-        public int SolosWinstreak { get; set; }
+        public int SolosWinstreak { get; private set; }
         #endregion
 
         #region duos
         [JsonProperty("eight_two_void_deaths_bedwars")]
-        public int DuosVoidDeathsBedwars { get; set; }
+        public int DuosVoidDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_two_beds_broken_bedwars")]
-        public int DuosBedsBrokenBedwars { get; set; }
+        public int DuosBedsBrokenBedwars { get; private set; }
 
         [JsonProperty("eight_two_emerald_resources_collected_bedwars")]
-        public int DuosEmeraldResourcesCollectedBedwars { get; set; }
+        public int DuosEmeraldResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_two_permanent _items_purchased_bedwars")]
-        public int DuosPermanentItemsPurchasedBedwars { get; set; }
+        public int DuosPermanentItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("eight_two_resources_collected_bedwars")]
-        public int DuosResourcesCollectedBedwars { get; set; }
+        public int DuosResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_two_diamond_resources_collected_bedwars")]
-        public int DuosDiamondResourcesCollectedBedwars { get; set; }
+        public int DuosDiamondResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_two_fall_deaths_bedwars")]
-        public int DuosFallDeathsBedwars { get; set; }
+        public int DuosFallDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_two_kills_bedwars")]
-        public int DuosKillsBedwars { get; set; }
+        public int DuosKillsBedwars { get; private set; }
 
         [JsonProperty("eight_two_entity_attack_final_kills_bedwars")]
-        public int DuosEntityAttackFinalKillsBedwars { get; set; }
+        public int DuosEntityAttackFinalKillsBedwars { get; private set; }
 
         [JsonProperty("eight_two_entity_attack_kills_bedwars")]
-        public int DuosEntityAttackKillsBedwars { get; set; }
+        public int DuosEntityAttackKillsBedwars { get; private set; }
 
         [JsonProperty("eight_two_iron_resources_collected_bedwars")]
-        public int DuosIronResourcesCollectedBedwars { get; set; }
+        public int DuosIronResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_two_final_deaths_bedwars")]
-        public int DuosFinalDeathsBedwars { get; set; }
+        public int DuosFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_two_void_final_deaths_bedwars")]
-        public int DuosVoidFinalDeathsBedwars { get; set; }
+        public int DuosVoidFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_two_deaths_bedwars")]
-        public int DuosDeathsBedwars { get; set; }
+        public int DuosDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_two_games_played_bedwars")]
-        public int DuosGamesPlayedBedwars { get; set; }
+        public int DuosGamesPlayedBedwars { get; private set; }
 
         [JsonProperty("eight_two_items_purchased_bedwars")]
-        public int DuosItemsPurchasedBedwars { get; set; }
+        public int DuosItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("eight_two_beds_lost_bedwars")]
-        public int DuosBedsLostBedwars { get; set; }
+        public int DuosBedsLostBedwars { get; private set; }
 
         [JsonProperty("eight_two_entity_attack_deaths_bedwars")]
-        public int DuosEntityAttackDeathsBedwars { get; set; }
+        public int DuosEntityAttackDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_two_void_final_kills_bedwars")]
-        public int DuosVoidFinalKillsBedwars { get; set; }
+        public int DuosVoidFinalKillsBedwars { get; private set; }
 
         [JsonProperty("eight_two_gold_resources_collected_bedwars")]
-        public int DuosGoldResourcesCollectedBedwars { get; set; }
+        public int DuosGoldResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_two_final_kills_bedwars")]
-        public int DuosFinalKillsBedwars { get; set; }
+        public int DuosFinalKillsBedwars { get; private set; }
 
         [JsonProperty("eight_two_losses_bedwars")]
-        public int DuosLossesBedwars { get; set; }
+        public int DuosLossesBedwars { get; private set; }
 
         [JsonProperty("eight_two_fall_final_kills_bedwars")]
-        public int DuosFallFinalKillsBedwars { get; set; }
+        public int DuosFallFinalKillsBedwars { get; private set; }
 
         [JsonProperty("eight_two_wins_bedwars")]
-        public int DuosWinsBedwars { get; set; }
+        public int DuosWinsBedwars { get; private set; }
 
         [JsonProperty("eight_two_fall_kills_bedwars")]
-        public int DuosFallKillsBedwars { get; set; }
+        public int DuosFallKillsBedwars { get; private set; }
 
         [JsonProperty("eight_two_void_kills_bedwars")]
-        public int DuosVoidKillsBedwars { get; set; }
+        public int DuosVoidKillsBedwars { get; private set; }
 
         [JsonProperty("eight_two_entity_attack_final_deaths_bedwars")]
-        public int DuosEntityAttackFinalDeathsBedwars { get; set; }
+        public int DuosEntityAttackFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_two_fall_final_deaths_bedwars")]
-        public int DuosFallFinalDeathsBedwars { get; set; }
+        public int DuosFallFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_two_projectile_final_kills_bedwars")]
-        public int DuosProjectileFinalKillsBedwars { get; set; }
+        public int DuosProjectileFinalKillsBedwars { get; private set; }
 
         [JsonProperty("eight_two_entity_explosion_final_kills_bedwars")]
-        public int DuosEntityExplosionFinalKillsBedwars { get; set; }
+        public int DuosEntityExplosionFinalKillsBedwars { get; private set; }
 
         [JsonProperty("eight_two_projectile_kills_bedwars")]
-        public int DuosProjectileKillsBedwars { get; set; }
+        public int DuosProjectileKillsBedwars { get; private set; }
 
         [JsonProperty("eight_two_projectile_deaths_bedwars")]
-        public int DuosProjectileDeathsBedwars { get; set; }
+        public int DuosProjectileDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_two_winstreak")]
-        public int DuosWinstreak { get; set; }
+        public int DuosWinstreak { get; private set; }
 
         [JsonProperty("eight_two_fire_kills_bedwars")]
-        public int DuosFireKillsBedwars { get; set; }
+        public int DuosFireKillsBedwars { get; private set; }
         #endregion
 
         #region trios
         [JsonProperty("four_three_iron_resources_collected_bedwars")]
-        public int TriosIronResourcesCollectedBedwars { get; set; }
+        public int TriosIronResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("four_three_entity_attack_final_deaths_bedwars")]
-        public int TriosEntityAttackFinalDeathsBedwars { get; set; }
+        public int TriosEntityAttackFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("four_three_games_played_bedwars")]
-        public int TriosGamesPlayedBedwars { get; set; }
+        public int TriosGamesPlayedBedwars { get; private set; }
 
         [JsonProperty("four_three_fall_deaths_bedwars")]
-        public int TriosFallDeathsBedwars { get; set; }
+        public int TriosFallDeathsBedwars { get; private set; }
 
         [JsonProperty("four_three_emerald_resources_collected_bedwars")]
-        public int TriosEmeraldResourcesCollectedBedwars { get; set; }
+        public int TriosEmeraldResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("four_three_beds_lost_bedwars")]
-        public int TriosBedsLostBedwars { get; set; }
+        public int TriosBedsLostBedwars { get; private set; }
 
         [JsonProperty("four_three_gold_resources_collected_bedwars")]
-        public int TriosGoldResourcesCollectedBedwars { get; set; }
+        public int TriosGoldResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("four_three_deaths_bedwars")]
-        public int TriosDeathsBedwars { get; set; }
+        public int TriosDeathsBedwars { get; private set; }
 
         [JsonProperty("four_three_beds_broken_bedwars")]
-        public int TriosBedsBrokenBedwars { get; set; }
+        public int TriosBedsBrokenBedwars { get; private set; }
 
         [JsonProperty("four_three_losses_bedwars")]
-        public int TriosLossesBedwars { get; set; }
+        public int TriosLossesBedwars { get; private set; }
 
         [JsonProperty("four_three_items_purchased_bedwars")]
-        public int TriosItemsPurchasedBedwars { get; set; }
+        public int TriosItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("four_three_final_deaths_bedwars")]
-        public int TriosFinalDeathsBedwars { get; set; }
+        public int TriosFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("four_three_resources_collected_bedwars")]
-        public int TriosResourcesCollectedBedwars { get; set; }
+        public int TriosResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("four_three_void_final_kills_bedwars")]
-        public int TriosVoidFinalKillsBedwars { get; set; }
+        public int TriosVoidFinalKillsBedwars { get; private set; }
 
         [JsonProperty("four_three_wins_bedwars")]
-        public int TriosWinsBedwars { get; set; }
+        public int TriosWinsBedwars { get; private set; }
 
         [JsonProperty("four_three_entity_explosion_final_kills_bedwars")]
-        public int TriosEntityExplosionFinalKillsBedwars { get; set; }
+        public int TriosEntityExplosionFinalKillsBedwars { get; private set; }
 
         [JsonProperty("four_three_void_deaths_bedwars")]
-        public int TriosVoidDeathsBedwars { get; set; }
+        public int TriosVoidDeathsBedwars { get; private set; }
 
         [JsonProperty("four_three_entity_attack_deaths_bedwars")]
-        public int TriosEntityAttackDeathsBedwars { get; set; }
+        public int TriosEntityAttackDeathsBedwars { get; private set; }
 
         [JsonProperty("four_three_permanent _items_purchased_bedwars")]
-        public int TriosPermanentItemsPurchasedBedwars { get; set; }
+        public int TriosPermanentItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("four_three_entity_attack_final_kills_bedwars")]
-        public int TriosEntityAttackFinalKillsBedwars { get; set; }
+        public int TriosEntityAttackFinalKillsBedwars { get; private set; }
 
         [JsonProperty("four_three_final_kills_bedwars")]
-        public int TriosFinalKillsBedwars { get; set; }
+        public int TriosFinalKillsBedwars { get; private set; }
 
         [JsonProperty("four_three_diamond_resources_collected_bedwars")]
-        public int TriosDiamondResourcesCollectedBedwars { get; set; }
+        public int TriosDiamondResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("four_three_void_kills_bedwars")]
-        public int TriosVoidKillsBedwars { get; set; }
+        public int TriosVoidKillsBedwars { get; private set; }
 
         [JsonProperty("four_three_fall_final_kills_bedwars")]
-        public int TriosFallFinalKillsBedwars { get; set; }
+        public int TriosFallFinalKillsBedwars { get; private set; }
 
         [JsonProperty("four_three_kills_bedwars")]
-        public int TriosKillsBedwars { get; set; }
+        public int TriosKillsBedwars { get; private set; }
 
         [JsonProperty("four_three_entity_attack_kills_bedwars")]
-        public int TriosEntityAttackKillsBedwars { get; set; }
+        public int TriosEntityAttackKillsBedwars { get; private set; }
 
         [JsonProperty("four_three_entity_explosion_kills_bedwars")]
-        public int TriosEntityExplosionKillsBedwars { get; set; }
+        public int TriosEntityExplosionKillsBedwars { get; private set; }
 
         [JsonProperty("four_three_void_final_deaths_bedwars")]
-        public int TriosVoidFinalDeathsBedwars { get; set; }
+        public int TriosVoidFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("four_three_entity_explosion_deaths_bedwars")]
-        public int TriosEntityExplosionDeathsBedwars { get; set; }
+        public int TriosEntityExplosionDeathsBedwars { get; private set; }
 
         [JsonProperty("four_three_projectile_kills_bedwars")]
-        public int TriosProjectileKillsBedwars { get; set; }
+        public int TriosProjectileKillsBedwars { get; private set; }
 
         [JsonProperty("four_three_fall_kills_bedwars")]
-        public int TriosFallKillsBedwars { get; set; }
+        public int TriosFallKillsBedwars { get; private set; }
 
         [JsonProperty("four_three_entity_explosion_final_deaths_bedwars")]
-        public int TriosEntityExplosionFinalDeathsBedwars { get; set; }
+        public int TriosEntityExplosionFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("four_three_fall_final_deaths_bedwars")]
-        public int TriosFallFinalDeathsBedwars { get; set; }
+        public int TriosFallFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("four_three_projectile_final_kills_bedwars")]
-        public int TriosProjectileFinalKillsBedwars { get; set; }
+        public int TriosProjectileFinalKillsBedwars { get; private set; }
 
         [JsonProperty("four_three_wrapped_present_resources_collected_bedwars")]
-        public int TriosWrappedPresentResourcesCollectedBedwars { get; set; }
+        public int TriosWrappedPresentResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("four_three_fire_tick_deaths_bedwars")]
-        public int TriosFireTickDeathsBedwars { get; set; }
+        public int TriosFireTickDeathsBedwars { get; private set; }
 
         [JsonProperty("four_three_winstreak")]
-        public int TriosWinstreak { get; set; }
+        public int TriosWinstreak { get; private set; }
 
         #endregion
 
         #region fours
         [JsonProperty("four_four_beds_broken_bedwars")]
-        public int FoursBedsBrokenBedwars { get; set; }
+        public int FoursBedsBrokenBedwars { get; private set; }
 
         [JsonProperty("four_four_kills_bedwars")]
-        public int FoursKillsBedwars { get; set; }
+        public int FoursKillsBedwars { get; private set; }
 
         [JsonProperty("four_four_final_deaths_bedwars")]
-        public int FoursFinalDeathsBedwars { get; set; }
+        public int FoursFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("four_four_gold_resources_collected_bedwars")]
-        public int FoursGoldResourcesCollectedBedwars { get; set; }
+        public int FoursGoldResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("four_four_beds_lost_bedwars")]
-        public int FoursBedsLostBedwars { get; set; }
+        public int FoursBedsLostBedwars { get; private set; }
 
         [JsonProperty("four_four_losses_bedwars")]
-        public int FoursLossesBedwars { get; set; }
+        public int FoursLossesBedwars { get; private set; }
 
         [JsonProperty("four_four_iron_resources_collected_bedwars")]
-        public int FoursIronResourcesCollectedBedwars { get; set; }
+        public int FoursIronResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("four_four_fall_final_deaths_bedwars")]
-        public int FoursFallFinalDeathsBedwars { get; set; }
+        public int FoursFallFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("four_four_resources_collected_bedwars")]
-        public int FoursResourcesCollectedBedwars { get; set; }
+        public int FoursResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("four_four_items_purchased_bedwars")]
-        public int FoursItemsPurchasedBedwars { get; set; }
+        public int FoursItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("four_four_entity_attack_kills_bedwars")]
-        public int FoursEntityAttackKillsBedwars { get; set; }
+        public int FoursEntityAttackKillsBedwars { get; private set; }
 
         [JsonProperty("four_four_final_kills_bedwars")]
-        public int FoursFinalKillsBedwars { get; set; }
+        public int FoursFinalKillsBedwars { get; private set; }
 
         [JsonProperty("four_four_emerald_resources_collected_bedwars")]
-        public int FoursEmeraldResourcesCollectedBedwars { get; set; }
+        public int FoursEmeraldResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("four_four_permanent _items_purchased_bedwars")]
-        public int FoursPermanentItemsPurchasedBedwars { get; set; }
+        public int FoursPermanentItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("four_four_void_kills_bedwars")]
-        public int FoursVoidKillsBedwars { get; set; }
+        public int FoursVoidKillsBedwars { get; private set; }
 
         [JsonProperty("four_four_fall_deaths_bedwars")]
-        public int FoursFallDeathsBedwars { get; set; }
+        public int FoursFallDeathsBedwars { get; private set; }
 
         [JsonProperty("four_four_deaths_bedwars")]
-        public int FoursDeathsBedwars { get; set; }
+        public int FoursDeathsBedwars { get; private set; }
 
         [JsonProperty("four_four_wins_bedwars")]
-        public int FoursWinsBedwars { get; set; }
+        public int FoursWinsBedwars { get; private set; }
 
         [JsonProperty("four_four_void_final_kills_bedwars")]
-        public int FoursVoidFinalKillsBedwars { get; set; }
+        public int FoursVoidFinalKillsBedwars { get; private set; }
 
         [JsonProperty("four_four_entity_attack_deaths_bedwars")]
-        public int FoursEntityAttackDeathsBedwars { get; set; }
+        public int FoursEntityAttackDeathsBedwars { get; private set; }
 
         [JsonProperty("four_four_diamond_resources_collected_bedwars")]
-        public int FoursDiamondResourcesCollectedBedwars { get; set; }
+        public int FoursDiamondResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("four_four_entity_explosion_kills_bedwars")]
-        public int FoursEntityExplosionKillsBedwars { get; set; }
+        public int FoursEntityExplosionKillsBedwars { get; private set; }
 
         [JsonProperty("four_four_void_deaths_bedwars")]
-        public int FoursVoidDeathsBedwars { get; set; }
+        public int FoursVoidDeathsBedwars { get; private set; }
 
         [JsonProperty("four_four_void_final_deaths_bedwars")]
-        public int FoursVoidFinalDeathsBedwars { get; set; }
+        public int FoursVoidFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("four_four_fall_kills_bedwars")]
-        public int FoursFallKillsBedwars { get; set; }
+        public int FoursFallKillsBedwars { get; private set; }
 
         [JsonProperty("four_four_fall_final_kills_bedwars")]
-        public int FoursFallFinalKillsBedwars { get; set; }
+        public int FoursFallFinalKillsBedwars { get; private set; }
 
         [JsonProperty("four_four_projectile_deaths_bedwars")]
-        public int FoursProjectileDeathsBedwars { get; set; }
+        public int FoursProjectileDeathsBedwars { get; private set; }
 
         [JsonProperty("four_four_entity_attack_final_deaths_bedwars")]
-        public int FoursEntityAttackFinalDeathsBedwars { get; set; }
+        public int FoursEntityAttackFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("four_four_entity_explosion_final_kills_bedwars")]
-        public int FoursEntityExplosionFinalKillsBedwars { get; set; }
+        public int FoursEntityExplosionFinalKillsBedwars { get; private set; }
 
         [JsonProperty("four_four_entity_explosion_deaths_bedwars")]
-        public int FoursEntityExplosionDeathsBedwars { get; set; }
+        public int FoursEntityExplosionDeathsBedwars { get; private set; }
 
         [JsonProperty("four_four_entity_explosion_final_deaths_bedwars")]
-        public int FoursEntityExplosionFinalDeathsBedwars { get; set; }
+        public int FoursEntityExplosionFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("four_four_projectile_kills_bedwars")]
-        public int FoursProjectileKillsBedwars { get; set; }
+        public int FoursProjectileKillsBedwars { get; private set; }
 
         [JsonProperty("four_four_projectile_final_kills_bedwars")]
-        public int FoursProjectileFinalKillsBedwars { get; set; }
+        public int FoursProjectileFinalKillsBedwars { get; private set; }
 
         [JsonProperty("four_four_projectile_final_deaths_bedwars")]
-        public int FoursProjectileFinalDeathsBedwars { get; set; }
+        public int FoursProjectileFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("four_four_fire_tick_deaths_bedwars")]
-        public int FoursFireTickDeathsBedwars { get; set; }
+        public int FoursFireTickDeathsBedwars { get; private set; }
 
         [JsonProperty("four_four_wrapped_present_resources_collected_bedwars")]
-        public int FoursWrappedPresentResourcesCollected { get; set; }
+        public int FoursWrappedPresentResourcesCollected { get; private set; }
 
         [JsonProperty("four_four_winstreak")]
-        public int FoursWinstreak { get; set; }
+        public int FoursWinstreak { get; private set; }
 
         [JsonProperty("four_four_fire_tick_kills_bedwars")]
-        public int FoursFireTickKillsBedwars { get; set; }
+        public int FoursFireTickKillsBedwars { get; private set; }
 
         [JsonProperty("four_four_fire_tick_final_kills_bedwars")]
-        public int FoursFireTickFinalKillsBedwars { get; set; }
+        public int FoursFireTickFinalKillsBedwars { get; private set; }
         #endregion
 
         #region castle bedwars mode
         [JsonProperty("castle_winstreak")]
-        public int CastleWinstreak { get; set; }
+        public int CastleWinstreak { get; private set; }
 
         [JsonProperty("castle_beds_lost_bedwars")]
-        public int CastleBedsLostBedwars { get; set; }
+        public int CastleBedsLostBedwars { get; private set; }
 
         [JsonProperty("castle_permanent _items_purchased_bedwars")]
-        public int CastlePermanentItemsPurchasedBedwars { get; set; }
+        public int CastlePermanentItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("castle_deaths_bedwars")]
-        public int CastleDeathsBedwars { get; set; }
+        public int CastleDeathsBedwars { get; private set; }
 
         [JsonProperty("castle_beds_broken_bedwars")]
-        public int CastleBedsBrokenBedwars { get; set; }
+        public int CastleBedsBrokenBedwars { get; private set; }
 
         [JsonProperty("castle_games_played_bedwars")]
-        public int CastleGamesPlayedBedwars { get; set; }
+        public int CastleGamesPlayedBedwars { get; private set; }
 
         [JsonProperty("castle_wins_bedwars")]
-        public int CastleWinsBedwars { get; set; }
+        public int CastleWinsBedwars { get; private set; }
 
         [JsonProperty("castle_fall_kills_bedwars")]
-        public int CastleFallKillsBedwars { get; set; }
+        public int CastleFallKillsBedwars { get; private set; }
 
         [JsonProperty("castle_entity_attack_kills_bedwars")]
-        public int CastleEntityAttackKillsBedwars { get; set; }
+        public int CastleEntityAttackKillsBedwars { get; private set; }
 
         [JsonProperty("castle_items_purchased_bedwars")]
-        public int CastleItemsPurchasedBedwars { get; set; }
+        public int CastleItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("castle_diamond_resources_collected_bedwars")]
-        public int CastleDiamondResourcesCollectedBedwars { get; set; }
+        public int CastleDiamondResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("castle_gold_resources_collected_bedwars")]
-        public int CastleGoldResourcesCollectedBedwars { get; set; }
+        public int CastleGoldResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("castle_resources_collected_bedwars")]
-        public int CastleResourcesCollectedBedwars { get; set; }
+        public int CastleResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("castle_void_deaths_bedwars")]
-        public int CastleVoidDeathsBedwars { get; set; }
+        public int CastleVoidDeathsBedwars { get; private set; }
 
         [JsonProperty("castle_iron_resources_collected_bedwars")]
-        public int CastleIronResourcesCollectedBedwars { get; set; }
+        public int CastleIronResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("castle_void_kills_bedwars")]
-        public int CastleVoidKillsBedwars { get; set; }
+        public int CastleVoidKillsBedwars { get; private set; }
 
         [JsonProperty("castle_kills_bedwars")]
-        public int CastleKillsBedwars { get; set; }
+        public int CastleKillsBedwars { get; private set; }
 
         [JsonProperty("castle_entity_attack_final_kills_bedwars")]
-        public int CastleEntityAttackFinalKillsBedwars { get; set; }
+        public int CastleEntityAttackFinalKillsBedwars { get; private set; }
 
         [JsonProperty("castle_entity_attack_deaths_bedwars")]
-        public int CastleEntityAttackDeathsBedwars { get; set; }
+        public int CastleEntityAttackDeathsBedwars { get; private set; }
 
         [JsonProperty("castle_emerald_resources_collected_bedwars")]
-        public int CastleEmeraldResourcesCollectedBedwars { get; set; }
+        public int CastleEmeraldResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("castle_final_kills_bedwars")]
-        public int CastleFinalKillsBedwars { get; set; }
+        public int CastleFinalKillsBedwars { get; private set; }
 
         [JsonProperty("castle_void_final_kills_bedwars")]
-        public int CastleVoidFinalKillsBedwars { get; set; }
+        public int CastleVoidFinalKillsBedwars { get; private set; }
 
         [JsonProperty("castle_entity_attack_final_deaths_bedwars")]
-        public int CastleEntityAttackFinalDeathsBedwars { get; set; }
+        public int CastleEntityAttackFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("castle_final_deaths_bedwars")]
-        public int CastleFinalDeathsBedwars { get; set; }
+        public int CastleFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("castle_entity_explosion_final_kills_bedwars")]
-        public int CastleEntityExplosionFinalKillsBedwars { get; set; }
+        public int CastleEntityExplosionFinalKillsBedwars { get; private set; }
 
         [JsonProperty("castle_fall_deaths_bedwars")]
-        public int CastleFallDeathsBedwars { get; set; }
+        public int CastleFallDeathsBedwars { get; private set; }
 
         [JsonProperty("castle_void_final_deaths_bedwars")]
-        public int CastleVoidFinalDeathsBedwars { get; set; }
+        public int CastleVoidFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("castle_losses_bedwars")]
-        public int CastleLossesBedwars { get; set; }
+        public int CastleLossesBedwars { get; private set; }
 
         [JsonProperty("castle_entity_explosion_kills_bedwars")]
-        public int CastleEntityExplosionKillsBedwars { get; set; }
+        public int CastleEntityExplosionKillsBedwars { get; private set; }
 
         [JsonProperty("castle_fall_final_kills_bedwars")]
-        public int CastleFallFinalKillsBedwars { get; set; }
+        public int CastleFallFinalKillsBedwars { get; private set; }
 
         [JsonProperty("castle_projectile_deaths_bedwars")]
-        public int CastleProjectileDeathsBedwars { get; set; }
+        public int CastleProjectileDeathsBedwars { get; private set; }
 
         [JsonProperty("castle_entity_explosion_deaths_bedwars")]
-        public int CastleEntityExplosionDeathsBedwars { get; set; }
+        public int CastleEntityExplosionDeathsBedwars { get; private set; }
 
         [JsonProperty("castle_suffocation_deaths_bedwars")]
-        public int CastleSuffocationDeathsBedwars { get; set; }
+        public int CastleSuffocationDeathsBedwars { get; private set; }
 
         [JsonProperty("castle_entity_explosion_final_deaths_bedwars")]
-        public int CastleEntityExplosionFinalDeathsBedwars { get; set; }
+        public int CastleEntityExplosionFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("castle_fall_final_deaths_bedwars")]
-        public int CastleFallFinalDeathsBedwars { get; set; }
+        public int CastleFallFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("castle_projectile_final_kills_bedwars")]
-        public int CastleProjectileFinalKillsBedwars { get; set; }
+        public int CastleProjectileFinalKillsBedwars { get; private set; }
 
         [JsonProperty("castle_projectile_kills_bedwars")]
-        public int CastleProjectileKillsBedwars { get; set; }
+        public int CastleProjectileKillsBedwars { get; private set; }
 
         [JsonProperty("castle_fire_tick_deaths_bedwars")]
-        public int CastleFireTickDeathsBedwars { get; set; }
+        public int CastleFireTickDeathsBedwars { get; private set; }
 
         [JsonProperty("castle_projectile_final_deaths_bedwars")]
-        public int CastleProjectileFinalDeathsBedwars { get; set; }
+        public int CastleProjectileFinalDeathsBedwars { get; private set; }
         #endregion
 
         #region rush bedwars mode
         [JsonProperty("eight_one_rush_winstreak")]
-        public int SolosRushWinstreak { get; set; }
+        public int SolosRushWinstreak { get; private set; }
 
         [JsonProperty("eight_one_rush_kills_bedwars")]
-        public int SolosRushKillsBedwars { get; set; }
+        public int SolosRushKillsBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_beds_broken_bedwars")]
-        public int SolosRushBedsBrokenBedwars { get; set; }
+        public int SolosRushBedsBrokenBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_items_purchased_bedwars")]
-        public int SolosRushItemsPurchasedBedwars { get; set; }
+        public int SolosRushItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_games_played_bedwars")]
-        public int SolosRushGamesPlayedBedwars { get; set; }
+        public int SolosRushGamesPlayedBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_deaths_bedwars")]
-        public int SolosRushDeathsBedwars { get; set; }
+        public int SolosRushDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_entity_attack_final_kills_bedwars")]
-        public int SolosRushEntityAttackFinalKillsBedwars { get; set; }
+        public int SolosRushEntityAttackFinalKillsBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_emerald_resources_collected_bedwars")]
-        public int SolosRushEmeraldResourcesCollectedBedwars { get; set; }
+        public int SolosRushEmeraldResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_void_final_kills_bedwars")]
-        public int SolosRushVoidFinalKillsBedwars { get; set; }
+        public int SolosRushVoidFinalKillsBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_entity_attack_deaths_bedwars")]
-        public int SolosRushEntityAttackDeathsBedwars { get; set; }
+        public int SolosRushEntityAttackDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_final_kills_bedwars")]
-        public int SolosRushFinalKillsBedwars { get; set; }
+        public int SolosRushFinalKillsBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_gold_resources_collected_bedwars")]
-        public int SolosRushGoldResourcesCollectedBedwars { get; set; }
+        public int SolosRushGoldResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_resources_collected_bedwars")]
-        public int SolosRushResourcesCollectedBedwars { get; set; }
+        public int SolosRushResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_void_kills_bedwars")]
-        public int SolosRushVoidKillsBedwars { get; set; }
+        public int SolosRushVoidKillsBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_diamond_resources_collected_bedwars")]
-        public int SolosRushDiamondResourcesCollectedBedwars { get; set; }
+        public int SolosRushDiamondResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_entity_attack_kills_bedwars")]
-        public int SolosRushEntityAttackKillsBedwars { get; set; }
+        public int SolosRushEntityAttackKillsBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_wins_bedwars")]
-        public int SolosRushWinsBedwars { get; set; }
+        public int SolosRushWinsBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_permanent _items_purchased_bedwars")]
-        public int SolosRushPermanentItemsPurchasedBedwars { get; set; }
+        public int SolosRushPermanentItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_iron_resources_collected_bedwars")]
-        public int SolosRushIronResourcesCollectedBedwars { get; set; }
+        public int SolosRushIronResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_void_deaths_bedwars")]
-        public int SolosRushVoidDeathsBedwars { get; set; }
+        public int SolosRushVoidDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_fall_final_deaths_bedwars")]
-        public int SolosRushFallFinalDeathsBedwars { get; set; }
+        public int SolosRushFallFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_losses_bedwars")]
-        public int SolosRushLossesBedwars { get; set; }
+        public int SolosRushLossesBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_beds_lost_bedwars")]
-        public int SolosRushBedsLostBedwars { get; set; }
+        public int SolosRushBedsLostBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_final_deaths_bedwars")]
-        public int SolosRushFinalDeathsBedwars { get; set; }
+        public int SolosRushFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_entity_attack_final_deaths_bedwars")]
-        public int SolosRushEntityAttackFinalDeathsBedwars { get; set; }
+        public int SolosRushEntityAttackFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_one_rush_entity_explosion_final_kills_bedwars")]
-        public int SolosRushEntityExplosionFinalKillsBedwars { get; set; }
+        public int SolosRushEntityExplosionFinalKillsBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_winstreak")]
-        public int DuosRushWinstreak { get; set; }
+        public int DuosRushWinstreak { get; private set; }
 
         [JsonProperty("eight_two_rush_kills_bedwars")]
-        public int DuosRushKillsBedwars { get; set; }
+        public int DuosRushKillsBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_beds_broken_bedwars")]
-        public int DuosRushBedsBrokenBedwars { get; set; }
+        public int DuosRushBedsBrokenBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_items_purchased_bedwars")]
-        public int DuosRushItemsPurchasedBedwars { get; set; }
+        public int DuosRushItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_games_played_bedwars")]
-        public int DuosRushGamesPlayedBedwars { get; set; }
+        public int DuosRushGamesPlayedBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_deaths_bedwars")]
-        public int DuosRushDeathsBedwars { get; set; }
+        public int DuosRushDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_entity_attack_final_kills_bedwars")]
-        public int DuosRushEntityAttackFinalKillsBedwars { get; set; }
+        public int DuosRushEntityAttackFinalKillsBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_emerald_resources_collected_bedwars")]
-        public int DuosRushEmeraldResourcesCollectedBedwars { get; set; }
+        public int DuosRushEmeraldResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_void_final_kills_bedwars")]
-        public int DuosRushVoidFinalKillsBedwars { get; set; }
+        public int DuosRushVoidFinalKillsBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_entity_attack_deaths_bedwars")]
-        public int DuosRushEntityAttackDeathsBedwars { get; set; }
+        public int DuosRushEntityAttackDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_final_kills_bedwars")]
-        public int DuosRushFinalKillsBedwars { get; set; }
+        public int DuosRushFinalKillsBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_gold_resources_collected_bedwars")]
-        public int DuosRushGoldResourcesCollectedBedwars { get; set; }
+        public int DuosRushGoldResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_resources_collected_bedwars")]
-        public int DuosRushResourcesCollectedBedwars { get; set; }
+        public int DuosRushResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_void_kills_bedwars")]
-        public int DuosRushVoidKillsBedwars { get; set; }
+        public int DuosRushVoidKillsBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_diamond_resources_collected_bedwars")]
-        public int DuosRushDiamondResourcesCollectedBedwars { get; set; }
+        public int DuosRushDiamondResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_entity_attack_kills_bedwars")]
-        public int DuosRushEntityAttackKillsBedwars { get; set; }
+        public int DuosRushEntityAttackKillsBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_wins_bedwars")]
-        public int DuosRushWinsBedwars { get; set; }
+        public int DuosRushWinsBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_permanent _items_purchased_bedwars")]
-        public int DuosRushPermanentItemsPurchasedBedwars { get; set; }
+        public int DuosRushPermanentItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_iron_resources_collected_bedwars")]
-        public int DuosRushIronResourcesCollectedBedwars { get; set; }
+        public int DuosRushIronResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_void_deaths_bedwars")]
-        public int DuosRushVoidDeathsBedwars { get; set; }
+        public int DuosRushVoidDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_fall_final_deaths_bedwars")]
-        public int DuosRushFallFinalDeathsBedwars { get; set; }
+        public int DuosRushFallFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_losses_bedwars")]
-        public int DuosRushLossesBedwars { get; set; }
+        public int DuosRushLossesBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_beds_lost_bedwars")]
-        public int DuosRushBedsLostBedwars { get; set; }
+        public int DuosRushBedsLostBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_final_deaths_bedwars")]
-        public int DuosRushFinalDeathsBedwars { get; set; }
+        public int DuosRushFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_entity_attack_final_deaths_bedwars")]
-        public int DuosRushEntityAttackFinalDeathsBedwars { get; set; }
+        public int DuosRushEntityAttackFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_two_rush_entity_explosion_final_kills_bedwars")]
-        public int DuosRushEntityExplosionFinalKillsBedwars { get; set; }
+        public int DuosRushEntityExplosionFinalKillsBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_winstreak")]
-        public int FoursRushWinstreak { get; set; }
+        public int FoursRushWinstreak { get; private set; }
 
         [JsonProperty("four_four_rush_kills_bedwars")]
-        public int FoursRushKillsBedwars { get; set; }
+        public int FoursRushKillsBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_beds_broken_bedwars")]
-        public int FoursRushBedsBrokenBedwars { get; set; }
+        public int FoursRushBedsBrokenBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_items_purchased_bedwars")]
-        public int FoursRushItemsPurchasedBedwars { get; set; }
+        public int FoursRushItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_games_played_bedwars")]
-        public int FoursRushGamesPlayedBedwars { get; set; }
+        public int FoursRushGamesPlayedBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_deaths_bedwars")]
-        public int FoursRushDeathsBedwars { get; set; }
+        public int FoursRushDeathsBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_entity_attack_final_kills_bedwars")]
-        public int FoursRushEntityAttackFinalKillsBedwars { get; set; }
+        public int FoursRushEntityAttackFinalKillsBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_emerald_resources_collected_bedwars")]
-        public int FoursRushEmeraldResourcesCollectedBedwars { get; set; }
+        public int FoursRushEmeraldResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_void_final_kills_bedwars")]
-        public int FoursRushVoidFinalKillsBedwars { get; set; }
+        public int FoursRushVoidFinalKillsBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_entity_attack_deaths_bedwars")]
-        public int FoursRushEntityAttackDeathsBedwars { get; set; }
+        public int FoursRushEntityAttackDeathsBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_final_kills_bedwars")]
-        public int FoursRushFinalKillsBedwars { get; set; }
+        public int FoursRushFinalKillsBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_gold_resources_collected_bedwars")]
-        public int FoursRushGoldResourcesCollectedBedwars { get; set; }
+        public int FoursRushGoldResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_resources_collected_bedwars")]
-        public int FoursRushResourcesCollectedBedwars { get; set; }
+        public int FoursRushResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_void_kills_bedwars")]
-        public int FoursRushVoidKillsBedwars { get; set; }
+        public int FoursRushVoidKillsBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_diamond_resources_collected_bedwars")]
-        public int FoursRushDiamondResourcesCollectedBedwars { get; set; }
+        public int FoursRushDiamondResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_entity_attack_kills_bedwars")]
-        public int FoursRushEntityAttackKillsBedwars { get; set; }
+        public int FoursRushEntityAttackKillsBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_wins_bedwars")]
-        public int FoursRushWinsBedwars { get; set; }
+        public int FoursRushWinsBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_permanent _items_purchased_bedwars")]
-        public int FoursRushPermanentItemsPurchasedBedwars { get; set; }
+        public int FoursRushPermanentItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_iron_resources_collected_bedwars")]
-        public int FoursRushIronResourcesCollectedBedwars { get; set; }
+        public int FoursRushIronResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_void_deaths_bedwars")]
-        public int FoursRushVoidDeathsBedwars { get; set; }
+        public int FoursRushVoidDeathsBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_fall_final_deaths_bedwars")]
-        public int FoursRushFallFinalDeathsBedwars { get; set; }
+        public int FoursRushFallFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_losses_bedwars")]
-        public int FoursRushLossesBedwars { get; set; }
+        public int FoursRushLossesBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_beds_lost_bedwars")]
-        public int FoursRushBedsLostBedwars { get; set; }
+        public int FoursRushBedsLostBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_final_deaths_bedwars")]
-        public int FoursRushFinalDeathsBedwars { get; set; }
+        public int FoursRushFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_entity_attack_final_deaths_bedwars")]
-        public int FoursRushEntityAttackFinalDeathsBedwars { get; set; }
+        public int FoursRushEntityAttackFinalDeathsBedwars { get; private set; }
 
         [JsonProperty("four_four_rush_entity_explosion_final_kills_bedwars")]
-        public int FoursRushEntityExplosionFinalKillsBedwars { get; set; }
+        public int FoursRushEntityExplosionFinalKillsBedwars { get; private set; }
         #endregion
 
         #region lucky bedwars mode
         [JsonProperty("eight_two_lucky_winstreak")]
-        public int DuosLuckyWinstreak { get; set; }
+        public int DuosLuckyWinstreak { get; private set; }
 
         [JsonProperty("eight_two_lucky_void_deaths_bedwars")]
-        public int DuosLuckyVoidDeathsBedwars { get; set; }
+        public int DuosLuckyVoidDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_two_lucky_permanent _items_purchased_bedwars")]
-        public int DuosLuckyPermanentItemsPurchasedBedwars { get; set; }
+        public int DuosLuckyPermanentItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("eight_two_lucky_items_purchased_bedwars")]
-        public int DuosLuckyItemsPurchasedBedwars { get; set; }
+        public int DuosLuckyItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("eight_two_lucky_games_played_bedwars")]
-        public int DuosLuckyGamesPlayedBedwars { get; set; }
+        public int DuosLuckyGamesPlayedBedwars { get; private set; }
 
         [JsonProperty("eight_two_lucky_beds_broken_bedwars")]
-        public int DuosLuckyBedsBrokenBedwars { get; set; }
+        public int DuosLuckyBedsBrokenBedwars { get; private set; }
 
         [JsonProperty("eight_two_lucky_resources_collected_bedwars")]
-        public int DuosLuckyResourcesCollectedBedwars { get; set; }
+        public int DuosLuckyResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_two_lucky_deaths_bedwars")]
-        public int DuosLuckyDeathsBedwars { get; set; }
+        public int DuosLuckyDeathsBedwars { get; private set; }
 
         [JsonProperty("eight_two_lucky_iron_resources_collected_bedwars")]
-        public int DuosLuckyIronResourcesCollectedBedwars { get; set; }
+        public int DuosLuckyIronResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_two_lucky_gold_resources_collected_bedwars")]
-        public int DuosLuckyGoldResourcesCollectedBedwars { get; set; }
+        public int DuosLuckyGoldResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("eight_two_lucky_wins_bedwars")]
-        public int DuosLuckyWinsBedwars { get; set; }
+        public int DuosLuckyWinsBedwars { get; private set; }
 
         [JsonProperty("four_four_lucky_winstreak")]
-        public int FoursLuckyWinstreak { get; set; }
+        public int FoursLuckyWinstreak { get; private set; }
 
         [JsonProperty("four_four_lucky_void_deaths_bedwars")]
-        public int FoursLuckyVoidDeathsBedwars { get; set; }
+        public int FoursLuckyVoidDeathsBedwars { get; private set; }
 
         [JsonProperty("four_four_lucky_permanent _items_purchased_bedwars")]
-        public int FoursLuckyPermanentItemsPurchasedBedwars { get; set; }
+        public int FoursLuckyPermanentItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("four_four_lucky_items_purchased_bedwars")]
-        public int FoursLuckyItemsPurchasedBedwars { get; set; }
+        public int FoursLuckyItemsPurchasedBedwars { get; private set; }
 
         [JsonProperty("four_four_lucky_games_played_bedwars")]
-        public int FoursLuckyGamesPlayedBedwars { get; set; }
+        public int FoursLuckyGamesPlayedBedwars { get; private set; }
 
         [JsonProperty("four_four_lucky_beds_broken_bedwars")]
-        public int FoursLuckyBedsBrokenBedwars { get; set; }
+        public int FoursLuckyBedsBrokenBedwars { get; private set; }
 
         [JsonProperty("four_four_lucky_resources_collected_bedwars")]
-        public int FoursLuckyResourcesCollectedBedwars { get; set; }
+        public int FoursLuckyResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("four_four_lucky_deaths_bedwars")]
-        public int FoursLuckyDeathsBedwars { get; set; }
+        public int FoursLuckyDeathsBedwars { get; private set; }
 
         [JsonProperty("four_four_lucky_iron_resources_collected_bedwars")]
-        public int FoursLuckyIronResourcesCollectedBedwars { get; set; }
+        public int FoursLuckyIronResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("four_four_lucky_gold_resources_collected_bedwars")]
-        public int FoursLuckyGoldResourcesCollectedBedwars { get; set; }
+        public int FoursLuckyGoldResourcesCollectedBedwars { get; private set; }
 
         [JsonProperty("four_four_lucky_wins_bedwars")]
-        public int FoursLuckyWinsBedwars { get; set; }
+        public int FoursLuckyWinsBedwars { get; private set; }
         #endregion
     }
 }

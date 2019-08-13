@@ -6,16 +6,16 @@ namespace Hypixel.NET.Booster
     public class Booster
     {
         [JsonProperty("purchaserUuid")]
-        public string PurchaserUuid { get; set; }
+        public string PurchaserUuid { get; private set; }
 
         [JsonProperty("amount")]
-        public double Amount { get; set; }
+        public double Amount { get; private set; }
 
         [JsonProperty("originalLength")]
-        public int OriginalLength { get; set; }
+        public int OriginalLength { get; private set; }
 
         [JsonProperty("length")]
-        public int Length { get; set; }
+        public int Length { get; private set; }
 
         [JsonProperty("gameType")]
         private readonly int _gameType;

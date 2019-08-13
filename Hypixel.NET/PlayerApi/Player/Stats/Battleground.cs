@@ -9,634 +9,634 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
 
         #region general
         [JsonProperty("coins")]
-        public int Coins { get; set; }
+        public int Coins { get; private set; }
 
         [JsonProperty("chosen_class")]
-        public string ChosenClass { get; set; }
+        public string ChosenClass { get; private set; }
 
         [JsonProperty("packages")]
-        public List<string> Packages { get; set; }
+        public List<string> Packages { get; private set; }
 
         [JsonProperty("selected_mount")]
-        public string SelectedMount { get; set; }
+        public string SelectedMount { get; private set; }
 
         [JsonProperty("void_shards")]
-        public int VoidShards { get; set; }
+        public int VoidShards { get; private set; }
 
         [JsonProperty("weapon_inventory")]
-        public List<WeaponInventory> WeaponInventory { get; set; }
+        public List<WeaponInventory> WeaponInventory { get; private set; }
 
         [JsonProperty("win_streak")]
-        public int WinStreak { get; set; }
+        public int WinStreak { get; private set; }
 
         [JsonProperty("wins")]
-        public int Wins { get; set; }
+        public int Wins { get; private set; }
 
         [JsonProperty("play_streak")]
-        public int PlayStreak { get; set; }
+        public int PlayStreak { get; private set; }
 
         [JsonProperty("hotkeymode")]
-        public bool Hotkeymode { get; set; }
+        public bool Hotkeymode { get; private set; }
 
         [JsonProperty("prestiged")]
-        public List<string> PrestigedClasses { get; set; }
+        public List<string> PrestigedClasses { get; private set; }
         #endregion
 
         #region general stats
         [JsonProperty("broken_inventory")]
-        public int BrokenInventory { get; set; }
+        public int BrokenInventory { get; private set; }
 
         [JsonProperty("damage")]
-        public long Damage { get; set; }
+        public long Damage { get; private set; }
 
         [JsonProperty("crafted")]
-        public int Crafted { get; set; }
+        public int Crafted { get; private set; }
 
         [JsonProperty("crafted_epic")]
-        public int CraftedEpic { get; set; }
+        public int CraftedEpic { get; private set; }
 
         [JsonProperty("damage_prevented")]
-        public long DamagePrevented { get; set; }
+        public long DamagePrevented { get; private set; }
 
         [JsonProperty("damage_taken")]
-        public long DamageTaken { get; set; }
+        public long DamageTaken { get; private set; }
 
         [JsonProperty("deaths")]
-        public int Deaths { get; set; }
+        public int Deaths { get; private set; }
 
         [JsonProperty("kills")]
-        public int Kills { get; set; }
+        public int Kills { get; private set; }
 
         [JsonProperty("assists")]
-        public int Assists { get; set; }
+        public int Assists { get; private set; }
 
         [JsonProperty("life_leeched")]
-        public long LifeLeeched { get; set; }
+        public long LifeLeeched { get; private set; }
 
         [JsonProperty("losses")]
-        public int Losses { get; set; }
+        public int Losses { get; private set; }
 
         [JsonProperty("magic_dust")]
-        public int MagicDust { get; set; }
+        public int MagicDust { get; private set; }
 
         [JsonProperty("repaired")]
-        public int Repaired { get; set; }
+        public int Repaired { get; private set; }
 
         [JsonProperty("repaired_common")]
-        public int RepairedCommon { get; set; }
+        public int RepairedCommon { get; private set; }
 
         [JsonProperty("repaired_epic")]
-        public int RepairedEpic { get; set; }
+        public int RepairedEpic { get; private set; }
 
         [JsonProperty("repaired_rare")]
-        public int RepairedRare { get; set; }
+        public int RepairedRare { get; private set; }
 
         [JsonProperty("salvaged_dust_reward")]
-        public int SalvagedDustReward { get; set; }
+        public int SalvagedDustReward { get; private set; }
 
         [JsonProperty("salvaged_shards_reward")]
-        public int SalvagedShardsReward { get; set; }
+        public int SalvagedShardsReward { get; private set; }
 
         [JsonProperty("salvaged_weapons")]
-        public int SalvagedWeapons { get; set; }
+        public int SalvagedWeapons { get; private set; }
 
         [JsonProperty("salvaged_weapons_common")]
-        public int SalvagedWeaponsCommon { get; set; }
+        public int SalvagedWeaponsCommon { get; private set; }
 
         [JsonProperty("salvaged_weapons_rare")]
-        public int SalvagedWeaponsRare { get; set; }
+        public int SalvagedWeaponsRare { get; private set; }
 
         [JsonProperty("upgrade_random")]
-        public int UpgradeRandom { get; set; }
+        public int UpgradeRandom { get; private set; }
 
         [JsonProperty("upgrade_random_epic")]
-        public int UpgradeRandomEpic { get; set; }
+        public int UpgradeRandomEpic { get; private set; }
 
         [JsonProperty("wins_blu")]
-        public int WinsBlue { get; set; }
+        public int WinsBlue { get; private set; }
 
         [JsonProperty("wins_capturetheflag")]
-        public int WinsCapturetheflag { get; set; }
+        public int WinsCapturetheflag { get; private set; }
 
         [JsonProperty("wins_capturetheflag_blu")]
-        public int WinsCapturetheflagBlue { get; set; }
+        public int WinsCapturetheflagBlue { get; private set; }
 
         [JsonProperty("wins_capturetheflag_red")]
-        public int WinsCapturetheflagRed { get; set; }
+        public int WinsCapturetheflagRed { get; private set; }
 
         [JsonProperty("wins_domination")]
-        public int WinsDomination { get; set; }
+        public int WinsDomination { get; private set; }
 
         [JsonProperty("wins_domination_blu")]
-        public int WinsDominationBlue { get; set; }
+        public int WinsDominationBlue { get; private set; }
 
         [JsonProperty("wins_domination_red")]
-        public int WinsDominationRed { get; set; }
+        public int WinsDominationRed { get; private set; }
 
         [JsonProperty("wins_red")]
-        public int WinsRed { get; set; }
+        public int WinsRed { get; private set; }
 
         [JsonProperty("salvaged_weapons_epic")]
-        public int SalvagedWeaponsEpic { get; set; }
+        public int SalvagedWeaponsEpic { get; private set; }
 
         [JsonProperty("upgrade_crafted")]
-        public int UpgradeCrafted { get; set; }
+        public int UpgradeCrafted { get; private set; }
 
         [JsonProperty("upgrade_crafted_epic")]
-        public int UpgradeCraftedEpic { get; set; }
+        public int UpgradeCraftedEpic { get; private set; }
 
         [JsonProperty("reroll_epic")]
-        public int RerollEpic { get; set; }
+        public int RerollEpic { get; private set; }
 
         [JsonProperty("reroll")]
-        public int Reroll { get; set; }
+        public int Reroll { get; private set; }
 
         [JsonProperty("repaired_legendary")]
-        public int RepairedLegendary { get; set; }
+        public int RepairedLegendary { get; private set; }
 
         [JsonProperty("salvaged_weapons_legendary")]
-        public int SalvagedWeaponsLegendary { get; set; }
+        public int SalvagedWeaponsLegendary { get; private set; }
 
         [JsonProperty("crafted_legendary")]
-        public int CraftedLegendary { get; set; }
+        public int CraftedLegendary { get; private set; }
 
         [JsonProperty("reroll_legendary")]
-        public int RerollLegendary { get; set; }
+        public int RerollLegendary { get; private set; }
 
         [JsonProperty("afk_warned")]
-        public int AfkWarned { get; set; }
+        public int AfkWarned { get; private set; }
 
         [JsonProperty("penalty")]
-        public int Penalty { get; set; }
+        public int Penalty { get; private set; }
 
         [JsonProperty("upgrade_crafted_legendary")]
-        public int UpgradeCraftedLegendary { get; set; }
+        public int UpgradeCraftedLegendary { get; private set; }
 
         [JsonProperty("wins_teamdeathmatch")]
-        public int WinsTeamdeathmatch { get; set; }
+        public int WinsTeamdeathmatch { get; private set; }
 
         [JsonProperty("wins_teamdeathmatch_blu")]
-        public int WinsTeamdeathmatchBlue { get; set; }
+        public int WinsTeamdeathmatchBlue { get; private set; }
 
         [JsonProperty("wins_teamdeathmatch_red")]
-        public int WinsTeamdeathmatchRed { get; set; }
+        public int WinsTeamdeathmatchRed { get; private set; }
 
         [JsonProperty("crafted_rare")]
-        public int CraftedRare { get; set; }
+        public int CraftedRare { get; private set; }
 
         [JsonProperty("reroll_common")]
-        public int RerollCommon { get; set; }
+        public int RerollCommon { get; private set; }
 
         [JsonProperty("upgrade_random_legendary")]
-        public int UpgradeRandomLegendary { get; set; }
+        public int UpgradeRandomLegendary { get; private set; }
 
         [JsonProperty("reward_inventory")]
-        public int RewardInventory { get; set; }
+        public int RewardInventory { get; private set; }
 
         [JsonProperty("kills_capturetheflag")]
-        public int CapturetheflagKills { get; set; }
+        public int CapturetheflagKills { get; private set; }
 
         [JsonProperty("kills_teamdeathmatch")]
-        public int TeamdeathmatchKills { get; set; }
+        public int TeamdeathmatchKills { get; private set; }
 
         [JsonProperty("kills_domination")]
-        public int DominationKills { get; set; }
+        public int DominationKills { get; private set; }
 
         [JsonProperty("total_domination_score")]
-        public int TotalDominationScore { get; set; }
+        public int TotalDominationScore { get; private set; }
 
         [JsonProperty("flag_returns")]
-        public int FlagReturns { get; set; }
+        public int FlagReturns { get; private set; }
 
         [JsonProperty("mvp_count")]
-        public int MvpCount { get; set; }
+        public int MvpCount { get; private set; }
 
         [JsonProperty("dom_point_captures")]
-        public int DomPointCaptures { get; set; }
+        public int DomPointCaptures { get; private set; }
 
         [JsonProperty("dom_point_defends")]
-        public int DomPointDefends { get; set; }
+        public int DomPointDefends { get; private set; }
 
         [JsonProperty("powerups_collected")]
-        public int PowerupsCollected { get; set; }
+        public int PowerupsCollected { get; private set; }
         #endregion
 
         #region berserker
         [JsonProperty("berserker_plays")]
-        public int BerserkerPlays { get; set; }
+        public int BerserkerPlays { get; private set; }
 
         [JsonProperty("damage_berserker")]
-        public long BerserkerDamage { get; set; }
+        public long BerserkerDamage { get; private set; }
 
         [JsonProperty("damage_prevented_berserker")]
-        public long BerserkerDamagePrevented { get; set; }
+        public long BerserkerDamagePrevented { get; private set; }
 
         [JsonProperty("heal_berserker")]
-        public long BerserkerHealing { get; set; }
+        public long BerserkerHealing { get; private set; }
 
         [JsonProperty("life_leeched_berserker")]
-        public long BerserkerLifeLeeched { get; set; }
+        public long BerserkerLifeLeeched { get; private set; }
 
         [JsonProperty("losses_berserker")]
-        public int BerserkerLosses { get; set; }
+        public int BerserkerLosses { get; private set; }
 
         [JsonProperty("wins_berserker")]
-        public int BerserkerWins { get; set; }
+        public int BerserkerWins { get; private set; }
         #endregion
 
         #region defender
         [JsonProperty("damage_defender")]
-        public long DefenderDamage { get; set; }
+        public long DefenderDamage { get; private set; }
 
         [JsonProperty("damage_prevented_defender")]
-        public long DefenderDamagePrevented { get; set; }
+        public long DefenderDamagePrevented { get; private set; }
 
         [JsonProperty("defender_plays")]
-        public int DefenderPlays { get; set; }
+        public int DefenderPlays { get; private set; }
 
         [JsonProperty("heal_defender")]
-        public long DefenderHealing { get; set; }
+        public long DefenderHealing { get; private set; }
 
         [JsonProperty("losses_defender")]
-        public int DefenderLosses { get; set; }
+        public int DefenderLosses { get; private set; }
 
         [JsonProperty("wins_defender")]
-        public int DefenderWins { get; set; }
+        public int DefenderWins { get; private set; }
         #endregion
 
         #region warrior
         [JsonProperty("damage_prevented_warrior")]
-        public long WarriorDamagePrevented { get; set; }
+        public long WarriorDamagePrevented { get; private set; }
 
         [JsonProperty("damage_warrior")]
-        public long WarriorDamage { get; set; }
+        public long WarriorDamage { get; private set; }
 
         [JsonProperty("heal_warrior")]
-        public long WarriorHeal { get; set; }
+        public long WarriorHeal { get; private set; }
 
         [JsonProperty("life_leeched_warrior")]
-        public long WarriorLifeLeeched { get; set; }
+        public long WarriorLifeLeeched { get; private set; }
 
         [JsonProperty("losses_warrior")]
-        public int WarriorLosses { get; set; }
+        public int WarriorLosses { get; private set; }
 
         [JsonProperty("warrior_cooldown")]
-        public int WarriorCooldown { get; set; }
+        public int WarriorCooldown { get; private set; }
 
         [JsonProperty("warrior_critchance")]
-        public int WarriorCritchance { get; set; }
+        public int WarriorCritchance { get; private set; }
 
         [JsonProperty("warrior_critmultiplier")]
-        public int WarriorCritmultiplier { get; set; }
+        public int WarriorCritmultiplier { get; private set; }
 
         [JsonProperty("warrior_energy")]
-        public int WarriorEnergyLevel { get; set; }
+        public int WarriorEnergyLevel { get; private set; }
 
         [JsonProperty("warrior_health")]
-        public int WarriorHealthLevel { get; set; }
+        public int WarriorHealthLevel { get; private set; }
 
         [JsonProperty("warrior_plays")]
-        public int WarriorPlays { get; set; }
+        public int WarriorPlays { get; private set; }
 
         [JsonProperty("warrior_skill1")]
-        public int WarriorSkill1Level { get; set; }
+        public int WarriorSkill1Level { get; private set; }
 
         [JsonProperty("warrior_skill2")]
-        public int WarriorSkill2Level { get; set; }
+        public int WarriorSkill2Level { get; private set; }
 
         [JsonProperty("warrior_skill3")]
-        public int WarriorSkill3Level { get; set; }
+        public int WarriorSkill3Level { get; private set; }
 
         [JsonProperty("warrior_skill4")]
-        public int WarriorSkill4Level { get; set; }
+        public int WarriorSkill4Level { get; private set; }
 
         [JsonProperty("warrior_skill5")]
-        public int WarriorSkill5Level { get; set; }
+        public int WarriorSkill5Level { get; private set; }
 
         [JsonProperty("warrior_spec")]
-        public string WarriorSpec { get; set; }
+        public string WarriorSpec { get; private set; }
 
         [JsonProperty("wins_warrior")]
-        public int WarriorWins { get; set; }
+        public int WarriorWins { get; private set; }
         #endregion
 
         #region mage
         [JsonProperty("mage_spec")]
-        public string MageSpec { get; set; }
+        public string MageSpec { get; private set; }
 
         [JsonProperty("heal_mage")]
-        public long MageHeal { get; set; }
+        public long MageHeal { get; private set; }
 
         [JsonProperty("damage_prevented_mage")]
-        public long MageDamagePrevented { get; set; }
+        public long MageDamagePrevented { get; private set; }
 
         [JsonProperty("wins_mage")]
-        public int MageWins { get; set; }
+        public int MageWins { get; private set; }
 
         [JsonProperty("damage_mage")]
-        public int MageDamage { get; set; }
+        public int MageDamage { get; private set; }
 
         [JsonProperty("mage_plays")]
-        public int MagePlays { get; set; }
+        public int MagePlays { get; private set; }
 
         [JsonProperty("losses_mage")]
-        public int MageLosses { get; set; }
+        public int MageLosses { get; private set; }
 
         [JsonProperty("mage_skill1")]
-        public int MageSkill1Level { get; set; }
+        public int MageSkill1Level { get; private set; }
 
         [JsonProperty("mage_skill3")]
-        public int MageSkill3Level { get; set; }
+        public int MageSkill3Level { get; private set; }
 
         [JsonProperty("mage_skill4")]
-        public int MageSkill4Level { get; set; }
+        public int MageSkill4Level { get; private set; }
 
         [JsonProperty("mage_skill5")]
-        public int MageSkill5Level { get; set; }
+        public int MageSkill5Level { get; private set; }
 
         [JsonProperty("mage_skill2")]
-        public int MageSkill2Level { get; set; }
+        public int MageSkill2Level { get; private set; }
 
         [JsonProperty("mage_health")]
-        public int MageHealthLevel { get; set; }
+        public int MageHealthLevel { get; private set; }
 
         [JsonProperty("mage_energy")]
-        public int MageEnergyLevel { get; set; }
+        public int MageEnergyLevel { get; private set; }
 
         [JsonProperty("mage_cooldown")]
-        public int MageCooldownLevel { get; set; }
+        public int MageCooldownLevel { get; private set; }
 
         [JsonProperty("mage_critchance")]
-        public int MageCritchanceLevel { get; set; }
+        public int MageCritchanceLevel { get; private set; }
 
         [JsonProperty("mage_critmultiplier")]
-        public int MageCritmultiplierLevel { get; set; }
+        public int MageCritmultiplierLevel { get; private set; }
         #endregion
 
         #region paladin
         [JsonProperty("paladin_spec")]
-        public string PaladinSpec { get; set; }
+        public string PaladinSpec { get; private set; }
 
         [JsonProperty("damage_paladin")]
-        public long PaladinDamage { get; set; }
+        public long PaladinDamage { get; private set; }
 
         [JsonProperty("paladin_plays")]
-        public int PaladinPlays { get; set; }
+        public int PaladinPlays { get; private set; }
 
         [JsonProperty("losses_paladin")]
-        public int PaladinLosses { get; set; }
+        public int PaladinLosses { get; private set; }
 
         [JsonProperty("heal_paladin")]
-        public long PaladinHeals { get; set; }
+        public long PaladinHeals { get; private set; }
 
         [JsonProperty("damage_prevented_paladin")]
-        public int PaladinDamagePrevented { get; set; }
+        public int PaladinDamagePrevented { get; private set; }
 
         [JsonProperty("wins_paladin")]
-        public int PaladinWins { get; set; }
+        public int PaladinWins { get; private set; }
 
         [JsonProperty("paladin_skill5")]
-        public int PaladinSkill5Level { get; set; }
+        public int PaladinSkill5Level { get; private set; }
 
         [JsonProperty("paladin_skill4")]
-        public int PaladinSkill4Level { get; set; }
+        public int PaladinSkill4Level { get; private set; }
 
         [JsonProperty("paladin_skill3")]
-        public int PaladinSkill3Level { get; set; }
+        public int PaladinSkill3Level { get; private set; }
 
         [JsonProperty("paladin_skill1")]
-        public int PaladinSkill1Level { get; set; }
+        public int PaladinSkill1Level { get; private set; }
 
         [JsonProperty("paladin_skill2")]
-        public int PaladinSkill2Level { get; set; }
+        public int PaladinSkill2Level { get; private set; }
 
         [JsonProperty("paladin_energy")]
-        public int PaladinEnergyLevel { get; set; }
+        public int PaladinEnergyLevel { get; private set; }
 
         [JsonProperty("paladin_critmultiplier")]
-        public int PaladinCritmultiplierLevel { get; set; }
+        public int PaladinCritmultiplierLevel { get; private set; }
 
         [JsonProperty("paladin_health")]
-        public int PaladinHealthLevel { get; set; }
+        public int PaladinHealthLevel { get; private set; }
 
         [JsonProperty("paladin_cooldown")]
-        public int PaladinCooldownLevel { get; set; }
+        public int PaladinCooldownLevel { get; private set; }
 
         [JsonProperty("paladin_critchance")]
-        public int PaladinCritchanceLevel { get; set; }
+        public int PaladinCritchanceLevel { get; private set; }
         #endregion
 
         #region pyromancer
         [JsonProperty("damage_pyromancer")]
-        public long PyromancerDamage { get; set; }
+        public long PyromancerDamage { get; private set; }
 
         [JsonProperty("heal_pyromancer")]
-        public long PyromancerHeals { get; set; }
+        public long PyromancerHeals { get; private set; }
 
         [JsonProperty("damage_prevented_pyromancer")]
-        public long PyromancerDamagePrevented { get; set; }
+        public long PyromancerDamagePrevented { get; private set; }
 
         [JsonProperty("pyromancer_plays")]
-        public int PyromancerPlays { get; set; }
+        public int PyromancerPlays { get; private set; }
 
         [JsonProperty("wins_pyromancer")]
-        public int PyromancerWins { get; set; }
+        public int PyromancerWins { get; private set; }
 
         [JsonProperty("losses_pyromancer")]
-        public int PyromancerLosses { get; set; }
+        public int PyromancerLosses { get; private set; }
         #endregion
 
         #region avenger
         [JsonProperty("losses_avenger")]
-        public int AvengerLosses { get; set; }
+        public int AvengerLosses { get; private set; }
 
         [JsonProperty("damage_avenger")]
-        public int AvengerDamage { get; set; }
+        public int AvengerDamage { get; private set; }
 
         [JsonProperty("avenger_plays")]
-        public int PlaysAvenger { get; set; }
+        public int PlaysAvenger { get; private set; }
 
         [JsonProperty("heal_avenger")]
-        public long AvengerHeals { get; set; }
+        public long AvengerHeals { get; private set; }
 
         [JsonProperty("damage_prevented_avenger")]
-        public long AvengerDamagePrevented { get; set; }
+        public long AvengerDamagePrevented { get; private set; }
 
         [JsonProperty("wins_avenger")]
-        public int AvengerWins { get; set; }
+        public int AvengerWins { get; private set; }
         #endregion
 
         #region cryomancer
         [JsonProperty("cryomancer_plays")]
-        public int CryomancerPlays { get; set; }
+        public int CryomancerPlays { get; private set; }
 
         [JsonProperty("wins_cryomancer")]
-        public int CryomancerWins { get; set; }
+        public int CryomancerWins { get; private set; }
 
         [JsonProperty("heal_cryomancer")]
-        public long CryomancerHeals { get; set; }
+        public long CryomancerHeals { get; private set; }
 
         [JsonProperty("damage_prevented_cryomancer")]
-        public long CryomancerDamagePrevented { get; set; }
+        public long CryomancerDamagePrevented { get; private set; }
 
         [JsonProperty("damage_cryomancer")]
-        public long CryomancerDamage { get; set; }
+        public long CryomancerDamage { get; private set; }
 
         [JsonProperty("losses_cryomancer")]
-        public int CryomancerLosses { get; set; }
+        public int CryomancerLosses { get; private set; }
         #endregion
 
         #region aquamancer
         [JsonProperty("damage_prevented_aquamancer")]
-        public long AquamancerDamagePrevented { get; set; }
+        public long AquamancerDamagePrevented { get; private set; }
 
         [JsonProperty("wins_aquamancer")]
-        public int AquamancerWins { get; set; }
+        public int AquamancerWins { get; private set; }
 
         [JsonProperty("damage_aquamancer")]
-        public long AquamancerDamage { get; set; }
+        public long AquamancerDamage { get; private set; }
 
         [JsonProperty("aquamancer_plays")]
-        public int AquamancerPlays { get; set; }
+        public int AquamancerPlays { get; private set; }
 
         [JsonProperty("heal_aquamancer")]
-        public long AquamancerHeals { get; set; }
+        public long AquamancerHeals { get; private set; }
 
         [JsonProperty("losses_aquamancer")]
-        public int AquamancerLosses { get; set; }
+        public int AquamancerLosses { get; private set; }
         #endregion
 
         #region shaman
         [JsonProperty("shaman_spec")]
-        public string ShamanSpec { get; set; }
+        public string ShamanSpec { get; private set; }
 
         [JsonProperty("damage_shaman")]
-        public long ShamanDamage { get; set; }
+        public long ShamanDamage { get; private set; }
 
         [JsonProperty("shaman_plays")]
-        public int ShamanPlays { get; set; }
+        public int ShamanPlays { get; private set; }
 
         [JsonProperty("damage_prevented_shaman")]
-        public long ShamanDamagePrevented { get; set; }
+        public long ShamanDamagePrevented { get; private set; }
 
         [JsonProperty("heal_shaman")]
-        public long ShamanHeals { get; set; }
+        public long ShamanHeals { get; private set; }
 
         [JsonProperty("wins_shaman")]
-        public int ShamanWins { get; set; }
+        public int ShamanWins { get; private set; }
 
         [JsonProperty("losses_shaman")]
-        public int ShamanLosses { get; set; }
+        public int ShamanLosses { get; private set; }
 
         [JsonProperty("shaman_skill1")]
-        public int ShamanSkill1Level { get; set; }
+        public int ShamanSkill1Level { get; private set; }
 
         [JsonProperty("shaman_skill3")]
-        public int ShamanSkill3Level { get; set; }
+        public int ShamanSkill3Level { get; private set; }
 
         [JsonProperty("shaman_skill2")]
-        public int ShamanSkill2Level { get; set; }
+        public int ShamanSkill2Level { get; private set; }
 
         [JsonProperty("shaman_skill4")]
-        public int ShamanSkill4Level { get; set; }
+        public int ShamanSkill4Level { get; private set; }
 
         [JsonProperty("shaman_skill5")]
-        public int ShamanSkill5Level { get; set; }
+        public int ShamanSkill5Level { get; private set; }
 
         [JsonProperty("shaman_critmultiplier")]
-        public int ShamanCritmultiplierLevel { get; set; }
+        public int ShamanCritmultiplierLevel { get; private set; }
 
         [JsonProperty("shaman_energy")]
-        public int ShamanEnergyLevel { get; set; }
+        public int ShamanEnergyLevel { get; private set; }
 
         [JsonProperty("shaman_critchance")]
-        public int ShamanCritchanceLevel { get; set; }
+        public int ShamanCritchanceLevel { get; private set; }
 
         [JsonProperty("shaman_cooldown")]
-        public int ShamanCooldownLevel { get; set; }
+        public int ShamanCooldownLevel { get; private set; }
 
         [JsonProperty("shaman_health")]
-        public int ShamanHealthLevel { get; set; }
+        public int ShamanHealthLevel { get; private set; }
         #endregion
 
         #region earthwarden
         [JsonProperty("damage_prevented_earthwarden")]
-        public long EarthwardenDamagePrevented { get; set; }
+        public long EarthwardenDamagePrevented { get; private set; }
 
         [JsonProperty("damage_earthwarden")]
-        public long EarthwardenDamage { get; set; }
+        public long EarthwardenDamage { get; private set; }
 
         [JsonProperty("earthwarden_plays")]
-        public int EarthwardenPlays { get; set; }
+        public int EarthwardenPlays { get; private set; }
 
         [JsonProperty("heal_earthwarden")]
-        public long EarthwardenHeals { get; set; }
+        public long EarthwardenHeals { get; private set; }
 
         [JsonProperty("wins_earthwarden")]
-        public int EarthwardenWins { get; set; }
+        public int EarthwardenWins { get; private set; }
 
         [JsonProperty("losses_earthwarden")]
-        public int EarthwardenLosses { get; set; }
+        public int EarthwardenLosses { get; private set; }
         #endregion
 
         #region thunderlord
         [JsonProperty("heal_thunderlord")]
-        public long ThunderlordHeals { get; set; }
+        public long ThunderlordHeals { get; private set; }
 
         [JsonProperty("thunderlord_plays")]
-        public int ThunderlordPlays { get; set; }
+        public int ThunderlordPlays { get; private set; }
 
         [JsonProperty("damage_thunderlord")]
-        public long ThunderlordDamage { get; set; }
+        public long ThunderlordDamage { get; private set; }
 
         [JsonProperty("losses_thunderlord")]
-        public int ThunderlordLosses { get; set; }
+        public int ThunderlordLosses { get; private set; }
 
         [JsonProperty("damage_prevented_thunderlord")]
-        public long ThunderlordDamagePrevented { get; set; }
+        public long ThunderlordDamagePrevented { get; private set; }
 
         [JsonProperty("wins_thunderlord")]
-        public int ThunderlordWins { get; set; }
+        public int ThunderlordWins { get; private set; }
         #endregion
 
         #region crusader
         [JsonProperty("crusader_plays")]
-        public int CrusaderPlays { get; set; }
+        public int CrusaderPlays { get; private set; }
 
         [JsonProperty("heal_crusader")]
-        public long CrusaderHeals { get; set; }
+        public long CrusaderHeals { get; private set; }
 
         [JsonProperty("wins_crusader")]
-        public int CrusaderWins { get; set; }
+        public int CrusaderWins { get; private set; }
 
         [JsonProperty("damage_crusader")]
-        public long CrusaderDamage { get; set; }
+        public long CrusaderDamage { get; private set; }
 
         [JsonProperty("damage_prevented_crusader")]
-        public long CrusaderDamagePrevented { get; set; }
+        public long CrusaderDamagePrevented { get; private set; }
 
         [JsonProperty("losses_crusader")]
-        public int CrusaderLosses { get; set; }
+        public int CrusaderLosses { get; private set; }
         #endregion
 
         #region protector
         [JsonProperty("wins_protector")]
-        public int ProtectorWins { get; set; }
+        public int ProtectorWins { get; private set; }
 
         [JsonProperty("heal_protector")]
-        public long ProtectorHeals { get; set; }
+        public long ProtectorHeals { get; private set; }
 
         [JsonProperty("protector_plays")]
-        public int ProtectorPlays { get; set; }
+        public int ProtectorPlays { get; private set; }
 
         [JsonProperty("damage_prevented_protector")]
-        public long ProtectorDamagePrevented { get; set; }
+        public long ProtectorDamagePrevented { get; private set; }
 
         [JsonProperty("damage_protector")]
-        public long ProtectorDamage { get; set; }
+        public long ProtectorDamage { get; private set; }
 
         [JsonProperty("losses_protector")]
-        public int ProtectorLosses { get; set; }
+        public int ProtectorLosses { get; private set; }
         #endregion
     }
 }

@@ -6,10 +6,10 @@ namespace Hypixel.NET.FriendsApi.Record
     public class Records
     {
         [JsonProperty("uuidSender")]
-        public string UuidSender { get; set; }
+        public string UuidSender { get; private set; }
 
         [JsonProperty("uuidReceiver")]
-        public string UuidReceiver { get; set; }
+        public string UuidReceiver { get; private set; }
 
         [JsonProperty("started")]
         private readonly long _started;

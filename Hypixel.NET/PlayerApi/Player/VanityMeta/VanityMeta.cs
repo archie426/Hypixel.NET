@@ -8,6 +8,6 @@ namespace Hypixel.NET.PlayerApi.Player.VanityMeta
     public class VanityMeta
     {
         [JsonProperty("packages")]
-        public List<string> Packages { get; set; }
+        public List<string> Packages { get; private set; }
     }
 }

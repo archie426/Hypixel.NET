@@ -5,363 +5,363 @@ namespace Hypixel.NET.PlayerApi.Player.Achievements
     public class Achievements
     {
         [JsonProperty("arena_bossed")]
-        public int ArenaBossed { get; set; }
+        public int ArenaBossed { get; private set; }
 
         [JsonProperty("arena_climb_the_ranks")]
-        public int ArenaClimbTheRanks { get; set; }
+        public int ArenaClimbTheRanks { get; private set; }
 
         [JsonProperty("arena_gladiator")]
-        public int ArenaGladiator { get; set; }
+        public int ArenaGladiator { get; private set; }
 
         [JsonProperty("arena_gotta_wear_em_all")]
-        public int ArenaGottaWearEmAll { get; set; }
+        public int ArenaGottaWearEmAll { get; private set; }
 
         [JsonProperty("blitz_coins")]
-        public int BlitzCoins { get; set; }
+        public int BlitzCoins { get; private set; }
 
         [JsonProperty("blitz_kills")]
-        public int BlitzKills { get; set; }
+        public int BlitzKills { get; private set; }
 
         [JsonProperty("general_coins")]
-        public int GeneralCoins { get; set; }
+        public int GeneralCoins { get; private set; }
 
         [JsonProperty("general_wins")]
-        public int GeneralWins { get; set; }
+        public int GeneralWins { get; private set; }
 
         [JsonProperty("quake_killing_sprees")]
-        public int QuakeKillingSprees { get; set; }
+        public int QuakeKillingSprees { get; private set; }
 
         [JsonProperty("quake_kills")]
-        public int QuakeKills { get; set; }
+        public int QuakeKills { get; private set; }
 
         [JsonProperty("quake_wins")]
-        public int QuakeWins { get; set; }
+        public int QuakeWins { get; private set; }
 
         [JsonProperty("tntgames_bow_spleef_wins")]
-        public int TntgamesBowSpleefWins { get; set; }
+        public int TntgamesBowSpleefWins { get; private set; }
 
         [JsonProperty("tntgames_tnt_run_wins")]
-        public int TntgamesTntRunWins { get; set; }
+        public int TntgamesTntRunWins { get; private set; }
 
         [JsonProperty("tntgames_wizards_wins")]
-        public int TntgamesWizardsWins { get; set; }
+        public int TntgamesWizardsWins { get; private set; }
 
         [JsonProperty("vampirez_coins")]
-        public int VampirezCoins { get; set; }
+        public int VampirezCoins { get; private set; }
 
         [JsonProperty("vampirez_kill_survivors")]
-        public int VampirezKillSurvivors { get; set; }
+        public int VampirezKillSurvivors { get; private set; }
 
         [JsonProperty("vampirez_kill_vampires")]
-        public int VampirezKillVampires { get; set; }
+        public int VampirezKillVampires { get; private set; }
 
         [JsonProperty("vampirez_survivor_wins")]
-        public int VampirezSurvivorWins { get; set; }
+        public int VampirezSurvivorWins { get; private set; }
 
         [JsonProperty("walls3_coins")]
-        public int Walls3Coins { get; set; }
+        public int Walls3Coins { get; private set; }
 
         [JsonProperty("walls3_kills")]
-        public int Walls3Kills { get; set; }
+        public int Walls3Kills { get; private set; }
 
         [JsonProperty("walls3_wins")]
-        public int Walls3Wins { get; set; }
+        public int Walls3Wins { get; private set; }
 
         [JsonProperty("walls_coins")]
-        public int WallsCoins { get; set; }
+        public int WallsCoins { get; private set; }
 
         [JsonProperty("walls_kills")]
-        public int WallsKills { get; set; }
+        public int WallsKills { get; private set; }
 
         [JsonProperty("walls_wins")]
-        public int WallsWins { get; set; }
+        public int WallsWins { get; private set; }
 
         [JsonProperty("uhc_champion")]
-        public int UhcChampion { get; set; }
+        public int UhcChampion { get; private set; }
 
         [JsonProperty("uhc_hunter")]
-        public int UhcHunter { get; set; }
+        public int UhcHunter { get; private set; }
 
         [JsonProperty("uhc_moving_up")]
-        public int UhcMovingUp { get; set; }
+        public int UhcMovingUp { get; private set; }
 
         [JsonProperty("paintball_kills")]
-        public int PaintballKills { get; set; }
+        public int PaintballKills { get; private set; }
 
         [JsonProperty("paintball_coins")]
-        public int PaintballCoins { get; set; }
+        public int PaintballCoins { get; private set; }
 
         [JsonProperty("skywars_kills_team")]
-        public int SkywarsKillsTeam { get; set; }
+        public int SkywarsKillsTeam { get; private set; }
 
         [JsonProperty("skywars_kills_solo")]
-        public int SkywarsKillsSolo { get; set; }
+        public int SkywarsKillsSolo { get; private set; }
 
         [JsonProperty("skywars_wins_solo")]
-        public int SkywarsWinsSolo { get; set; }
+        public int SkywarsWinsSolo { get; private set; }
 
         [JsonProperty("skywars_kits_solo")]
-        public int SkywarsKitsSolo { get; set; }
+        public int SkywarsKitsSolo { get; private set; }
 
         [JsonProperty("skywars_wins_team")]
-        public int SkywarsWinsTeam { get; set; }
+        public int SkywarsWinsTeam { get; private set; }
 
         [JsonProperty("skywars_cages")]
-        public int SkywarsCages { get; set; }
+        public int SkywarsCages { get; private set; }
 
         [JsonProperty("skywars_kits_team")]
-        public int SkywarsKitsTeam { get; set; }
+        public int SkywarsKitsTeam { get; private set; }
 
         [JsonProperty("truecombat_kit_hoarder_solo")]
-        public int TruecombatKitHoarderSolo { get; set; }
+        public int TruecombatKitHoarderSolo { get; private set; }
 
         [JsonProperty("truecombat_kit_hoarder_team")]
-        public int TruecombatKitHoarderTeam { get; set; }
+        public int TruecombatKitHoarderTeam { get; private set; }
 
         [JsonProperty("walls3_guardian")]
-        public int Walls3Guardian { get; set; }
+        public int Walls3Guardian { get; private set; }
 
         [JsonProperty("skywars_kills_mega")]
-        public int SkywarsKillsMega { get; set; }
+        public int SkywarsKillsMega { get; private set; }
 
         [JsonProperty("skywars_kits_mega")]
-        public int SkywarsKitsMega { get; set; }
+        public int SkywarsKitsMega { get; private set; }
 
         [JsonProperty("skywars_wins_mega")]
-        public int SkywarsWinsMega { get; set; }
+        public int SkywarsWinsMega { get; private set; }
 
         [JsonProperty("warlords_warrior_level")]
-        public int WarlordsWarriorLevel { get; set; }
+        public int WarlordsWarriorLevel { get; private set; }
 
         [JsonProperty("warlords_shaman_level")]
-        public int WarlordsShamanLevel { get; set; }
+        public int WarlordsShamanLevel { get; private set; }
 
         [JsonProperty("warlords_mage_level")]
-        public int WarlordsMageLevel { get; set; }
+        public int WarlordsMageLevel { get; private set; }
 
         [JsonProperty("warlords_paladin_level")]
-        public int WarlordsPaladinLevel { get; set; }
+        public int WarlordsPaladinLevel { get; private set; }
 
         [JsonProperty("copsandcrims_bomb_specialist")]
-        public int CopsandCrimsBombSpecialist { get; set; }
+        public int CopsandCrimsBombSpecialist { get; private set; }
 
         [JsonProperty("general_challenger")]
-        public int GeneralChallenger { get; set; }
+        public int GeneralChallenger { get; private set; }
 
         [JsonProperty("general_quest_master")]
-        public int GeneralQuestMaster { get; set; }
+        public int GeneralQuestMaster { get; private set; }
 
         [JsonProperty("speeduhc_hunter")]
-        public int SpeeduhcHunter { get; set; }
+        public int SpeeduhcHunter { get; private set; }
 
         [JsonProperty("skyclash_cards_unlocked")]
-        public int SkyclashCardsUnlocked { get; set; }
+        public int SkyclashCardsUnlocked { get; private set; }
 
         [JsonProperty("skyclash_kills")]
-        public int SkyclashKills { get; set; }
+        public int SkyclashKills { get; private set; }
 
         [JsonProperty("skyclash_packs_opened")]
-        public int SkyclashPacksOpened { get; set; }
+        public int SkyclashPacksOpened { get; private set; }
 
         [JsonProperty("truecombat_solo_killer")]
-        public int TruecombatSoloKiller { get; set; }
+        public int TruecombatSoloKiller { get; private set; }
 
         [JsonProperty("skyclash_wins")]
-        public int SkyclashWins { get; set; }
+        public int SkyclashWins { get; private set; }
 
         [JsonProperty("paintball_wins")]
-        public int PaintballWins { get; set; }
+        public int PaintballWins { get; private set; }
 
         [JsonProperty("truecombat_team_killer")]
-        public int TruecombatTeamKiller { get; set; }
+        public int TruecombatTeamKiller { get; private set; }
 
         [JsonProperty("arcade_miniwalls_winner")]
-        public int ArcadeMiniwallsWinner { get; set; }
+        public int ArcadeMiniwallsWinner { get; private set; }
 
         [JsonProperty("arcade_team_work")]
-        public int ArcadeTeamWork { get; set; }
+        public int ArcadeTeamWork { get; private set; }
 
         [JsonProperty("arcade_arcade_winner")]
-        public int ArcadeArcadeWinner { get; set; }
+        public int ArcadeArcadeWinner { get; private set; }
 
         [JsonProperty("arcade_arcade_banker")]
-        public int ArcadeArcadeBanker { get; set; }
+        public int ArcadeArcadeBanker { get; private set; }
 
         [JsonProperty("skyclash_treasure_hunter")]
-        public int SkyclashTreasureHunter { get; set; }
+        public int SkyclashTreasureHunter { get; private set; }
 
         [JsonProperty("skyclash_mob_beheading")]
-        public int SkyclashMobBeheading { get; set; }
+        public int SkyclashMobBeheading { get; private set; }
 
         [JsonProperty("tntgames_tnt_tag_wins")]
-        public int TntgamesTntTagWins { get; set; }
+        public int TntgamesTntTagWins { get; private set; }
 
         [JsonProperty("tntgames_pvp_run_killer")]
-        public int TntgamesPvpRunKiller { get; set; }
+        public int TntgamesPvpRunKiller { get; private set; }
 
         [JsonProperty("tntgames_pvp_run_wins")]
-        public int TntgamesPvpRunWins { get; set; }
+        public int TntgamesPvpRunWins { get; private set; }
 
         [JsonProperty("tntgames_tnt_wizards_kills")]
-        public int TntgamesTntWizardsKills { get; set; }
+        public int TntgamesTntWizardsKills { get; private set; }
 
         [JsonProperty("tntgames_tnt_triathlon")]
-        public int TntgamesTntTriathlon { get; set; }
+        public int TntgamesTntTriathlon { get; private set; }
 
         [JsonProperty("tntgames_tnt_banker")]
-        public int TntgamesTntBanker { get; set; }
+        public int TntgamesTntBanker { get; private set; }
 
         [JsonProperty("uhc_bounty")]
-        public int UhcBounty { get; set; }
+        public int UhcBounty { get; private set; }
 
         [JsonProperty("gingerbread_banker")]
-        public int GingerbreadBanker { get; set; }
+        public int GingerbreadBanker { get; private set; }
 
         [JsonProperty("vampirez_zombie_killer")]
-        public int VampirezZombieKiller { get; set; }
+        public int VampirezZombieKiller { get; private set; }
 
         [JsonProperty("quake_coins")]
-        public int QuakeCoins { get; set; }
+        public int QuakeCoins { get; private set; }
 
         [JsonProperty("quake_headshots")]
-        public int QuakeHeadshots { get; set; }
+        public int QuakeHeadshots { get; private set; }
 
         [JsonProperty("tntgames_tnt_wizards_caps")]
-        public int TntgamesTntWizardsCaps { get; set; }
+        public int TntgamesTntWizardsCaps { get; private set; }
 
         [JsonProperty("truecombat_team_winner")]
-        public int TruecombatTeamWinner { get; set; }
+        public int TruecombatTeamWinner { get; private set; }
 
         [JsonProperty("blitz_wins_teams")]
-        public int BlitzWinsTeams { get; set; }
+        public int BlitzWinsTeams { get; private set; }
 
         [JsonProperty("blitz_war_veteran")]
-        public int BlitzWarVeteran { get; set; }
+        public int BlitzWarVeteran { get; private set; }
 
         [JsonProperty("blitz_wins")]
-        public int BlitzWins { get; set; }
+        public int BlitzWins { get; private set; }
 
         [JsonProperty("blitz_looter")]
-        public int BlitzLooter { get; set; }
+        public int BlitzLooter { get; private set; }
 
         [JsonProperty("blitz_treasure_seeker")]
-        public int BlitzTreasureSeeker { get; set; }
+        public int BlitzTreasureSeeker { get; private set; }
 
         [JsonProperty("bedwars_wins")]
-        public int BedwarsWins { get; set; }
+        public int BedwarsWins { get; private set; }
 
         [JsonProperty("bedwars_beds")]
-        public int BedwarsBeds { get; set; }
+        public int BedwarsBeds { get; private set; }
 
         [JsonProperty("bedwars_level")]
-        public int BedwarsLevel { get; set; }
+        public int BedwarsLevel { get; private set; }
 
         [JsonProperty("bedwars_loot_box")]
-        public int BedwarsLootBox { get; set; }
+        public int BedwarsLootBox { get; private set; }
 
         [JsonProperty("gingerbread_racer")]
-        public int GingerbreadRacer { get; set; }
+        public int GingerbreadRacer { get; private set; }
 
         [JsonProperty("gingerbread_winner")]
-        public int GingerbreadWinner { get; set; }
+        public int GingerbreadWinner { get; private set; }
 
         [JsonProperty("murdermystery_wins_as_survivor")]
-        public int MurdermysteryWinsAsSurvivor { get; set; }
+        public int MurdermysteryWinsAsSurvivor { get; private set; }
 
         [JsonProperty("arcade_football_pro")]
-        public int ArcadeFootballPro { get; set; }
+        public int ArcadeFootballPro { get; private set; }
 
         [JsonProperty("truecombat_king")]
-        public int TruecombatKing { get; set; }
+        public int TruecombatKing { get; private set; }
 
         [JsonProperty("murdermystery_kills_as_murderer")]
-        public int MurdermysteryKillsAsMurderer { get; set; }
+        public int MurdermysteryKillsAsMurderer { get; private set; }
 
         [JsonProperty("arcade_bounty_hunter")]
-        public int ArcadeBountyHunter { get; set; }
+        public int ArcadeBountyHunter { get; private set; }
 
         [JsonProperty("copsandcrims_serial_killer")]
-        public int CopsandCrimsSerialKiller { get; set; }
+        public int CopsandCrimsSerialKiller { get; private set; }
 
         [JsonProperty("copsandcrims_hero_terrorist")]
-        public int CopsandcrimsHeroTerrorist { get; set; }
+        public int CopsandcrimsHeroTerrorist { get; private set; }
 
         [JsonProperty("buildbattle_build_battle_points")]
-        public int BuildbattleBuildBattlePoints { get; set; }
+        public int BuildbattleBuildBattlePoints { get; private set; }
 
         [JsonProperty("buildbattle_build_battle_voter")]
-        public int BuildbattleBuildBattleVoter { get; set; }
+        public int BuildbattleBuildBattleVoter { get; private set; }
 
         [JsonProperty("buildbattle_build_battle_score")]
-        public int BuildbattleBuildBattleScore { get; set; }
+        public int BuildbattleBuildBattleScore { get; private set; }
 
         [JsonProperty("buildbattle_guess_the_build_guesses")]
-        public int BuildbattleGuessTheBuildGuesses { get; set; }
+        public int BuildbattleGuessTheBuildGuesses { get; private set; }
 
         [JsonProperty("buildbattle_guess_the_build_winner")]
-        public int BuildbattleGuessTheBuildWinner { get; set; }
+        public int BuildbattleGuessTheBuildWinner { get; private set; }
 
         [JsonProperty("duels_duels_winner")]
-        public int DuelsDuelsWinner { get; set; }
+        public int DuelsDuelsWinner { get; private set; }
 
         [JsonProperty("duels_duels_win_streak")]
-        public int DuelsDuelsWinStreak { get; set; }
+        public int DuelsDuelsWinStreak { get; private set; }
 
         [JsonProperty("murdermystery_wins_as_murderer")]
-        public int MurdermysteryWinsAsMurderer { get; set; }
+        public int MurdermysteryWinsAsMurderer { get; private set; }
 
         [JsonProperty("skywars_wins_lab")]
-        public int SkywarsWinsLab { get; set; }
+        public int SkywarsWinsLab { get; private set; }
 
         [JsonProperty("arcade_farmhunt_dominator")]
-        public int ArcadeFarmhuntDominator { get; set; }
+        public int ArcadeFarmhuntDominator { get; private set; }
 
         [JsonProperty("bedwars_bedwars_killer")]
-        public int BedwarsBedwarsKiller { get; set; }
+        public int BedwarsBedwarsKiller { get; private set; }
 
         [JsonProperty("bedwars_collectors_edition")]
-        public int BedwarsCollectorsEdition { get; set; }
+        public int BedwarsCollectorsEdition { get; private set; }
 
         [JsonProperty("truecombat_feels_lucky")]
-        public int TruecombatFeelsLucky { get; set; }
+        public int TruecombatFeelsLucky { get; private set; }
 
         [JsonProperty("truecombat_solo_winner")]
-        public int TruecombatSoloWinner { get; set; }
+        public int TruecombatSoloWinner { get; private set; }
 
         [JsonProperty("tntgames_clinic")]
-        public int TntgamesClinic { get; set; }
+        public int TntgamesClinic { get; private set; }
 
         [JsonProperty("murdermystery_hoarder")]
-        public int MurdermysteryHoarder { get; set; }
+        public int MurdermysteryHoarder { get; private set; }
 
         [JsonProperty("duels_duels_traveller")]
-        public int DuelsDuelsTraveller { get; set; }
+        public int DuelsDuelsTraveller { get; private set; }
 
         [JsonProperty("paintball_kill_streaks")]
-        public int PaintballKillStreaks { get; set; }
+        public int PaintballKillStreaks { get; private set; }
 
         [JsonProperty("gingerbread_mystery")]
-        public int GingerbreadMystery { get; set; }
+        public int GingerbreadMystery { get; private set; }
 
         [JsonProperty("skywars_heads")]
-        public int SkywarsHeads { get; set; }
+        public int SkywarsHeads { get; private set; }
 
         [JsonProperty("copsandcrims_cac_banker")]
-        public int CopsandcrimsCacBanker { get; set; }
+        public int CopsandcrimsCacBanker { get; private set; }
 
         [JsonProperty("warlords_ctf_objective")]
-        public int WarlordsCtfObjective { get; set; }
+        public int WarlordsCtfObjective { get; private set; }
 
         [JsonProperty("warlords_assist")]
-        public int WarlordsAssist { get; set; }
+        public int WarlordsAssist { get; private set; }
 
         [JsonProperty("warlords_coins")]
-        public int WarlordsCoins { get; set; }
+        public int WarlordsCoins { get; private set; }
 
         [JsonProperty("warlords_kills")]
-        public int WarlordsKills { get; set; }
+        public int WarlordsKills { get; private set; }
 
         [JsonProperty("warlords_ctf_wins")]
-        public int WarlordsCtfWins { get; set; }
+        public int WarlordsCtfWins { get; private set; }
     }
 }

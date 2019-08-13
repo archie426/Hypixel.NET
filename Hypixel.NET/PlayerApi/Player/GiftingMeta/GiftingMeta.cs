@@ -8,21 +8,21 @@ namespace Hypixel.NET.PlayerApi.Player.GiftingMeta
     public class GiftingMeta
     {
         [JsonProperty("giftsGiven")]
-        public long GiftsGiven { get; set; }
+        public long GiftsGiven { get; private set; }
 
         [JsonProperty("bundlesGiven")]
-        public long BundlesGiven { get; set; }
+        public long BundlesGiven { get; private set; }
 
         [JsonProperty("realBundlesGiven")]
-        public long RealBundlesGiven { get; set; }
+        public long RealBundlesGiven { get; private set; }
 
         [JsonProperty("milestones")]
-        public List<string> Milestones { get; set; }
+        public List<string> Milestones { get; private set; }
 
         [JsonProperty("realBundlesReceived")]
-        public long RealBundlesReceived { get; set; }
+        public long RealBundlesReceived { get; private set; }
 
         [JsonProperty("bundlesReceived")]
-        public long BundlesReceived { get; set; }
+        public long BundlesReceived { get; private set; }
     }
 }

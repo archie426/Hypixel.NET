@@ -6,54 +6,54 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
     public class BuildBattle
     {
         [JsonProperty("wins")]
-        public long Wins { get; set; }
+        public long Wins { get; private set; }
 
         [JsonProperty("wins_solo_normal")]
-        public long WinsSoloNormal { get; set; }
+        public long WinsSoloNormal { get; private set; }
 
         [JsonProperty("packages")]
-        public List<string> Packages { get; set; }
+        public List<string> Packages { get; private set; }
 
         [JsonProperty("games_played")]
-        public long GamesPlayed { get; set; }
+        public long GamesPlayed { get; private set; }
 
         [JsonProperty("score")]
-        public long Score { get; set; }
+        public long Score { get; private set; }
 
         [JsonProperty("coins")]
-        public long Coins { get; set; }
+        public long Coins { get; private set; }
 
         [JsonProperty("total_votes")]
-        public long TotalVotes { get; set; }
+        public long TotalVotes { get; private set; }
 
         [JsonProperty("correct_guesses")]
-        public long CorrectGuesses { get; set; }
+        public long CorrectGuesses { get; private set; }
 
         [JsonProperty("wins_guess_the_build")]
-        public long WinsGuessTheBuild { get; set; }
+        public long WinsGuessTheBuild { get; private set; }
 
         [JsonProperty("wins_teams_normal")]
-        public long WinsTeamsNormal { get; set; }
+        public long WinsTeamsNormal { get; private set; }
 
         [JsonProperty("new_suit")]
-        public string NewSuit { get; set; }
+        public string NewSuit { get; private set; }
 
         [JsonProperty("wins_halloween")]
-        public long WinsHalloween { get; set; }
+        public long WinsHalloween { get; private set; }
 
         [JsonProperty("wins_solo_pro")]
-        public long WinsSoloPro { get; set; }
+        public long WinsSoloPro { get; private set; }
 
         [JsonProperty("super_votes")]
-        public long SuperVotes { get; set; }
+        public long SuperVotes { get; private set; }
 
         [JsonProperty("last_purchased_song")]
-        public string LastPurchasedSong { get; set; }
+        public string LastPurchasedSong { get; private set; }
 
         [JsonProperty("music")]
-        public bool Music { get; set; }
+        public bool Music { get; private set; }
 
         [JsonProperty("teams_most_points")]
-        public long TeamsMostPoints { get; set; }
+        public long TeamsMostPoints { get; private set; }
     }
 }

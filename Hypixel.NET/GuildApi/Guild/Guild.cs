@@ -8,16 +8,16 @@ namespace Hypixel.NET.GuildApi.Guild
     public class Guild
     {
         [JsonProperty("_id")]
-        public string Id { get; set; }
+        public string Id { get; private set; }
 
         [JsonProperty("name")]
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
         [JsonProperty("coins")]
-        public long Coins { get; set; }
+        public long Coins { get; private set; }
 
         [JsonProperty("coinsEver")]
-        public long CoinsEver { get; set; }
+        public long CoinsEver { get; private set; }
 
         [JsonProperty("created")]
         private readonly long _created;
@@ -32,25 +32,25 @@ namespace Hypixel.NET.GuildApi.Guild
         }
 
         [JsonProperty("members")]
-        public List<Member.Member> Members { get; set; }
+        public List<Member.Member> Members { get; private set; }
 
         [JsonProperty("tag")]
-        public string Tag { get; set; }
+        public string Tag { get; private set; }
 
         [JsonProperty("tagColor")]
-        public string TagColor { get; set; }
+        public string TagColor { get; private set; }
 
         [JsonProperty("achievements")]
-        public Achievements.Achievements Achievements { get; set; }
+        public Achievements.Achievements Achievements { get; private set; }
 
         [JsonProperty("legacyRanking")]
-        public long LegacyRanking { get; set; }
+        public long LegacyRanking { get; private set; }
 
         [JsonProperty("exp")]
-        public long Exp { get; set; }
+        public long Exp { get; private set; }
 
         [JsonProperty("name_lower")]
-        public string NameLower { get; set; }
+        public string NameLower { get; private set; }
 
         [JsonProperty("guildExpByGameType")]
         public GuildExpByGameType GuildExpByGameType;

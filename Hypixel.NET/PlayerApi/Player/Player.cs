@@ -10,13 +10,13 @@ namespace Hypixel.NET.PlayerApi.Player
         /// General onetime unlock achievements
         /// </summary>
         [JsonProperty("achievementsOneTime")]
-        public List<object> AchievementsOneTime { get; set; }
+        public List<object> AchievementsOneTime { get; private set; }
 
         /// <summary>
         /// The display name of the player
         /// </summary>
         [JsonProperty("displayname")]
-        public string DisplayName { get; set; }
+        public string DisplayName { get; private set; }
 
         /// <summary>
         /// The First time the player logged into Hypixel
@@ -52,67 +52,67 @@ namespace Hypixel.NET.PlayerApi.Player
         /// Known previous usernames that the player has had
         /// </summary>
         [JsonProperty("knownAliasesLower")]
-        public List<string> KnownAliases { get; set; }
+        public List<string> KnownAliases { get; private set; }
 
         /// <summary>
         /// The players total xp on the server
         /// </summary>
         [JsonProperty("networkExp")]
-        public long NetworkExp { get; set; }
+        public long NetworkExp { get; private set; }
 
         /// <summary>
         /// The settings that the requested user has set
         /// </summary>
         [JsonProperty("settings")]
-        public Settings.Settings Settings { get; set; }
+        public Settings.Settings Settings { get; private set; }
 
         /// <summary>
         /// The stats of each game that the user has played
         /// </summary>
         [JsonProperty("stats")]
-        public Stats.Stats Stats { get; set; }
+        public Stats.Stats Stats { get; private set; }
 
         [JsonProperty("timePlaying")]
-        public long TimePlaying { get; set; }
+        public long TimePlaying { get; private set; }
 
         /// <summary>
         /// The UUID of the player
         /// </summary>
         [JsonProperty("uuid")]
-        public string Uuid { get; set; }
+        public string Uuid { get; private set; }
 
         [JsonProperty("karma")]
-        public long Karma { get; set; }
+        public long Karma { get; private set; }
 
         [JsonProperty("vanityTokens")]
-        public long VanityTokens { get; set; }
+        public long VanityTokens { get; private set; }
 
         /// <summary>
         /// cosmetic packages
         /// </summary>
         [JsonProperty("vanityMeta")]
-        public VanityMeta.VanityMeta VanityMeta { get; set; }
+        public VanityMeta.VanityMeta VanityMeta { get; private set; }
 
         [JsonProperty("totalRewards")]
-        public int TotalRewards { get; set; }
+        public int TotalRewards { get; private set; }
 
         [JsonProperty("totalDailyRewards")]
-        public int TotalDailyRewards { get; set; }
+        public int TotalDailyRewards { get; private set; }
 
         [JsonProperty("rewardStreak")]
-        public int RewardStreak { get; set; }
+        public int RewardStreak { get; private set; }
 
         [JsonProperty("rewardScore")]
-        public int RewardScore { get; set; }
+        public int RewardScore { get; private set; }
 
         [JsonProperty("rewardHighScore")]
-        public int RewardHighScore { get; set; }
+        public int RewardHighScore { get; private set; }
 
         [JsonProperty("currentPet")]
-        public string CurrentPet { get; set; }
+        public string CurrentPet { get; private set; }
 
         [JsonProperty("giftingMeta")]
-        public GiftingMeta.GiftingMeta GiftingMeta { get; set; }
+        public GiftingMeta.GiftingMeta GiftingMeta { get; private set; }
 
         [JsonProperty("lastLogout")]
         private readonly long _lastLogout;
@@ -127,7 +127,7 @@ namespace Hypixel.NET.PlayerApi.Player
         }
 
         [JsonProperty("rankPlusColor")]
-        public string RankPlusColor { get; set; }
+        public string RankPlusColor { get; private set; }
 
         [JsonProperty("voting")]
         public Voting.Voting Voting;

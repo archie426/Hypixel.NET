@@ -7,918 +7,918 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
     {
         #region general
         [JsonProperty("chosen_class")]
-        public string ChosenClass { get; set; }
+        public string ChosenClass { get; private set; }
 
         [JsonProperty("coins")]
-        public int Coins { get; set; }
+        public int Coins { get; private set; }
 
         [JsonProperty("packages")]
-        public List<string> Packages { get; set; }
+        public List<string> Packages { get; private set; }
         #endregion
 
         #region final kills
         [JsonProperty("finalKills")]
-        public int FinalKills { get; set; }
+        public int FinalKills { get; private set; }
 
         [JsonProperty("finalKills_Arcanist")]
-        public int FinalKillsArcanist { get; set; }
+        public int FinalKillsArcanist { get; private set; }
 
         [JsonProperty("finalKills_Blaze")]
-        public int FinalKillsBlaze { get; set; }
+        public int FinalKillsBlaze { get; private set; }
 
         [JsonProperty("finalKills_Creeper")]
-        public int FinalKillsCreeper { get; set; }
+        public int FinalKillsCreeper { get; private set; }
 
         [JsonProperty("finalKills_Dreadlord")]
-        public int FinalKillsDreadlord { get; set; }
+        public int FinalKillsDreadlord { get; private set; }
 
         [JsonProperty("finalKills_Enderman")]
-        public int FinalKillsEnderman { get; set; }
+        public int FinalKillsEnderman { get; private set; }
 
         [JsonProperty("finalKills_Golem")]
-        public int FinalKillsGolem { get; set; }
+        public int FinalKillsGolem { get; private set; }
 
         [JsonProperty("finalKills_Herobrine")]
-        public int FinalKillsHerobrine { get; set; }
+        public int FinalKillsHerobrine { get; private set; }
 
         [JsonProperty("finalKills_Pigman")]
-        public int FinalKillsPigman { get; set; }
+        public int FinalKillsPigman { get; private set; }
 
         [JsonProperty("finalKills_Shaman")]
-        public int FinalKillsShaman { get; set; }
+        public int FinalKillsShaman { get; private set; }
 
         [JsonProperty("finalKills_Skeleton")]
-        public int FinalKillsSkeleton { get; set; }
+        public int FinalKillsSkeleton { get; private set; }
 
         [JsonProperty("finalKills_Spider")]
-        public int FinalKillsSpider { get; set; }
+        public int FinalKillsSpider { get; private set; }
 
         [JsonProperty("finalKills_Zombie")]
-        public int FinalKillsZombie { get; set; }
+        public int FinalKillsZombie { get; private set; }
 
         [JsonProperty("finalKills_Squid")]
-        public int FinalKillsSquid { get; set; }
+        public int FinalKillsSquid { get; private set; }
 
         [JsonProperty("finalKills_Pirate")]
-        public int FinalKillsPirate { get; set; }
+        public int FinalKillsPirate { get; private set; }
 
         [JsonProperty("hunter_final_kills")]
-        public int HunterFinalKills { get; set; }
+        public int HunterFinalKills { get; private set; }
 
         [JsonProperty("moleman_final_kills")]
-        public int MolemanFinalKills { get; set; }
+        public int MolemanFinalKills { get; private set; }
         #endregion
 
         #region finalassists
         [JsonProperty("finalAssists")]
-        public int FinalAssists { get; set; }
+        public int FinalAssists { get; private set; }
 
         [JsonProperty("finalAssists_Dreadlord")]
-        public int FinalAssistsDreadlord { get; set; }
+        public int FinalAssistsDreadlord { get; private set; }
 
         [JsonProperty("finalAssists_Arcanist")]
-        public int FinalAssistsArcanist { get; set; }
+        public int FinalAssistsArcanist { get; private set; }
 
         [JsonProperty("finalAssists_Spider")]
-        public int FinalAssistsSpider { get; set; }
+        public int FinalAssistsSpider { get; private set; }
 
         [JsonProperty("finalAssists_Enderman")]
-        public int FinalAssistsEnderman { get; set; }
+        public int FinalAssistsEnderman { get; private set; }
 
         [JsonProperty("finalAssists_Herobrine")]
-        public int FinalAssistsHerobrine { get; set; }
+        public int FinalAssistsHerobrine { get; private set; }
 
         [JsonProperty("finalAssists_Creeper")]
-        public int FinalAssistsCreeper { get; set; }
+        public int FinalAssistsCreeper { get; private set; }
 
         [JsonProperty("finalAssists_Skeleton")]
-        public int FinalAssistsSkeleton { get; set; }
+        public int FinalAssistsSkeleton { get; private set; }
 
         [JsonProperty("finalAssists_Shaman")]
-        public int FinalAssistsShaman { get; set; }
+        public int FinalAssistsShaman { get; private set; }
 
         [JsonProperty("finalAssists_Golem")]
-        public int FinalAssistsGolem { get; set; }
+        public int FinalAssistsGolem { get; private set; }
 
         [JsonProperty("finalAssists_Zombie")]
-        public int FinalAssistsZombie { get; set; }
+        public int FinalAssistsZombie { get; private set; }
 
         [JsonProperty("finalAssists_Blaze")]
-        public int FinalAssistsBlaze { get; set; }
+        public int FinalAssistsBlaze { get; private set; }
 
         [JsonProperty("finalAssists_Pigman")]
-        public int FinalAssistsPigman { get; set; }
+        public int FinalAssistsPigman { get; private set; }
 
         [JsonProperty("finalAssists_Squid")]
-        public int FinalAssistsSquid { get; set; }
+        public int FinalAssistsSquid { get; private set; }
 
         [JsonProperty("finalAssists_Pirate")]
-        public int FinalAssistsPirate { get; set; }
+        public int FinalAssistsPirate { get; private set; }
 
         [JsonProperty("hunter_final_assists")]
-        public int HunterFinalAssists { get; set; }
+        public int HunterFinalAssists { get; private set; }
 
         [JsonProperty("moleman_final_assists")]
-        public int MolemanFinalAssists { get; set; }
+        public int MolemanFinalAssists { get; private set; }
         #endregion
 
 
         #region finaldeaths
         [JsonProperty("finalDeaths")]
-        public int FinalDeaths { get; set; }
+        public int FinalDeaths { get; private set; }
 
         [JsonProperty("skeleton_final_deaths")]
-        public int SkeletonFinalDeaths { get; set; }
+        public int SkeletonFinalDeaths { get; private set; }
 
         [JsonProperty("zombie_final_deaths")]
-        public int ZombieFinalDeaths { get; set; }
+        public int ZombieFinalDeaths { get; private set; }
 
         [JsonProperty("arcanist_final_deaths")]
-        public int ArcanistFinalDeaths { get; set; }
+        public int ArcanistFinalDeaths { get; private set; }
 
         [JsonProperty("enderman_final_deaths")]
-        public int EndermanFinalDeaths { get; set; }
+        public int EndermanFinalDeaths { get; private set; }
 
         [JsonProperty("dreadlord_final_deaths")]
-        public int DreadlordFinalDeaths { get; set; }
+        public int DreadlordFinalDeaths { get; private set; }
 
         [JsonProperty("spider_final_deaths")]
-        public int SpiderFinalDeaths { get; set; }
+        public int SpiderFinalDeaths { get; private set; }
 
         [JsonProperty("golem_final_deaths")]
-        public int GolemFinalDeaths { get; set; }
+        public int GolemFinalDeaths { get; private set; }
 
         [JsonProperty("blaze_final_deaths")]
-        public int BlazeFinalDeaths { get; set; }
+        public int BlazeFinalDeaths { get; private set; }
 
         [JsonProperty("squid_final_deaths")]
-        public int SquidFinalDeaths { get; set; }
+        public int SquidFinalDeaths { get; private set; }
 
         [JsonProperty("shaman_final_deaths")]
-        public int ShamanFinalDeaths { get; set; }
+        public int ShamanFinalDeaths { get; private set; }
 
         [JsonProperty("moleman_final_deaths")]
-        public int MolemanFinalDeaths { get; set; }
+        public int MolemanFinalDeaths { get; private set; }
 
         [JsonProperty("pigman_final_deaths")]
-        public int PigmanFinalDeaths { get; set; }
+        public int PigmanFinalDeaths { get; private set; }
 
         [JsonProperty("pirate_final_deaths")]
-        public int PirateFinalDeaths { get; set; }
+        public int PirateFinalDeaths { get; private set; }
 
         [JsonProperty("creeper_final_deaths")]
-        public int CreeperFinalDeaths { get; set; }
+        public int CreeperFinalDeaths { get; private set; }
 
         [JsonProperty("hunter_final_deaths")]
-        public int HunterFinalDeaths { get; set; }
+        public int HunterFinalDeaths { get; private set; }
 
         [JsonProperty("herobrine_final_deaths")]
-        public int HerobrineFinalDeaths { get; set; }
+        public int HerobrineFinalDeaths { get; private set; }
         #endregion finaldeaths
 
         #region wins
         [JsonProperty("wins")]
-        public int Wins { get; set; }
+        public int Wins { get; private set; }
 
         [JsonProperty("wins_Arcanist")]
-        public int WinsArcanist { get; set; }
+        public int WinsArcanist { get; private set; }
 
         [JsonProperty("wins_Creeper")]
-        public int WinsCreeper { get; set; }
+        public int WinsCreeper { get; private set; }
 
         [JsonProperty("wins_Dreadlord")]
-        public int WinsDreadlord { get; set; }
+        public int WinsDreadlord { get; private set; }
 
         [JsonProperty("wins_Enderman")]
-        public int WinsEnderman { get; set; }
+        public int WinsEnderman { get; private set; }
 
         [JsonProperty("wins_Golem")]
-        public int WinsGolem { get; set; }
+        public int WinsGolem { get; private set; }
 
         [JsonProperty("wins_Herobrine")]
-        public int WinsHerobrine { get; set; }
+        public int WinsHerobrine { get; private set; }
 
         [JsonProperty("wins_Pigman")]
-        public int WinsPigman { get; set; }
+        public int WinsPigman { get; private set; }
 
         [JsonProperty("wins_Shaman")]
-        public int WinsShaman { get; set; }
+        public int WinsShaman { get; private set; }
 
         [JsonProperty("wins_Skeleton")]
-        public int WinsSkeleton { get; set; }
+        public int WinsSkeleton { get; private set; }
 
         [JsonProperty("wins_Spider")]
-        public int WinsSpider { get; set; }
+        public int WinsSpider { get; private set; }
 
         [JsonProperty("wins_Zombie")]
-        public int WinsZombie { get; set; }
+        public int WinsZombie { get; private set; }
 
         [JsonProperty("hunter_wins")]
-        public int HunterWins { get; set; }
+        public int HunterWins { get; private set; }
 
         [JsonProperty("moleman_wins")]
-        public int MolemanWins { get; set; }
+        public int MolemanWins { get; private set; }
         #endregion
 
         #region kills
         [JsonProperty("kills")]
-        public int Kills { get; set; }
+        public int Kills { get; private set; }
 
         [JsonProperty("kills_Arcanist")]
-        public int KillsArcanist { get; set; }
+        public int KillsArcanist { get; private set; }
 
         [JsonProperty("kills_Blaze")]
-        public int KillsBlaze { get; set; }
+        public int KillsBlaze { get; private set; }
 
         [JsonProperty("kills_Creeper")]
-        public int KillsCreeper { get; set; }
+        public int KillsCreeper { get; private set; }
 
         [JsonProperty("kills_Dreadlord")]
-        public int KillsDreadlord { get; set; }
+        public int KillsDreadlord { get; private set; }
 
         [JsonProperty("kills_Enderman")]
-        public int KillsEnderman { get; set; }
+        public int KillsEnderman { get; private set; }
 
         [JsonProperty("kills_Golem")]
-        public int KillsGolem { get; set; }
+        public int KillsGolem { get; private set; }
 
         [JsonProperty("kills_Herobrine")]
-        public int KillsHerobrine { get; set; }
+        public int KillsHerobrine { get; private set; }
 
         [JsonProperty("kills_Pigman")]
-        public int KillsPigman { get; set; }
+        public int KillsPigman { get; private set; }
 
         [JsonProperty("kills_Shaman")]
-        public int KillsShaman { get; set; }
+        public int KillsShaman { get; private set; }
 
         [JsonProperty("kills_Skeleton")]
-        public int KillsSkeleton { get; set; }
+        public int KillsSkeleton { get; private set; }
 
         [JsonProperty("kills_Spider")]
-        public int KillsSpider { get; set; }
+        public int KillsSpider { get; private set; }
 
         [JsonProperty("kills_Zombie")]
-        public int KillsZombie { get; set; }
+        public int KillsZombie { get; private set; }
 
         [JsonProperty("hunter_kills")]
-        public int HunterKills { get; set; }
+        public int HunterKills { get; private set; }
 
         [JsonProperty("moleman_kills")]
-        public int MolemanKills { get; set; }
+        public int MolemanKills { get; private set; }
         #endregion
 
 
         #region deaths
         [JsonProperty("deaths")]
-        public int Deaths { get; set; }
+        public int Deaths { get; private set; }
 
         [JsonProperty("deaths_Arcanist")]
-        public int DeathsArcanist { get; set; }
+        public int DeathsArcanist { get; private set; }
 
         [JsonProperty("deaths_Blaze")]
-        public int DeathsBlaze { get; set; }
+        public int DeathsBlaze { get; private set; }
 
         [JsonProperty("deaths_Creeper")]
-        public int DeathsCreeper { get; set; }
+        public int DeathsCreeper { get; private set; }
 
         [JsonProperty("deaths_Dreadlord")]
-        public int DeathsDreadlord { get; set; }
+        public int DeathsDreadlord { get; private set; }
 
         [JsonProperty("deaths_Enderman")]
-        public int DeathsEnderman { get; set; }
+        public int DeathsEnderman { get; private set; }
 
         [JsonProperty("deaths_Golem")]
-        public int DeathsGolem { get; set; }
+        public int DeathsGolem { get; private set; }
 
         [JsonProperty("deaths_Herobrine")]
-        public int DeathsHerobrine { get; set; }
+        public int DeathsHerobrine { get; private set; }
 
         [JsonProperty("deaths_Pigman")]
-        public int DeathsPigman { get; set; }
+        public int DeathsPigman { get; private set; }
 
         [JsonProperty("deaths_Shaman")]
-        public int DeathsShaman { get; set; }
+        public int DeathsShaman { get; private set; }
 
         [JsonProperty("deaths_Skeleton")]
-        public int DeathsSkeleton { get; set; }
+        public int DeathsSkeleton { get; private set; }
 
         [JsonProperty("deaths_Spider")]
-        public int DeathsSpider { get; set; }
+        public int DeathsSpider { get; private set; }
 
         [JsonProperty("deaths_Zombie")]
-        public int DeathsZombie { get; set; }
+        public int DeathsZombie { get; private set; }
 
         [JsonProperty("hunter_deaths")]
-        public int HunterDeaths { get; set; }
+        public int HunterDeaths { get; private set; }
 
         [JsonProperty("moleman_deaths")]
-        public int MolemanDeaths { get; set; }
+        public int MolemanDeaths { get; private set; }
         #endregion
 
 
         #region losses
         [JsonProperty("losses")]
-        public int Losses { get; set; }
+        public int Losses { get; private set; }
 
         [JsonProperty("losses_Arcanist")]
-        public int LossesArcanist { get; set; }
+        public int LossesArcanist { get; private set; }
 
         [JsonProperty("losses_Blaze")]
-        public int LossesBlaze { get; set; }
+        public int LossesBlaze { get; private set; }
 
         [JsonProperty("losses_Creeper")]
-        public int LossesCreeper { get; set; }
+        public int LossesCreeper { get; private set; }
 
         [JsonProperty("losses_Dreadlord")]
-        public int LossesDreadlord { get; set; }
+        public int LossesDreadlord { get; private set; }
 
         [JsonProperty("losses_Enderman")]
-        public int LossesEnderman { get; set; }
+        public int LossesEnderman { get; private set; }
 
         [JsonProperty("losses_Golem")]
-        public int LossesGolem { get; set; }
+        public int LossesGolem { get; private set; }
 
         [JsonProperty("losses_Herobrine")]
-        public int LossesHerobrine { get; set; }
+        public int LossesHerobrine { get; private set; }
 
         [JsonProperty("losses_Pigman")]
-        public int LossesPigman { get; set; }
+        public int LossesPigman { get; private set; }
 
         [JsonProperty("losses_Shaman")]
-        public int LossesShaman { get; set; }
+        public int LossesShaman { get; private set; }
 
         [JsonProperty("losses_Skeleton")]
-        public int LossesSkeleton { get; set; }
+        public int LossesSkeleton { get; private set; }
 
         [JsonProperty("losses_Spider")]
-        public int LossesSpider { get; set; }
+        public int LossesSpider { get; private set; }
 
         [JsonProperty("losses_Zombie")]
-        public int LossesZombie { get; set; }
+        public int LossesZombie { get; private set; }
 
         [JsonProperty("hunter_lossess")]
-        public int HunterLossess { get; set; }
+        public int HunterLossess { get; private set; }
 
         [JsonProperty("moleman_losses")]
-        public int MolemanLosses { get; set; }
+        public int MolemanLosses { get; private set; }
         #endregion
 
         #region assists
         [JsonProperty("assists_Dreadlord")]
-        public int AssistsDreadlord { get; set; }
+        public int AssistsDreadlord { get; private set; }
 
         [JsonProperty("assists_Arcanist")]
-        public int AssistsArcanist { get; set; }
+        public int AssistsArcanist { get; private set; }
 
         [JsonProperty("assists_Spider")]
-        public int AssistsSpider { get; set; }
+        public int AssistsSpider { get; private set; }
 
         [JsonProperty("assists_Enderman")]
-        public int AssistsEnderman { get; set; }
+        public int AssistsEnderman { get; private set; }
 
         [JsonProperty("assists_Herobrine")]
-        public int AssistsHerobrine { get; set; }
+        public int AssistsHerobrine { get; private set; }
 
         [JsonProperty("assists_Creeper")]
-        public int AssistsCreeper { get; set; }
+        public int AssistsCreeper { get; private set; }
 
         [JsonProperty("assists_Skeleton")]
-        public int AssistsSkeleton { get; set; }
+        public int AssistsSkeleton { get; private set; }
 
         [JsonProperty("assists_Shaman")]
-        public int AssistsShaman { get; set; }
+        public int AssistsShaman { get; private set; }
 
         [JsonProperty("assists_Zombie")]
-        public int AssistsZombie { get; set; }
+        public int AssistsZombie { get; private set; }
 
         [JsonProperty("assists_Golem")]
-        public int AssistsGolem { get; set; }
+        public int AssistsGolem { get; private set; }
 
         [JsonProperty("assists_Blaze")]
-        public int AssistsBlaze { get; set; }
+        public int AssistsBlaze { get; private set; }
 
         [JsonProperty("assists_Pigman")]
-        public int AssistsPigman { get; set; }
+        public int AssistsPigman { get; private set; }
 
         [JsonProperty("assists_Squid")]
-        public int AssistsSquid { get; set; }
+        public int AssistsSquid { get; private set; }
 
         [JsonProperty("assists_Pirate")]
-        public int AssistsPirate { get; set; }
+        public int AssistsPirate { get; private set; }
 
         [JsonProperty("hunter_assists")]
-        public int HunterAssists { get; set; }
+        public int HunterAssists { get; private set; }
 
         [JsonProperty("moleman_assists")]
-        public int MolemanAssists { get; set; }
+        public int MolemanAssists { get; private set; }
         #endregion
 
         #region meters walked
         [JsonProperty("skeleton_meters_walked")]
-        public int SkeletonMetersWalked { get; set; }
+        public int SkeletonMetersWalked { get; private set; }
 
         [JsonProperty("meters_walked")]
-        public int MetersWalked { get; set; }
+        public int MetersWalked { get; private set; }
 
         [JsonProperty("enderman_meters_walked")]
-        public int EndermanMetersWalked { get; set; }
+        public int EndermanMetersWalked { get; private set; }
 
         [JsonProperty("arcanist_meters_walked")]
-        public int ArcanistMetersWalked { get; set; }
+        public int ArcanistMetersWalked { get; private set; }
 
         [JsonProperty("zombie_meters_walked")]
-        public int ZombieMetersWalked { get; set; }
+        public int ZombieMetersWalked { get; private set; }
 
         [JsonProperty("creeper_meters_walked")]
-        public int CreeperMetersWalked { get; set; }
+        public int CreeperMetersWalked { get; private set; }
 
         [JsonProperty("dreadlord_meters_walked")]
-        public int DreadlordMetersWalked { get; set; }
+        public int DreadlordMetersWalked { get; private set; }
 
         [JsonProperty("golem_meters_walked")]
-        public int GolemMetersWalked { get; set; }
+        public int GolemMetersWalked { get; private set; }
 
         [JsonProperty("spider_meters_walked")]
-        public int SpiderMetersWalked { get; set; }
+        public int SpiderMetersWalked { get; private set; }
 
         [JsonProperty("blaze_meters_walked")]
-        public int BlazeMetersWalked { get; set; }
+        public int BlazeMetersWalked { get; private set; }
 
         [JsonProperty("herobrine_meters_walked")]
-        public int HerobrineMetersWalked { get; set; }
+        public int HerobrineMetersWalked { get; private set; }
 
         [JsonProperty("squid_meters_walked")]
-        public int SquidMetersWalked { get; set; }
+        public int SquidMetersWalked { get; private set; }
 
         [JsonProperty("shaman_meters_walked")]
-        public int ShamanMetersWalked { get; set; }
+        public int ShamanMetersWalked { get; private set; }
 
         [JsonProperty("moleman_meters_walked")]
-        public int MolemanMetersWalked { get; set; }
+        public int MolemanMetersWalked { get; private set; }
 
         [JsonProperty("pigman_meters_walked")]
-        public int PigmanMetersWalked { get; set; }
+        public int PigmanMetersWalked { get; private set; }
 
         [JsonProperty("pirate_meters_walked")]
-        public int PirateMetersWalked { get; set; }
+        public int PirateMetersWalked { get; private set; }
 
         [JsonProperty("hunter_meters_walked")]
-        public int HunterMetersWalked { get; set; }
+        public int HunterMetersWalked { get; private set; }
         #endregion
 
         #region potions drunk
         [JsonProperty("potions_drunk")]
-        public int PotionsDrunk { get; set; }
+        public int PotionsDrunk { get; private set; }
 
         [JsonProperty("skeleton_potions_drunk")]
-        public int SkeletonPotionsDrunk { get; set; }
+        public int SkeletonPotionsDrunk { get; private set; }
 
         [JsonProperty("arcanist_potions_drunk")]
-        public int ArcanistPotionsDrunk { get; set; }
+        public int ArcanistPotionsDrunk { get; private set; }
 
         [JsonProperty("enderman_potions_drunk")]
-        public int EndermanPotionsDrunk { get; set; }
+        public int EndermanPotionsDrunk { get; private set; }
 
         [JsonProperty("zombie_potions_drunk")]
-        public int ZombiePotionsDrunk { get; set; }
+        public int ZombiePotionsDrunk { get; private set; }
 
         [JsonProperty("creeper_potions_drunk")]
-        public int CreeperPotionsDrunk { get; set; }
+        public int CreeperPotionsDrunk { get; private set; }
 
         [JsonProperty("dreadlord_potions_drunk")]
-        public int DreadlordPotionsDrunk { get; set; }
+        public int DreadlordPotionsDrunk { get; private set; }
 
         [JsonProperty("golem_potions_drunk")]
-        public int GolemPotionsDrunk { get; set; }
+        public int GolemPotionsDrunk { get; private set; }
 
         [JsonProperty("spider_potions_drunk")]
-        public int SpiderPotionsDrunk { get; set; }
+        public int SpiderPotionsDrunk { get; private set; }
 
         [JsonProperty("blaze_potions_drunk")]
-        public int BlazePotionsDrunk { get; set; }
+        public int BlazePotionsDrunk { get; private set; }
 
         [JsonProperty("herobrine_potions_drunk")]
-        public int HerobrinePotionsDrunk { get; set; }
+        public int HerobrinePotionsDrunk { get; private set; }
 
         [JsonProperty("squid_potions_drunk")]
-        public int SquidPotionsDrunk { get; set; }
+        public int SquidPotionsDrunk { get; private set; }
 
         [JsonProperty("shaman_potions_drunk")]
-        public int ShamanPotionsDrunk { get; set; }
+        public int ShamanPotionsDrunk { get; private set; }
 
         [JsonProperty("pigman_potions_drunk")]
-        public int PigmanPotionsDrunk { get; set; }
+        public int PigmanPotionsDrunk { get; private set; }
 
         [JsonProperty("pirate_potions_drunk")]
-        public int PiratePotionsDrunk { get; set; }
+        public int PiratePotionsDrunk { get; private set; }
         #endregion
 
         #region blocks broken
         [JsonProperty("blocks_broken")]
-        public int BlocksBroken { get; set; }
+        public int BlocksBroken { get; private set; }
 
         [JsonProperty("skeleton_blocks_broken")]
-        public int SkeletonBlocksBroken { get; set; }
+        public int SkeletonBlocksBroken { get; private set; }
 
         [JsonProperty("arcanist_blocks_broken")]
-        public int ArcanistBlocksBroken { get; set; }
+        public int ArcanistBlocksBroken { get; private set; }
 
         [JsonProperty("enderman_blocks_broken")]
-        public int EndermanBlocksBroken { get; set; }
+        public int EndermanBlocksBroken { get; private set; }
 
         [JsonProperty("zombie_blocks_broken")]
-        public int ZombieBlocksBroken { get; set; }
+        public int ZombieBlocksBroken { get; private set; }
 
         [JsonProperty("creeper_blocks_broken")]
-        public int CreeperBlocksBroken { get; set; }
+        public int CreeperBlocksBroken { get; private set; }
 
         [JsonProperty("dreadlord_blocks_broken")]
-        public int DreadlordBlocksBroken { get; set; }
+        public int DreadlordBlocksBroken { get; private set; }
 
         [JsonProperty("golem_blocks_broken")]
-        public int GolemBlocksBroken { get; set; }
+        public int GolemBlocksBroken { get; private set; }
 
         [JsonProperty("spider_blocks_broken")]
-        public int SpiderBlocksBroken { get; set; }
+        public int SpiderBlocksBroken { get; private set; }
 
         [JsonProperty("blaze_blocks_broken")]
-        public int BlazeBlocksBroken { get; set; }
+        public int BlazeBlocksBroken { get; private set; }
 
         [JsonProperty("herobrine_blocks_broken")]
-        public int HerobrineBlocksBroken { get; set; }
+        public int HerobrineBlocksBroken { get; private set; }
 
         [JsonProperty("squid_blocks_broken")]
-        public int SquidBlocksBroken { get; set; }
+        public int SquidBlocksBroken { get; private set; }
 
         [JsonProperty("shaman_blocks_broken")]
-        public int ShamanBlocksBroken { get; set; }
+        public int ShamanBlocksBroken { get; private set; }
 
         [JsonProperty("moleman_blocks_broken")]
-        public int MolemanBlocksBroken { get; set; }
+        public int MolemanBlocksBroken { get; private set; }
 
         [JsonProperty("pigman_blocks_broken")]
-        public int PigmanBlocksBroken { get; set; }
+        public int PigmanBlocksBroken { get; private set; }
 
         [JsonProperty("pirate_blocks_broken")]
-        public int PirateBlocksBroken { get; set; }
+        public int PirateBlocksBroken { get; private set; }
 
         [JsonProperty("hunter_blocks_broken")]
-        public int HunterBlocksBroken { get; set; }
+        public int HunterBlocksBroken { get; private set; }
         #endregion
 
         #region blocks placed
         [JsonProperty("blocks_placed")]
-        public int BlocksPlaced { get; set; }
+        public int BlocksPlaced { get; private set; }
 
         [JsonProperty("skeleton_blocks_placed")]
-        public int SkeletonBlocksPlaced { get; set; }
+        public int SkeletonBlocksPlaced { get; private set; }
 
         [JsonProperty("arcanist_blocks_placed")]
-        public int ArcanistBlocksPlaced { get; set; }
+        public int ArcanistBlocksPlaced { get; private set; }
 
         [JsonProperty("enderman_blocks_placed")]
-        public int EndermanBlocksPlaced { get; set; }
+        public int EndermanBlocksPlaced { get; private set; }
 
         [JsonProperty("zombie_blocks_placed")]
-        public int ZombieBlocksPlaced { get; set; }
+        public int ZombieBlocksPlaced { get; private set; }
 
         [JsonProperty("creeper_blocks_placed")]
-        public int CreeperBlocksPlaced { get; set; }
+        public int CreeperBlocksPlaced { get; private set; }
 
         [JsonProperty("dreadlord_blocks_placed")]
-        public int DreadlordBlocksPlaced { get; set; }
+        public int DreadlordBlocksPlaced { get; private set; }
 
         [JsonProperty("golem_blocks_placed")]
-        public int GolemBlocksPlaced { get; set; }
+        public int GolemBlocksPlaced { get; private set; }
 
         [JsonProperty("spider_blocks_placed")]
-        public int SpiderBlocksPlaced { get; set; }
+        public int SpiderBlocksPlaced { get; private set; }
 
         [JsonProperty("blaze_blocks_placed")]
-        public int BlazeBlocksPlaced { get; set; }
+        public int BlazeBlocksPlaced { get; private set; }
 
         [JsonProperty("herobrine_blocks_placed")]
-        public int HerobrineBlocksPlaced { get; set; }
+        public int HerobrineBlocksPlaced { get; private set; }
 
         [JsonProperty("squid_blocks_placed")]
-        public int SquidBlocksPlaced { get; set; }
+        public int SquidBlocksPlaced { get; private set; }
 
         [JsonProperty("shaman_blocks_placed")]
-        public int ShamanBlocksPlaced { get; set; }
+        public int ShamanBlocksPlaced { get; private set; }
 
         [JsonProperty("moleman_blocks_placed")]
-        public int MolemanBlocksPlaced { get; set; }
+        public int MolemanBlocksPlaced { get; private set; }
 
         [JsonProperty("pigman_blocks_placed")]
-        public int PigmanBlocksPlaced { get; set; }
+        public int PigmanBlocksPlaced { get; private set; }
 
         [JsonProperty("pirate_blocks_placed")]
-        public int PirateBlocksPlaced { get; set; }
+        public int PirateBlocksPlaced { get; private set; }
 
         [JsonProperty("hunter_blocks_placed")]
-        public int HunterBlocksPlaced { get; set; }
+        public int HunterBlocksPlaced { get; private set; }
         #endregion
 
         #region arrows fired
         [JsonProperty("arrows_fired")]
-        public int ArrowsFired { get; set; }
+        public int ArrowsFired { get; private set; }
 
         [JsonProperty("skeleton_arrows_fired")]
-        public int SkeletonArrowsFired { get; set; }
+        public int SkeletonArrowsFired { get; private set; }
 
         [JsonProperty("arcanist_arrows_fired")]
-        public int ArcanistArrowsFired { get; set; }
+        public int ArcanistArrowsFired { get; private set; }
 
         [JsonProperty("enderman_arrows_fired")]
-        public int EndermanArrowsFired { get; set; }
+        public int EndermanArrowsFired { get; private set; }
 
         [JsonProperty("zombie_arrows_fired")]
-        public int ZombieArrowsFired { get; set; }
+        public int ZombieArrowsFired { get; private set; }
 
         [JsonProperty("creeper_arrows_fired")]
-        public int CreeperArrowsFired { get; set; }
+        public int CreeperArrowsFired { get; private set; }
 
         [JsonProperty("dreadlord_arrows_fired")]
-        public int DreadlordArrowsFired { get; set; }
+        public int DreadlordArrowsFired { get; private set; }
 
         [JsonProperty("golem_arrows_fired")]
-        public int GolemArrowsFired { get; set; }
+        public int GolemArrowsFired { get; private set; }
 
         [JsonProperty("spider_arrows_fired")]
-        public int SpiderArrowsFired { get; set; }
+        public int SpiderArrowsFired { get; private set; }
 
         [JsonProperty("blaze_arrows_fired")]
-        public int BlazeArrowsFired { get; set; }
+        public int BlazeArrowsFired { get; private set; }
 
         [JsonProperty("herobrine_arrows_fired")]
-        public int HerobrineArrowsFired { get; set; }
+        public int HerobrineArrowsFired { get; private set; }
 
         [JsonProperty("squid_arrows_fired")]
-        public int SquidArrowsFired { get; set; }
+        public int SquidArrowsFired { get; private set; }
 
         [JsonProperty("moleman_arrows_fired")]
-        public int MolemanArrowsFired { get; set; }
+        public int MolemanArrowsFired { get; private set; }
 
         [JsonProperty("pigman_arrows_fired")]
-        public int PigmanArrowsFired { get; set; }
+        public int PigmanArrowsFired { get; private set; }
 
         [JsonProperty("hunter_arrows_fired")]
-        public int HunterArrowsFired { get; set; }
+        public int HunterArrowsFired { get; private set; }
         #endregion
 
         #region arrows hit
         [JsonProperty("arrows_hit")]
-        public int ArrowsHit { get; set; }
+        public int ArrowsHit { get; private set; }
 
         [JsonProperty("skeleton_arrows_hit")]
-        public int SkeletonArrowsHit { get; set; }
+        public int SkeletonArrowsHit { get; private set; }
 
         [JsonProperty("arcanist_arrows_hit")]
-        public int ArcanistArrowsHit { get; set; }
+        public int ArcanistArrowsHit { get; private set; }
 
         [JsonProperty("enderman_arrows_hit")]
-        public int EndermanArrowsHit { get; set; }
+        public int EndermanArrowsHit { get; private set; }
 
         [JsonProperty("zombie_arrows_hit")]
-        public int ZombieArrowsHit { get; set; }
+        public int ZombieArrowsHit { get; private set; }
 
         [JsonProperty("creeper_arrows_hit")]
-        public int CreeperArrowsHit { get; set; }
+        public int CreeperArrowsHit { get; private set; }
 
         [JsonProperty("dreadlord_arrows_hit")]
-        public int DreadlordArrowsHit { get; set; }
+        public int DreadlordArrowsHit { get; private set; }
 
         [JsonProperty("golem_arrows_hit")]
-        public int GolemArrowsHit { get; set; }
+        public int GolemArrowsHit { get; private set; }
 
         [JsonProperty("spider_arrows_hit")]
-        public int SpiderArrowsHit { get; set; }
+        public int SpiderArrowsHit { get; private set; }
 
         [JsonProperty("blaze_arrows_hit")]
-        public int BlazeArrowsHit { get; set; }
+        public int BlazeArrowsHit { get; private set; }
 
         [JsonProperty("herobrine_arrows_hit")]
-        public int HerobrineArrowsHit { get; set; }
+        public int HerobrineArrowsHit { get; private set; }
 
         [JsonProperty("squid_arrows_hit")]
-        public int SquidArrowsHit { get; set; }
+        public int SquidArrowsHit { get; private set; }
 
         [JsonProperty("moleman_arrows_hit")]
-        public int MolemanArrowsHit { get; set; }
+        public int MolemanArrowsHit { get; private set; }
 
         [JsonProperty("pigman_arrows_hit")]
-        public int PigmanArrowsHit { get; set; }
+        public int PigmanArrowsHit { get; private set; }
 
         [JsonProperty("hunter_arrows_hit")]
-        public int HunterArrowsHit { get; set; }
+        public int HunterArrowsHit { get; private set; }
         #endregion
 
         #region meters fallen
         [JsonProperty("meters_fallen")]
-        public int MetersFallen { get; set; }
+        public int MetersFallen { get; private set; }
 
         [JsonProperty("skeleton_meters_fallen")]
-        public int SkeletonMetersFallen { get; set; }
+        public int SkeletonMetersFallen { get; private set; }
 
         [JsonProperty("enderman_meters_fallen")]
-        public int EndermanMetersFallen { get; set; }
+        public int EndermanMetersFallen { get; private set; }
 
         [JsonProperty("arcanist_meters_fallen")]
-        public int ArcanistMetersFallen { get; set; }
+        public int ArcanistMetersFallen { get; private set; }
 
         [JsonProperty("zombie_meters_fallen")]
-        public int ZombieMetersFallen { get; set; }
+        public int ZombieMetersFallen { get; private set; }
 
         [JsonProperty("creeper_meters_fallen")]
-        public int CreeperMetersFallen { get; set; }
+        public int CreeperMetersFallen { get; private set; }
 
         [JsonProperty("dreadlord_meters_fallen")]
-        public int DreadlordMetersFallen { get; set; }
+        public int DreadlordMetersFallen { get; private set; }
 
         [JsonProperty("golem_meters_fallen")]
-        public int GolemMetersFallen { get; set; }
+        public int GolemMetersFallen { get; private set; }
 
         [JsonProperty("spider_meters_fallen")]
-        public int SpiderMetersFallen { get; set; }
+        public int SpiderMetersFallen { get; private set; }
 
         [JsonProperty("blaze_meters_fallen")]
-        public int BlazeMetersFallen { get; set; }
+        public int BlazeMetersFallen { get; private set; }
 
         [JsonProperty("herobrine_meters_fallen")]
-        public int HerobrineMetersFallen { get; set; }
+        public int HerobrineMetersFallen { get; private set; }
 
         [JsonProperty("squid_meters_fallen")]
-        public int SquidMetersFallen { get; set; }
+        public int SquidMetersFallen { get; private set; }
 
         [JsonProperty("shaman_meters_fallen")]
-        public int ShamanMetersFallen { get; set; }
+        public int ShamanMetersFallen { get; private set; }
 
         [JsonProperty("moleman_meters_fallen")]
-        public int MolemanMetersFallen { get; set; }
+        public int MolemanMetersFallen { get; private set; }
 
         [JsonProperty("pigman_meters_fallen")]
-        public int PigmanMetersFallen { get; set; }
+        public int PigmanMetersFallen { get; private set; }
 
         [JsonProperty("pirate_meters_fallen")]
-        public int PirateMetersFallen { get; set; }
+        public int PirateMetersFallen { get; private set; }
 
         [JsonProperty("hunter_meters_fallen")]
-        public int HunterMetersFallen { get; set; }
+        public int HunterMetersFallen { get; private set; }
         #endregion
 
         #region iron ore broken
         [JsonProperty("iron_ore_broken")]
-        public int IronOreBroken { get; set; }
+        public int IronOreBroken { get; private set; }
 
         [JsonProperty("skeleton_iron_ore_broken")]
-        public int SkeletonIronOreBroken { get; set; }
+        public int SkeletonIronOreBroken { get; private set; }
 
         [JsonProperty("arcanist_iron_ore_broken")]
-        public int ArcanistIronOreBroken { get; set; }
+        public int ArcanistIronOreBroken { get; private set; }
 
         [JsonProperty("enderman_iron_ore_broken")]
-        public int EndermanIronOreBroken { get; set; }
+        public int EndermanIronOreBroken { get; private set; }
 
         [JsonProperty("zombie_iron_ore_broken")]
-        public int ZombieIronOreBroken { get; set; }
+        public int ZombieIronOreBroken { get; private set; }
 
         [JsonProperty("creeper_iron_ore_broken")]
-        public int CreeperIronOreBroken { get; set; }
+        public int CreeperIronOreBroken { get; private set; }
 
         [JsonProperty("dreadlord_iron_ore_broken")]
-        public int DreadlordIronOreBroken { get; set; }
+        public int DreadlordIronOreBroken { get; private set; }
 
         [JsonProperty("golem_iron_ore_broken")]
-        public int GolemIronOreBroken { get; set; }
+        public int GolemIronOreBroken { get; private set; }
 
         [JsonProperty("spider_iron_ore_broken")]
-        public int SpiderIronOreBroken { get; set; }
+        public int SpiderIronOreBroken { get; private set; }
 
         [JsonProperty("blaze_iron_ore_broken")]
-        public int BlazeIronOreBroken { get; set; }
+        public int BlazeIronOreBroken { get; private set; }
 
         [JsonProperty("herobrine_iron_ore_broken")]
-        public int HerobrineIronOreBroken { get; set; }
+        public int HerobrineIronOreBroken { get; private set; }
 
         [JsonProperty("squid_iron_ore_broken")]
-        public int SquidIronOreBroken { get; set; }
+        public int SquidIronOreBroken { get; private set; }
 
         [JsonProperty("shaman_iron_ore_broken")]
-        public int ShamanIronOreBroken { get; set; }
+        public int ShamanIronOreBroken { get; private set; }
 
         [JsonProperty("moleman_iron_ore_broken")]
-        public int MolemanIronOreBroken { get; set; }
+        public int MolemanIronOreBroken { get; private set; }
 
         [JsonProperty("pigman_iron_ore_broken")]
-        public int PigmanIronOreBroken { get; set; }
+        public int PigmanIronOreBroken { get; private set; }
 
         [JsonProperty("pirate_iron_ore_broken")]
-        public int PirateIronOreBroken { get; set; }
+        public int PirateIronOreBroken { get; private set; }
 
         [JsonProperty("hunter_iron_ore_broken")]
-        public int HunterIronOreBroken { get; set; }
+        public int HunterIronOreBroken { get; private set; }
         #endregion
 
         #region diamond ore
         [JsonProperty("diamond_ore_broken")]
-        public int DiamondOreBroken { get; set; }
+        public int DiamondOreBroken { get; private set; }
 
         [JsonProperty("skeleton_diamond_ore_broken")]
-        public int SkeletonDiamondOreBroken { get; set; }
+        public int SkeletonDiamondOreBroken { get; private set; }
 
         [JsonProperty("arcanist_diamond_ore_broken")]
-        public int ArcanistDiamondOreBroken { get; set; }
+        public int ArcanistDiamondOreBroken { get; private set; }
 
         [JsonProperty("dreadlord_diamond_ore_broken")]
-        public int DreadlordDiamondOreBroken { get; set; }
+        public int DreadlordDiamondOreBroken { get; private set; }
 
         [JsonProperty("enderman_diamond_ore_broken")]
-        public int EndermanDiamondOreBroken { get; set; }
+        public int EndermanDiamondOreBroken { get; private set; }
 
         [JsonProperty("golem_diamond_ore_broken")]
-        public int GolemDiamondOreBroken { get; set; }
+        public int GolemDiamondOreBroken { get; private set; }
 
         [JsonProperty("zombie_diamond_ore_broken")]
-        public int ZombieDiamondOreBroken { get; set; }
+        public int ZombieDiamondOreBroken { get; private set; }
 
         [JsonProperty("shaman_diamond_ore_broken")]
-        public int ShamanDiamondOreBroken { get; set; }
+        public int ShamanDiamondOreBroken { get; private set; }
 
         [JsonProperty("squid_diamond_ore_broken")]
-        public int SquidDiamondOreBroken { get; set; }
+        public int SquidDiamondOreBroken { get; private set; }
 
         [JsonProperty("pirate_diamond_ore_broken")]
-        public int PirateDiamondOreBroken { get; set; }
+        public int PirateDiamondOreBroken { get; private set; }
         #endregion
 
         #region wither damage
         [JsonProperty("wither_damage")]
-        public int WitherDamage { get; set; }
+        public int WitherDamage { get; private set; }
 
         [JsonProperty("arcanist_wither_damage")]
-        public int ArcanistWitherDamage { get; set; }
+        public int ArcanistWitherDamage { get; private set; }
 
         [JsonProperty("zombie_wither_damage")]
-        public int ZombieWitherDamage { get; set; }
+        public int ZombieWitherDamage { get; private set; }
 
         [JsonProperty("dreadlord_wither_damage")]
-        public int DreadlordWitherDamage { get; set; }
+        public int DreadlordWitherDamage { get; private set; }
 
         [JsonProperty("golem_wither_damage")]
-        public int GolemWitherDamage { get; set; }
+        public int GolemWitherDamage { get; private set; }
 
         [JsonProperty("enderman_wither_damage")]
-        public int EndermanWitherDamage { get; set; }
+        public int EndermanWitherDamage { get; private set; }
 
         [JsonProperty("blaze_wither_damage")]
-        public int BlazeWitherDamage { get; set; }
+        public int BlazeWitherDamage { get; private set; }
 
         [JsonProperty("spider_wither_damage")]
-        public int SpiderWitherDamage { get; set; }
+        public int SpiderWitherDamage { get; private set; }
 
         [JsonProperty("hunter_wither_damage")]
-        public int HunterWitherDamage { get; set; }
+        public int HunterWitherDamage { get; private set; }
 
         [JsonProperty("creeper_wither_damage")]
-        public int CreeperWitherDamage { get; set; }
+        public int CreeperWitherDamage { get; private set; }
 
         [JsonProperty("skeleton_wither_damage")]
-        public int SkeletonWitherDamage { get; set; }
+        public int SkeletonWitherDamage { get; private set; }
         #endregion
 
         #region wither kills
         [JsonProperty("wither_kills")]
-        public int WitherKills { get; set; }
+        public int WitherKills { get; private set; }
 
         [JsonProperty("arcanist_wither_kills")]
-        public int ArcanistWitherKills { get; set; }
+        public int ArcanistWitherKills { get; private set; }
 
         [JsonProperty("zombie_wither_kills")]
-        public int ZombieWitherKills { get; set; }
+        public int ZombieWitherKills { get; private set; }
 
         [JsonProperty("dreadlord_wither_kills")]
-        public int DreadlordWitherKills { get; set; }
+        public int DreadlordWitherKills { get; private set; }
 
         [JsonProperty("golem_wither_kills")]
-        public int GolemWitherKills { get; set; }
+        public int GolemWitherKills { get; private set; }
 
         [JsonProperty("enderman_wither_kills")]
-        public int EndermanWitherKills { get; set; }
+        public int EndermanWitherKills { get; private set; }
 
         [JsonProperty("blaze_wither_kills")]
-        public int BlazeWitherKills { get; set; }
+        public int BlazeWitherKills { get; private set; }
 
         [JsonProperty("spider_wither_kills")]
-        public int SpiderWitherKills { get; set; }
+        public int SpiderWitherKills { get; private set; }
 
         [JsonProperty("hunter_wither_kills")]
-        public int HunterWitherKills { get; set; }
+        public int HunterWitherKills { get; private set; }
 
         [JsonProperty("creeper_wither_kills")]
-        public int CreeperWitherKills { get; set; }
+        public int CreeperWitherKills { get; private set; }
 
         [JsonProperty("skeleton_wither_kills")]
-        public int SkeletonWitherKills { get; set; }
+        public int SkeletonWitherKills { get; private set; }
         #endregion
     }
 }
