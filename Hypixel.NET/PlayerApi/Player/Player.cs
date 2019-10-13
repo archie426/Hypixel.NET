@@ -37,7 +37,6 @@ namespace Hypixel.NET.PlayerApi.Player
         /// The last time the player logged into Hypixel
         /// </summary>
         [JsonProperty("lastLogin")]
-        //
         private readonly long _lastLogin;
         public DateTime LastLogin
         {

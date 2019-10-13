@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Caching;
 using System.Timers;
 using Hypixel.NET.BoosterApi;
@@ -8,6 +9,7 @@ using Hypixel.NET.KeyApi;
 using Hypixel.NET.LeaderboardsApi;
 using Hypixel.NET.PlayerApi;
 using Hypixel.NET.PlayerApi.Player.GameCounts;
+using Hypixel.NET.SkyblockApi;
 using Hypixel.NET.WatchdogStatsApi;
 using Newtonsoft.Json;
 using RestSharp;
@@ -21,15 +23,18 @@ namespace Hypixel.NET
         private readonly int _cacheStoreTime;
         private static int _apiRequests;
         private static readonly MemoryCache ApiMemoryCache = MemoryCache.Default;
+        private Timer _apiResetTimer;
 
         public HypixelApi(string apiKey, int cacheTimeInSeconds)
         {
             _apiKey = apiKey;
             _cacheStoreTime = cacheTimeInSeconds;
-            var apiResetTimer = new Timer(60000); //Hypixel API only allows 120 requests per 60s
-            apiResetTimer.Elapsed += ResetApiLimit;
+            _apiResetTimer = new Timer(60000);
+            _apiResetTimer.AutoReset = false;
+            _apiResetTimer.Elapsed += ResetApiLimit;
         }
 
+        #region Caching
         private void AddItemToCache(string itemType, string apiResponse)
         {
             var cacheItemPolicy = new CacheItemPolicy
@@ -39,12 +44,37 @@ namespace Hypixel.NET
 
             ApiMemoryCache.Add(itemType, apiResponse, cacheItemPolicy);
         }
+        #endregion
 
+        #region Ratelimitng
         private void ResetApiLimit(object sender, ElapsedEventArgs e)
         {
             _apiRequests = 0;
         }
 
+        private void RateLimitCheck()
+        {
+            if (!_apiResetTimer.Enabled)
+            {
+                _apiResetTimer = new Timer(60000);
+                _apiResetTimer.Start();
+                _apiResetTimer.AutoReset = false;
+                _apiResetTimer.Elapsed += ResetApiLimit;
+                return;
+            }
+
+            if (_apiRequests < 118)
+            {
+                return;
+            }
+
+            const string rateLimitHit = "Rate limit hit!";
+            var hypixelRateLimitException = new ApplicationException(rateLimitHit);
+            throw hypixelRateLimitException;
+        }
+        #endregion
+
+        #region Player
         public GetPlayerData GetUserByUuid(string uuid)
         {
             ApplicationException hypixelException;
@@ -76,7 +106,7 @@ namespace Hypixel.NET
             //Get the response and Deserialize
             var response = client.Execute(request);
             var responseDeserialized = JsonConvert.DeserializeObject<GetPlayerData>(response.Content.Replace(".0", ""));
-            
+
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful && responseDeserialized.Player != null)
             {
@@ -89,6 +119,7 @@ namespace Hypixel.NET
             //Hypixel API returns success at true though the player is null
             if (responseDeserialized.Player == null && responseDeserialized.WasSuccessful)
             {
+                _apiRequests = _apiRequests + 1;
                 const string playerNotFound = "Invalid UUID! Please double check your UUID";
                 hypixelException = new ApplicationException(playerNotFound, response.ErrorException);
                 throw hypixelException;
@@ -118,9 +149,12 @@ namespace Hypixel.NET
             //Check rate limit
             RateLimitCheck();
 
+            //Get the UUID of the player requested - support for name is no longer supported
+            var uuid = GetUuidFromPlayerName(name);
+
             //Create the request
             var client = new RestClient("https://api.hypixel.net/");
-            var request = new RestRequest($"player?key={_apiKey}&name={name}", Method.GET);
+            var request = new RestRequest($"player?key={_apiKey}&uuid={uuid}", Method.GET);
 
             //Get the response and Deserialize
             var response = client.Execute(request);
@@ -140,6 +174,7 @@ namespace Hypixel.NET
             //Hypixel API returns success at true though the player is null
             if (responseDeserialized.Player == null && responseDeserialized.WasSuccessful)
             {
+                _apiRequests = _apiRequests + 1;
                 const string playerNotFound = "Invalid player name! Please double check your player name";
                 hypixelException = new ApplicationException(playerNotFound, response.ErrorException);
                 throw hypixelException;
@@ -149,7 +184,9 @@ namespace Hypixel.NET
             hypixelException = new ApplicationException(message, response.ErrorException);
             throw hypixelException;
         }
+        #endregion
 
+        #region Friends
         public GetFriends GetPlayerFriendsByUuid(string uuid)
         {
             var cacheUuid = uuid + "Type:Friends";
@@ -200,6 +237,9 @@ namespace Hypixel.NET
             return GetPlayerFriendsByUuid(playerUuid);
         }
 
+        #endregion
+
+        #region Guild
         public GetGuild GetGuildByGuildName(string guildName)
         {
             var cacheGuild = guildName + "Type:GuildName";
@@ -235,10 +275,12 @@ namespace Hypixel.NET
             //Throw expection
             if (responseDeserialized.Guild == null)
             {
+                _apiRequests = _apiRequests + 1;
                 message = $"{responseDeserialized.Cause} That guild does not exist";
                 hypixelException = new ApplicationException(message, response.ErrorException);
                 throw hypixelException;
             }
+
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)
             {
@@ -306,7 +348,9 @@ namespace Hypixel.NET
             var hypixelException = new ApplicationException(message, response.ErrorException);
             throw hypixelException;
         }
+        #endregion
 
+        #region Boosters
         public GetBoosters GetBoosters()
         {
             RateLimitCheck();
@@ -317,7 +361,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = client.Execute(request);
-            var responseDeserialized = JsonConvert.DeserializeObject<GetBoosters>(response.Content);
+            var responseDeserialized = JsonConvert.DeserializeObject<GetBoosters>(response.Content.Replace(".0", ""));
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)
@@ -331,13 +375,15 @@ namespace Hypixel.NET
             var hypixelException = new ApplicationException(message, response.ErrorException);
             throw hypixelException;
         }
+        #endregion
 
+        #region Api Key info
         public GetKey GetApiKeyInformation(string apiKey)
         {
             RateLimitCheck();
             //Create the request
             var client = new RestClient("https://api.hypixel.net/");
-            var request = new RestRequest($"key?key={_apiKey}", Method.GET);
+            var request = new RestRequest($"key?key={apiKey}", Method.GET);
 
             //Get the response and Deserialize
             var response = client.Execute(request);
@@ -355,7 +401,9 @@ namespace Hypixel.NET
             var hypixelException = new ApplicationException(message, response.ErrorException);
             throw hypixelException;
         }
+        #endregion
 
+        #region Watchdog
         public GetWatchdogStats GetWatchdogStats()
         {
             RateLimitCheck();
@@ -379,7 +427,9 @@ namespace Hypixel.NET
             var hypixelException = new ApplicationException(message, response.ErrorException);
             throw hypixelException;
         }
+        #endregion
 
+        #region Leaderboards
         public GetLeaderboards GetLeaderboards()
         {
             RateLimitCheck();
@@ -403,10 +453,13 @@ namespace Hypixel.NET
             var hypixelException = new ApplicationException(message, response.ErrorException);
             throw hypixelException;
         }
+        #endregion
 
+        #region Game Counts
         public GetGameCounts GetGameCounts()
         {
             RateLimitCheck();
+
             //Create the request
             var client = new RestClient("https://api.hypixel.net/");
             var request = new RestRequest($"gamecounts?key={_apiKey}", Method.GET);
@@ -427,69 +480,102 @@ namespace Hypixel.NET
             var hypixelException = new ApplicationException(message, response.ErrorException);
             throw hypixelException;
         }
+        #endregion
 
-        private static void RateLimitCheck()
+        #region Skyblock
+        public GetSkyBlockProfile GetSkyblockProfileByProfileId(string skyblockProfileId)
         {
-            if (_apiRequests != 120)
-            {
-                return;
-            }
-            const string rateLimitHit = "Rate limit hit!";
-            var hypixelRateLimitException = new ApplicationException(rateLimitHit);
-            throw hypixelRateLimitException;
-        }
-
-        private string GetUuidFromPlayerName(string playerName)
-        {
+            string message;
             ApplicationException hypixelException;
 
-            var cacheName = playerName + "Type:PlayerData";
-
             //Check if cached. If so deserialize and return
-            if (ApiMemoryCache.Contains(playerName))
+            var profileCache = skyblockProfileId + "Type:SkyblockProfile";
+
+            if (ApiMemoryCache.Contains(profileCache))
             {
-                var getCacheItem = ApiMemoryCache.GetCacheItem(cacheName);
+                var getCacheItem = ApiMemoryCache.GetCacheItem(profileCache);
 
                 //Verify that this isn't null - if is then will do API request as normal
                 if (getCacheItem != null)
                 {
-                    dynamic deserializedResponseCache = JsonConvert.DeserializeObject(getCacheItem.Value.ToString());
-                    return deserializedResponseCache.player.uuid;
+                    var deserializedResponseCache = JsonConvert.DeserializeObject<GetSkyBlockProfile>(getCacheItem.Value.ToString());
+                    deserializedResponseCache.FromCache = true;
+                    return deserializedResponseCache;
                 }
             }
 
-            //Rate limit check
             RateLimitCheck();
 
             //Create the request
-            var client = new RestClient("https://api.hypixel.net/");
-            var request = new RestRequest($"player?key={_apiKey}&name={playerName}", Method.GET);
+            var client = new RestClient("https://api.hypixel.net/skyblock");
+            var request = new RestRequest($"profile?key={_apiKey}&profile={skyblockProfileId}", Method.GET);
+
+            //Get the response and Deserialize
+            var response = client.Execute(request);
+            var responseDeserialized = JsonConvert.DeserializeObject<GetSkyBlockProfile>(response.Content);
+
+            //Throw expection
+            if (responseDeserialized.Profile == null)
+            {
+                _apiRequests = _apiRequests + 1;
+                message = "That profile ID does not exist";
+                hypixelException = new ApplicationException(message, response.ErrorException);
+                throw hypixelException;
+            }
+
+            //Verify that the request was successful
+            if (responseDeserialized.WasSuccessful)
+            {
+                _apiRequests = _apiRequests + 1;
+                AddItemToCache(profileCache, response.Content);
+                responseDeserialized.FromCache = false;
+                return responseDeserialized;
+            }
+
+            //If the response wasn't successful, an exception will be thrown
+            message = $"{responseDeserialized} Please double check your request information";
+            hypixelException = new ApplicationException(message, response.ErrorException);
+            throw hypixelException;
+        }
+
+        public List<GetSkyBlockProfile> GetSkyblockProfilesByName(string username)
+        {
+            //First grab the data from the username
+            var userData = GetUserByPlayerName(username);
+
+            //Make sure that the requests won't go over the amount
+            if (_apiRequests + userData.Player.Stats.SkyBlock.Profiles.Count > 118)
+            {
+                var overRatelimitExceptiom = new ApplicationException("Rate limit would be hit getting all profiles!");
+                throw overRatelimitExceptiom;
+            }
+
+            var profileList = new List<GetSkyBlockProfile>();
+
+            //Go through each profile to get API response
+            foreach (var profile in userData.Player.Stats.SkyBlock.Profiles)
+            {
+                profileList.Add(GetSkyblockProfileByProfileId(profile.Value.ProfileId));
+            }
+
+            return profileList;
+        }
+        #endregion
+
+        #region Mojang
+        private string GetUuidFromPlayerName(string playerName)
+        {
+            //Create the request
+            var client = new RestClient("https://api.mojang.com/");
+            var request = new RestRequest($"users/profiles/minecraft/{playerName}", Method.GET);
 
             //Get the response and Deserialize
             var response = client.Execute(request);
             dynamic responseDeserialized = JsonConvert.DeserializeObject(response.Content);
 
-            //Verify that the request was successful
-            if ((bool)responseDeserialized.success && responseDeserialized.player != null)
-            {
-                _apiRequests = _apiRequests + 1;
-                AddItemToCache(cacheName, response.Content);
-                responseDeserialized.FromCache = false;
-                return responseDeserialized.player.uuid;
-            }
-
-            //Hypixel API returns success at true though the player is null
-            if (responseDeserialized.player == null && responseDeserialized.success)
-            {
-                const string playerNotFound = "Invalid UUID! Please double check your UUID";
-                hypixelException = new ApplicationException(playerNotFound, response.ErrorException);
-                throw hypixelException;
-            }
-
-            var message = $"{responseDeserialized.cause} Please double check your request information";
-            hypixelException = new ApplicationException(message, response.ErrorException);
-            throw hypixelException;
+            //Mojang stores the uuid under id so return that
+            return responseDeserialized.id;
         }
-
+        #endregion
     }
 }

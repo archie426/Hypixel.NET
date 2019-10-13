@@ -19,7 +19,7 @@ namespace Examples
     {
         static void Main(string[] args)
         {
-            var hypixel = new HypixelApi("YOUR API KEY", 600);
+            var hypixel = new HypixelApi("YOUR API KEY", 300);
 
             var playerRequest = hypixel.GetUserByPlayerName("barrows");
             Console.WriteLine(playerRequest.Player.Stats.SkyWars.Kills);
@@ -27,7 +27,7 @@ namespace Examples
             var playerUuidRequest = hypixel.GetUserByUuid("4c38f0a6-a36f-4f06-985c-7851b3853ccb");
             Console.WriteLine(playerUuidRequest.Player.Stats.SkyWars.ArrowsShot);
 
-            var guildByGuildName = hypixel.GetGuildByGuildName("The Scrobobboplers");
+            var guildByGuildName = hypixel.GetGuildByGuildName("Develop");
             Console.WriteLine(guildByGuildName.Guild.Coins);
 
             var guildByPlayerName = hypixel.GetGuildByPlayerName("barrows");
@@ -53,6 +53,21 @@ namespace Examples
 
             var getLeaderboards = hypixel.GetLeaderboards();
             Console.WriteLine(getLeaderboards.Leaderboards.SkyWars.Count);
+
+            var getGameCounts = hypixel.GetGameCounts();
+            Console.WriteLine(getGameCounts.Games.Limbo.Players);
+
+            var getSkyblockProfile = hypixel.GetSkyblockProfileByProfileId("4c38f0a6a36f4f06985c7851b3853ccb");
+            foreach (var member in getSkyblockProfile.Profile.Members)
+            {
+                Console.WriteLine(member.Value.PlayerStats.AuctionsBids);
+            }
+
+            var getProfilesByName = hypixel.GetSkyblockProfilesByName("barrows");
+            foreach (var profile in getProfilesByName)
+            {
+                Console.WriteLine(profile.Profile.ProfileId);
+            }
         }
     }
 }

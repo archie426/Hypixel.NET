@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Hypixel.NET.PlayerApi.Player.GameCounts.Games;
 using Newtonsoft.Json;
 
 namespace Hypixel.NET.PlayerApi.Player.Stats
@@ -77,5 +78,7 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         [JsonProperty("Pit")]
         public Pit Pit { get; private set; }
 
-        }
+        [JsonProperty("SkyBlock")]
+        public Skyblock SkyBlock { get; private set; }
     }
+}

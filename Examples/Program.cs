@@ -43,8 +43,19 @@ namespace Examples
             Console.WriteLine(getLeaderboards.Leaderboards.SkyWars.Count);
 
             var getGameCounts = hypixel.GetGameCounts();
-            Console.WriteLine(getGameCounts.Games.Limbo);
-        }
+            Console.WriteLine(getGameCounts.Games.Limbo.Players);
 
+            var getSkyblockProfile = hypixel.GetSkyblockProfileByProfileId("4c38f0a6a36f4f06985c7851b3853ccb");
+            foreach (var member in getSkyblockProfile.Profile.Members)
+            {
+                Console.WriteLine(member.Value.PlayerStats.AuctionsBids);
+            }
+
+            var getProfilesByName = hypixel.GetSkyblockProfilesByName("barrows");
+            foreach (var profile in getProfilesByName)
+            {
+                Console.WriteLine(profile.Profile.ProfileId);
+            }
+        }
     }
 }

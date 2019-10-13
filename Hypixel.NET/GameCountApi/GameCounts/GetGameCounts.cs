@@ -16,5 +16,7 @@ namespace Hypixel.NET.PlayerApi.Player.GameCounts
         [JsonProperty("success")]
         public bool WasSuccessful { get; private set; }
 
+        [JsonProperty("playerCount")]
+        public long HypixelPlayerCount { get; private set; }
     }
 }
