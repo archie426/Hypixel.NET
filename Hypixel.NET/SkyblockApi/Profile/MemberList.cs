@@ -86,5 +86,53 @@ namespace Hypixel.NET.SkyblockApi.Profile
 
         [JsonProperty("achievement_spawned_island_types")]
         public List<string> AchivementSpawnedIslandTypes { get; private set; }
+
+        [JsonProperty("experience_skill_runecrafting")]
+        public double ExperienceSkillRunecrafting { get; set; }
+
+        [JsonProperty("experience_skill_combat")]
+        public double ExperienceSkillCombat { get; set; }
+
+        [JsonProperty("experience_skill_mining")]
+        public double ExperienceSkillMining { get; set; }
+
+        [JsonProperty("unlocked_coll_tiers")]
+        public List<string> UnlockedCollTiers { get; set; }
+
+        [JsonProperty("fishing_bag")]
+        public FishingBag FishingBag { get; set; }
+
+        [JsonProperty("experience_skill_alchemy")]
+        public double ExperienceSkillAlchemy { get; set; }
+
+        [JsonProperty("experience_skill_farming")]
+        public double ExperienceSkillFarming { get; set; }
+
+        [JsonProperty("quiver")]
+        public Quiver Quiver { get; set; }
+
+        [JsonProperty("ender_chest_contents")]
+        public EnderChestContents EnderChestContents { get; set; }
+
+        [JsonProperty("potion_bag")]
+        public PotionBag PotionBag { get; set; }
+
+        [JsonProperty("experience_skill_enchanting")]
+        public double ExperienceSkillEnchanting { get; set; }
+
+        [JsonProperty("experience_skill_fishing")]
+        public double ExperienceSkillFishing { get; set; }
+
+        [JsonProperty("inv_contents")]
+        public InvContents InvContents { get; set; }
+
+        [JsonProperty("talisman_bag")]
+        public TalismanBag TalismanBag { get; set; }
+
+        [JsonProperty("experience_skill_foraging")]
+        public double ExperienceSkillForaging { get; set; }
+
+        [JsonProperty("experience_skill_carpentry")]
+        public double ExperienceSkillCarpentry { get; set; }
     }
 }
