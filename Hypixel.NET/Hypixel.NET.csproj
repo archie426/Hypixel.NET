@@ -10,8 +10,8 @@
     <PackageProjectUrl>https://github.com/Bregann/Hypixel.NET</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Bregann/Hypixel.NET</RepositoryUrl>
     <PackageTags>Hypixel API Wrapper</PackageTags>
-    <PackageReleaseNotes>Skyblock API implementation + Hypixel total player count</PackageReleaseNotes>
-    <Version>1.0.4</Version>
+    <PackageReleaseNotes>Skyblock Auctions API + Inventory, bags and enderchest</PackageReleaseNotes>
+    <Version>1.0.5</Version>
   </PropertyGroup>
 
   <ItemGroup>
