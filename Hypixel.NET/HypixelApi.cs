@@ -132,6 +132,8 @@ namespace Hypixel.NET
 
         public GetPlayerData GetUserByPlayerName(string name)
         {
+            ApplicationException hypixelException;
+
             //Check cache
             if (ApiMemoryCache.Contains(name))
             {
@@ -152,6 +154,12 @@ namespace Hypixel.NET
             //Get the UUID of the player requested - support for name is no longer supported
             var uuid = GetUuidFromPlayerName(name);
 
+            if (uuid == null)
+            {
+                hypixelException = new ApplicationException("Username not found!");
+                throw hypixelException;
+            }
+
             //Create the request
             var client = new RestClient("https://api.hypixel.net/");
             var request = new RestRequest($"player?key={_apiKey}&uuid={uuid}", Method.GET);
@@ -168,8 +176,6 @@ namespace Hypixel.NET
                 responseDeserialized.FromCache = false;
                 return responseDeserialized;
             }
-
-            ApplicationException hypixelException;
 
             //Hypixel API returns success at true though the player is null
             if (responseDeserialized.Player == null && responseDeserialized.WasSuccessful)
@@ -234,6 +240,13 @@ namespace Hypixel.NET
         public GetFriends GetPlayerFriendsByPlayerName(string playerName)
         {
             var playerUuid = GetUuidFromPlayerName(playerName);
+
+            if (playerUuid == null)
+            {
+                var hypixelException = new ApplicationException("Username not found!");
+                throw hypixelException;
+            }
+
             return GetPlayerFriendsByUuid(playerUuid);
         }
 
@@ -300,6 +313,12 @@ namespace Hypixel.NET
         {
             //convert the player name into a uuid - Hypixel doesn't allow guild requests by player names
             var playerUuid = GetUuidFromPlayerName(playerName);
+
+            if (playerUuid == null)
+            {
+                var hypixelException = new ApplicationException("Username not found!");
+                throw hypixelException;
+            }
 
             //use the get guild by uuid 
             return GetGuildByUuid(playerUuid);
@@ -560,6 +579,185 @@ namespace Hypixel.NET
 
             return profileList;
         }
+
+        public GetAuctionPage GetAuctionPage(int auctionPage)
+        {
+            RateLimitCheck();
+
+            //Create the request
+            var client = new RestClient("https://api.hypixel.net/skyblock");
+            var request = new RestRequest($"auctions?key={_apiKey}&page={auctionPage}", Method.GET);
+
+            //Get the response and Deserialize
+            var response = client.Execute(request);
+            var responseDeserialized = JsonConvert.DeserializeObject<GetAuctionPage>(response.Content);
+
+            //Verify that the request was successful
+            if (responseDeserialized.WasSuccessful)
+            {
+                _apiRequests = _apiRequests + 1;
+                return responseDeserialized;
+            }
+
+            //If the response wasn't successful, an exception will be thrown
+            var message = $"{responseDeserialized.Cause} Please double check your request information";
+            var hypixelException = new ApplicationException(message, response.ErrorException);
+            throw hypixelException;
+        }
+
+        public AuctionsByPlayer GetAuctionsByPlayerUuid(string uuid)
+        {
+            string message;
+            ApplicationException hypixelException;
+
+            //Check if cached. If so deserialize and return
+            var profileCache = uuid + "Type:SkyblockAuctionsByUuid";
+
+            if (ApiMemoryCache.Contains(profileCache))
+            {
+                var getCacheItem = ApiMemoryCache.GetCacheItem(profileCache);
+
+                //Verify that this isn't null - if is then will do API request as normal
+                if (getCacheItem != null)
+                {
+                    var deserializedResponseCache = JsonConvert.DeserializeObject<AuctionsByPlayer>(getCacheItem.Value.ToString());
+                    deserializedResponseCache.FromCache = true;
+                    return deserializedResponseCache;
+                }
+            }
+
+            RateLimitCheck();
+
+            //Create the request
+            var client = new RestClient("https://api.hypixel.net/skyblock/");
+            var request = new RestRequest($"auction?key={_apiKey}&player={uuid}", Method.GET);
+
+            //Get the response and Deserialize
+            var response = client.Execute(request);
+            var responseDeserialized = JsonConvert.DeserializeObject<AuctionsByPlayer>(response.Content);
+
+            //Verify that the request was successful
+            if (responseDeserialized.WasSuccessful)
+            {
+                _apiRequests = _apiRequests + 1;
+                AddItemToCache(profileCache, response.Content);
+                responseDeserialized.FromCache = false;
+                return responseDeserialized;
+            }
+
+            //If the response wasn't successful, an exception will be thrown
+            message = $"{responseDeserialized} Please double check your request information";
+            hypixelException = new ApplicationException(message, response.ErrorException);
+            throw hypixelException;
+        }
+
+        public AuctionsByPlayer GetAuctionsByPlayerName(string name)
+        {
+            ApplicationException hypixelException;
+
+            //Get UUID from the player name
+            var uuid = GetUuidFromPlayerName(name);
+
+            if (uuid == null)
+            {
+                hypixelException = new ApplicationException("Username not found!");
+                throw hypixelException;
+            }
+
+            return GetAuctionsByPlayerUuid(uuid);
+        }
+
+        public AuctionsByProfile GetAuctionsByProfileId(string id)
+        {
+            string message;
+            ApplicationException hypixelException;
+
+            //Check if cached. If so deserialize and return
+            var profileIdCache = id + "Type:SkyblockAuctionsByProfileId";
+
+            if (ApiMemoryCache.Contains(profileIdCache))
+            {
+                var getCacheItem = ApiMemoryCache.GetCacheItem(profileIdCache);
+
+                //Verify that this isn't null - if is then will do API request as normal
+                if (getCacheItem != null)
+                {
+                    var deserializedResponseCache = JsonConvert.DeserializeObject<AuctionsByProfile>(getCacheItem.Value.ToString());
+                    deserializedResponseCache.FromCache = true;
+                    return deserializedResponseCache;
+                }
+            }
+
+            RateLimitCheck();
+
+            //Create the request
+            var client = new RestClient("https://api.hypixel.net/skyblock");
+            var request = new RestRequest($"auction?key={_apiKey}&profile={id}", Method.GET);
+
+            //Get the response and Deserialize
+            var response = client.Execute(request);
+            var responseDeserialized = JsonConvert.DeserializeObject<AuctionsByProfile>(response.Content);
+
+            //Verify that the request was successful
+            if (responseDeserialized.WasSuccessful)
+            {
+                _apiRequests = _apiRequests + 1;
+                AddItemToCache(profileIdCache, response.Content);
+                responseDeserialized.FromCache = false;
+                return responseDeserialized;
+            }
+
+            //If the response wasn't successful, an exception will be thrown
+            message = $"{responseDeserialized} Please double check your request information";
+            hypixelException = new ApplicationException(message, response.ErrorException);
+            throw hypixelException;
+        }
+
+        public AuctionByAuctionId GetAuctionByAuctionId(string id)
+        {
+            string message;
+            ApplicationException hypixelException;
+
+            //Check if cached. If so deserialize and return
+            var auctionIdCache = id + "Type:SkyblockAuctionByAuctionId";
+
+            if (ApiMemoryCache.Contains(auctionIdCache))
+            {
+                var getCacheItem = ApiMemoryCache.GetCacheItem(auctionIdCache);
+
+                //Verify that this isn't null - if is then will do API request as normal
+                if (getCacheItem != null)
+                {
+                    var deserializedResponseCache = JsonConvert.DeserializeObject<AuctionByAuctionId>(getCacheItem.Value.ToString());
+                    deserializedResponseCache.FromCache = true;
+                    return deserializedResponseCache;
+                }
+            }
+
+            RateLimitCheck();
+
+            //Create the request
+            var client = new RestClient("https://api.hypixel.net/skyblock");
+            var request = new RestRequest($"auction?key={_apiKey}&uuid={id}", Method.GET);
+
+            //Get the response and Deserialize
+            var response = client.Execute(request);
+            var responseDeserialized = JsonConvert.DeserializeObject<AuctionByAuctionId>(response.Content);
+
+            //Verify that the request was successful
+            if (responseDeserialized.WasSuccessful)
+            {
+                _apiRequests = _apiRequests + 1;
+                AddItemToCache(auctionIdCache, response.Content);
+                responseDeserialized.FromCache = false;
+                return responseDeserialized;
+            }
+
+            //If the response wasn't successful, an exception will be thrown
+            message = $"{responseDeserialized} Please double check your request information";
+            hypixelException = new ApplicationException(message, response.ErrorException);
+            throw hypixelException;
+        }
         #endregion
 
         #region Mojang
@@ -571,6 +769,12 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = client.Execute(request);
+
+            if (response.Content == "")
+            {
+                return null;
+            }
+
             dynamic responseDeserialized = JsonConvert.DeserializeObject(response.Content);
 
             //Mojang stores the uuid under id so return that

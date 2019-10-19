@@ -56,6 +56,21 @@ namespace Examples
             {
                 Console.WriteLine(profile.Profile.ProfileId);
             }
+
+            var getAuctionPage = hypixel.GetAuctionPage(0);
+            Console.WriteLine(getAuctionPage.Auctions[0].End);
+
+            var auctionsByPlayerUuid = hypixel.GetAuctionsByPlayerUuid("4c38f0a6a36f4f06985c7851b3853ccb");
+            Console.WriteLine(auctionsByPlayerUuid.Auctions[0].Auctioneer);
+
+            var auctionsByPlayerName = hypixel.GetAuctionsByPlayerName("barrows");
+            Console.WriteLine(auctionsByPlayerName.Auctions[0].Start);
+
+            var auctionsBySkyblockProfile = hypixel.GetAuctionsByProfileId("4c38f0a6a36f4f06985c7851b3853ccb");
+            Console.WriteLine(auctionsBySkyblockProfile.Auctions[0].ItemName);
+
+            var auctionsBySkyblockAuctionId = hypixel.GetAuctionByAuctionId("6a576eeb8f6e4941a72844147c378b65");
+            Console.WriteLine(auctionsBySkyblockAuctionId.Auction[0].ItemName);
         }
     }
 }
