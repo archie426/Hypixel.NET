@@ -23,10 +23,28 @@ namespace Hypixel.NET.SkyblockApi.Auctions
         public List<string> Coop { get; private set; }
 
         [JsonProperty("start")]
-        public long Start { get; private set; }
+        private readonly long _start;
+        public DateTime Start
+        {
+            get
+            {
+                var convertToDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+                convertToDateTime = convertToDateTime.AddMilliseconds(_start).ToLocalTime();
+                return convertToDateTime;
+            }
+        }
 
         [JsonProperty("end")]
-        public long End { get; private set; }
+        private readonly long _end;
+        public DateTime End
+        {
+            get
+            {
+                var convertToDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+                convertToDateTime = convertToDateTime.AddMilliseconds(_end).ToLocalTime();
+                return convertToDateTime;
+            }
+        }
 
         [JsonProperty("item_name")]
         public string ItemName { get; private set; }
