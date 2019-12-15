@@ -1088,5 +1088,94 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
         [JsonProperty("four_four_lucky_wins_bedwars")]
         public int FoursLuckyWinsBedwars { get; private set; }
         #endregion
-    }
+
+        #region Bedwars tourney Dec 2019
+        [JsonProperty("tourney_bedwars_two_four_0_winstreak2")]
+        public int TourneyDec2019WinStreak { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0__items_purchased_bedwars")]
+        public int TourneyDec2019itemsPurchased { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_deaths_bedwars")]
+        public int TourneyDec2019Deaths { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_entity_attack_deaths_bedwars")]
+        public int TourneyDec2019EntityAttackDeaths { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_entity_attack_final_kills_bedwars")]
+        public int TourneyDec2019EntityAttackFinalKills { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_fall_deaths_bedwars")]
+        public int TourneyDec2019FallDeaths { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_fall_kills_bedwars")]
+        public int TourneyDec2019FallKills { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_final_kills_bedwars")]
+        public int TourneyDec2019FinalKills { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_games_played_bedwars")]
+        public int TourneyDec2019GamesPlayed { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_gold_resources_collected_bedwars")]
+        public int TourneyDec2019GoldCollected { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_iron_resources_collected_bedwars")]
+        public int TourneyDec2019IronCollected { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_items_purchased_bedwars")]
+        public int TourneyDec2019IOtemsPurchased { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_kills_bedwars")]
+        public int TourneyDec2019Kills { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_resources_collected_bedwars")]
+        public int TourneyDec2019ResourcesCollected { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_wins_bedwars")]
+        public int TourneyDec2019Wins { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_void_deaths_bedwars")]
+        public int TourneyDec2019VoidDeaths { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_void_kills_bedwars")]
+        public int TourneyDec2019VoidKills { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_beds_broken_bedwars")]
+        public int TourneyDec2019BedsBroken { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_entity_explosion_deaths_bedwars")]
+        public int TourneyDec2019EntityExplosionDeaths { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_void_final_kills_bedwars")]
+        public int TourneyDec2019VoidFinalKills { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_projectile_deaths_bedwars")]
+        public int TourneyDec2019ProjectileDeaths { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_emerald_resources_collected_bedwars")]
+        public int TourneyDec2019EmeraldsCollected { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_entity_explosion_kills_bedwars")]
+        public int TourneyDec2019EntityExplosionKills { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_fall_final_kills_bedwars")]
+        public int TourneyDec2019FallFinalKills { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_diamond_resources_collected_bedwars")]
+        public int TourneyDec2019DiamondsCollected { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_beds_lost_bedwars")]
+        public int TourneyDec2019BedsLost { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_entity_attack_final_deaths_bedwars")]
+        public int TourneyDec2019EntityAttackFinalDeaths { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_final_deaths_bedwars")]
+        public int TourneyDec2019FinalDeaths { get; set; }
+
+        [JsonProperty("tourney_bedwars_two_four_0_losses_bedwars")]
+        public int TourneyDec2019Losses { get; set; }
+    #endregion
+}
 }

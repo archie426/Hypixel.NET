@@ -10,8 +10,8 @@
     <PackageProjectUrl>https://github.com/Bregann/Hypixel.NET</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Bregann/Hypixel.NET</RepositoryUrl>
     <PackageTags>Hypixel API Wrapper</PackageTags>
-    <PackageReleaseNotes>Skyblock Auctions API + Inventory, bags and enderchest</PackageReleaseNotes>
-    <Version>1.0.6</Version>
+    <PackageReleaseNotes>Bedwars tourney 2019 stats</PackageReleaseNotes>
+    <Version>1.0.6.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
