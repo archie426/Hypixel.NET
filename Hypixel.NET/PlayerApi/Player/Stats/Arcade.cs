@@ -6,7 +6,7 @@ namespace Hypixel.NET.PlayerApi.Player.Stats
     {
         #region general
         [JsonProperty("coins")]
-        public int Coins { get; private set; }
+        public string Coins { get; private set; }
         #endregion
 
         #region creeper attack
