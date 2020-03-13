@@ -23,7 +23,6 @@ namespace Examples
             var hypixel = new HypixelApi("YOUR API KEY", 300);
 
             #region Synchronous
-
             //Synchronous requests
             var playerRequest = hypixel.GetUserByPlayerName("barrows");
             Console.WriteLine(playerRequest.Player.Stats.SkyWars.Kills);
@@ -87,10 +86,18 @@ namespace Examples
 
             var auctionsBySkyblockAuctionId = hypixel.GetAuctionByAuctionId("6a576eeb8f6e4941a72844147c378b65");
             Console.WriteLine(auctionsBySkyblockAuctionId.Auction[0].ItemName);
+
+            var getNews = hypixel.GetNews();
+            Console.WriteLine(getNews.Items[0].Title);
+
+            var productPrice = hypixel.GetBazaarProductPrice("COAL");
+            Console.WriteLine(productPrice.ProductInfo.QuickStatus.BuyPrice);
+
+            var bazaarProducts = hypixel.GetBazaarProducts();
+            Console.WriteLine(bazaarProducts.ProductIds[2]);
             #endregion
 
             #region Async
-
             //Async requests
             var playerRequestAsync = await hypixel.GetUserByPlayerNameAsync("barrows").ConfigureAwait(false);
             Console.WriteLine(playerRequestAsync.Player.Stats.SkyWars.Kills);
@@ -154,6 +161,12 @@ namespace Examples
 
             var auctionsBySkyblockAuctionIdAsync = await hypixel.GetAuctionByAuctionIdAsync("6a576eeb8f6e4941a72844147c378b65").ConfigureAwait(false);
             Console.WriteLine(auctionsBySkyblockAuctionIdAsync.Auction[0].ItemName);
+
+            var productPriceAsync = await hypixel.GetBazaarProductPriceAsync("COAL");
+            Console.WriteLine(productPriceAsync.ProductInfo.QuickStatus.BuyPrice);
+
+            var bazaarProductsAsync = await hypixel.GetBazaarProductsAsync();
+            Console.WriteLine(bazaarProducts.ProductIds[2]);
             #endregion
         }
     }

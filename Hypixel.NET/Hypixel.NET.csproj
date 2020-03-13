@@ -6,12 +6,12 @@
     <Product />
     <Company></Company>
     <Description>C# API Wrapper for the Minecraft server Hypixel.net (https://hypixel.net)</Description>
-    <PackageLicenseUrl>https://github.com/Bregann/Hypixel.NET/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/Bregann/Hypixel.NET</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Bregann/Hypixel.NET</RepositoryUrl>
     <PackageTags>Hypixel API Wrapper</PackageTags>
-    <PackageReleaseNotes>Async methods</PackageReleaseNotes>
-    <Version>1.0.7</Version>
+    <PackageReleaseNotes>Bazaar and news endpoints</PackageReleaseNotes>
+    <Version>1.0.8</Version>
   </PropertyGroup>
 
   <ItemGroup>
