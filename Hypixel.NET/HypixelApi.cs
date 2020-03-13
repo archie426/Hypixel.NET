@@ -11,6 +11,7 @@ using Hypixel.NET.LeaderboardsApi;
 using Hypixel.NET.PlayerApi;
 using Hypixel.NET.PlayerApi.Player.GameCounts;
 using Hypixel.NET.SkyblockApi;
+using Hypixel.NET.SkyblockApi.News;
 using Hypixel.NET.WatchdogStatsApi;
 using Newtonsoft.Json;
 using RestSharp;
@@ -752,6 +753,32 @@ namespace Hypixel.NET
                 _apiRequests = _apiRequests + 1;
                 AddItemToCache(auctionIdCache, response.Content);
                 responseDeserialized.FromCache = false;
+                return responseDeserialized;
+            }
+
+            //If the response wasn't successful, an exception will be thrown
+            message = $"{responseDeserialized} Please double check your request information";
+            hypixelException = new ApplicationException(message, response.ErrorException);
+            throw hypixelException;
+        }
+
+        public GetNews GetNews()
+        {
+            string message;
+            ApplicationException hypixelException;
+
+            //Create the request
+            var client = new RestClient("https://api.hypixel.net/skyblock");
+            var request = new RestRequest($"news?key={_apiKey}", Method.GET);
+
+            //Get the response and Deserialize
+            var response = client.Execute(request);
+            var responseDeserialized = JsonConvert.DeserializeObject<GetNews>(response.Content);
+
+            //Verify that the request was successful
+            if (responseDeserialized.WasSuccessful)
+            {
+                _apiRequests = _apiRequests + 1;
                 return responseDeserialized;
             }
 
