@@ -1,13 +1,12 @@
 Hypixel.NET C# Wrapper
 ======
-This is my C# implmentation of the Hypixel API
+This is my C# implmentation of the [Hypixel API](https://api.hypixel.net/). 
 
 ### NuGet Package
-The NuGet package can be found at https://www.nuget.org/packages/Hypixel.NET/
-
+The NuGet package can be found by clicking [here!](https://www.nuget.org/packages/Hypixel.NET/) (https://www.nuget.org/packages/Hypixel.NET/)
 ### Examples
 
-Here are some examples from the Example project. Both Synchronous and Async methods are provided
+Here are some examples from the Example project. Both Synchronous and Async methods are provided.
 
 ```C#
 using System;
@@ -172,3 +171,12 @@ namespace Examples
     }
 }
 ```
+
+
+# Thank you to our contributors!
+
+<a href="https://github.com/bregann/hypixel.net/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=bregann/hypixel.net" />
+</a>
+
+Made with [contributors-img](https://contributors-img.web.app).
