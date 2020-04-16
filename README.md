@@ -171,3 +171,12 @@ namespace Examples
     }
 }
 ```
+
+
+# Thank you to our contributors!
+
+<a href="https://github.com/bregann/hypixel.net/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=bregann/hypixel.net" />
+</a>
+
+Made with [contributors-img](https://contributors-img.web.app).
