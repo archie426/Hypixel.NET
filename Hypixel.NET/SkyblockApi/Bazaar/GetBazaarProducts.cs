@@ -13,7 +13,18 @@ namespace Hypixel.NET.SkyblockApi.Bazaar
         [JsonProperty("cause")]
         public string Cause { get; private set; }
 
-        [JsonProperty("productIds")]
-        public List<string> ProductIds { get; private set; }
+        [JsonProperty("lastUpdated")]
+        private readonly long _lastUpdated;
+        public DateTime LastUpdated
+        {
+            get
+            {
+                var convertToDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+                convertToDateTime = convertToDateTime.AddMilliseconds(_lastUpdated).ToLocalTime();
+                return convertToDateTime;
+            }
+        }
+        [JsonProperty("products")]
+        public Dictionary<string, Product> Products { get; private set; }
     }
 }

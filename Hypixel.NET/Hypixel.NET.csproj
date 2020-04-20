@@ -10,8 +10,8 @@
     <PackageProjectUrl>https://github.com/Bregann/Hypixel.NET</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Bregann/Hypixel.NET</RepositoryUrl>
     <PackageTags>Hypixel API Wrapper</PackageTags>
-    <PackageReleaseNotes>Bazaar and news endpoints</PackageReleaseNotes>
-    <Version>1.0.8</Version>
+    <PackageReleaseNotes>Updated Bazaar endpoint to new varient</PackageReleaseNotes>
+    <Version>1.0.8.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

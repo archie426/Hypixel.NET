@@ -89,11 +89,8 @@ namespace Examples
             var getNews = hypixel.GetNews();
             Console.WriteLine(getNews.Items[0].Title);
 
-            var productPrice = hypixel.GetBazaarProductPrice("COAL");
-            Console.WriteLine(productPrice.ProductInfo.QuickStatus.BuyPrice);
-
             var bazaarProducts = hypixel.GetBazaarProducts();
-            Console.WriteLine(bazaarProducts.ProductIds[2]);
+            Console.WriteLine(bazaarProducts.Products["ENCHANTED_COAL"].QuickStatus.BuyPrice);
             #endregion
 
             #region Async
@@ -161,11 +158,8 @@ namespace Examples
             var auctionsBySkyblockAuctionIdAsync = await hypixel.GetAuctionByAuctionIdAsync("6a576eeb8f6e4941a72844147c378b65").ConfigureAwait(false);
             Console.WriteLine(auctionsBySkyblockAuctionIdAsync.Auction[0].ItemName);
 
-            var productPriceAsync = await hypixel.GetBazaarProductPriceAsync("COAL");
-            Console.WriteLine(productPriceAsync.ProductInfo.QuickStatus.BuyPrice);
-
             var bazaarProductsAsync = await hypixel.GetBazaarProductsAsync();
-            Console.WriteLine(bazaarProducts.ProductIds[2]);
+            Console.WriteLine(bazaarProducts.Products["ENCHANTED_COAL"].QuickStatus.BuyPrice);
             #endregion
         }
     }

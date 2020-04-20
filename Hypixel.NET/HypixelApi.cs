@@ -795,36 +795,11 @@ namespace Hypixel.NET
 
             //Create the request
             var client = new RestClient("https://api.hypixel.net/");
-            var request = new RestRequest($"skyblock/bazaar/products?key={_apiKey}", Method.GET);
+            var request = new RestRequest($"skyblock/bazaar?key={_apiKey}", Method.GET);
 
             //Get the response and Deserialize
             var response = client.Execute(request);
             var responseDeserialized = JsonConvert.DeserializeObject<GetBazaarProducts>(response.Content);
-
-            //Verify that the request was successful
-            if (responseDeserialized.WasSuccessful)
-            {
-                _apiRequests = _apiRequests + 1;
-                return responseDeserialized;
-            }
-
-            //If the response wasn't successful, an exception will be thrown
-            var message = $"{responseDeserialized.Cause} Please double check your request information";
-            var hypixelException = new ApplicationException(message, response.ErrorException);
-            throw hypixelException;
-        }
-
-        public GetBazaarProductPrice GetBazaarProductPrice(string productId)
-        {
-            RateLimitCheck();
-
-            //Create the request
-            var client = new RestClient("https://api.hypixel.net/");
-            var request = new RestRequest($"skyblock/bazaar/product?key={_apiKey}&productId={productId}", Method.GET);
-
-            //Get the response and Deserialize
-            var response = client.Execute(request);
-            var responseDeserialized = JsonConvert.DeserializeObject<GetBazaarProductPrice>(response.Content);
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)
@@ -1558,36 +1533,11 @@ namespace Hypixel.NET
 
             //Create the request
             var client = new RestClient("https://api.hypixel.net/");
-            var request = new RestRequest($"skyblock/bazaar/products?key={_apiKey}", Method.GET);
+            var request = new RestRequest($"skyblock/bazaar?key={_apiKey}", Method.GET);
 
             //Get the response and Deserialize
             var response = await client.ExecuteTaskAsync(request).ConfigureAwait(false);
             var responseDeserialized = await Task.Run(() => JsonConvert.DeserializeObject<GetBazaarProducts>(response.Content)).ConfigureAwait(false);
-
-            //Verify that the request was successful
-            if (responseDeserialized.WasSuccessful)
-            {
-                _apiRequests = _apiRequests + 1;
-                return responseDeserialized;
-            }
-
-            //If the response wasn't successful, an exception will be thrown
-            var message = $"{responseDeserialized.Cause} Please double check your request information";
-            var hypixelException = new ApplicationException(message, response.ErrorException);
-            throw hypixelException;
-        }
-
-        public async Task<GetBazaarProductPrice> GetBazaarProductPriceAsync(string productId)
-        {
-            RateLimitCheck();
-
-            //Create the request
-            var client = new RestClient("https://api.hypixel.net/");
-            var request = new RestRequest($"skyblock/bazaar/product?key={_apiKey}&productId={productId}", Method.GET);
-
-            //Get the response and Deserialize
-            var response = await client.ExecuteTaskAsync(request).ConfigureAwait(false);
-            var responseDeserialized = await Task.Run(() => JsonConvert.DeserializeObject<GetBazaarProductPrice>(response.Content)).ConfigureAwait(false);
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)
