@@ -134,5 +134,14 @@ namespace Hypixel.NET.SkyblockApi.Profile
 
         [JsonProperty("experience_skill_carpentry")]
         public double ExperienceSkillCarpentry { get; set; }
+
+        [JsonProperty("experience_skill_taming")]
+        public double ExperienceSkillTaming { get; set; }
+
+        [JsonProperty("pets")]
+        public List<Pets> Pets { get; set; }
+
+        [JsonProperty("slayer_bosses")]
+        public SlayerBosses SlayerBosses { get; set; }
     }
 }

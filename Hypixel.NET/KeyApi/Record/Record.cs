@@ -13,5 +13,8 @@ namespace Hypixel.NET.KeyApi.Record
 
         [JsonProperty("totalQueries")]
         public int TotalQueries { get; private set; }
+
+        [JsonProperty("queriesInPastMin")]
+        public int TotalQueriesInPastMin { get; private set; }
     }
 }

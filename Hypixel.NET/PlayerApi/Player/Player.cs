@@ -130,5 +130,16 @@ namespace Hypixel.NET.PlayerApi.Player
 
         [JsonProperty("voting")]
         public Voting.Voting Voting;
+
+        [JsonProperty("newPackageRank")]
+        public string NewPackageRank { get; private set; }
+
+        [JsonProperty("monthlyPackageRank")]
+        public string MonthlyPackageRank { get; private set; }
+
+        [JsonProperty("mostRecentMonthlyPackageRank")]
+        public string MostRecentMonthlyPackageRank { get; private set; }
+
+
     }
 }

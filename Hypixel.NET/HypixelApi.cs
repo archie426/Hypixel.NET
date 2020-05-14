@@ -32,9 +32,37 @@ namespace Hypixel.NET
         {
             _apiKey = apiKey;
             _cacheStoreTime = cacheTimeInSeconds;
+
+            if (!IsApiKeyValid(apiKey))
+            {
+                var message = " Invalid API key. Please double check your information";
+                var hypixelException = new ApplicationException(message);
+                throw hypixelException;
+            }
+
             _apiResetTimer = new Timer(60000);
             _apiResetTimer.AutoReset = false;
             _apiResetTimer.Elapsed += ResetApiLimit;
+        }
+
+        public bool IsApiKeyValid(string apiKey)
+        {
+            //Create the request
+            var client = new RestClient("https://api.hypixel.net/");
+            var request = new RestRequest($"key?key={apiKey}", Method.GET);
+
+            //Get the response and Deserialize
+            var response = client.Execute(request);
+            var responseDeserialized = JsonConvert.DeserializeObject<GetKey>(response.Content);
+
+            //Verify that the request was successful
+            if (responseDeserialized.WasSuccessful)
+            {
+                _apiRequests = _apiRequests + 1;
+                return true;
+            }
+
+            return false;
         }
         #region Caching
         private void AddItemToCache(string itemType, string apiResponse)
