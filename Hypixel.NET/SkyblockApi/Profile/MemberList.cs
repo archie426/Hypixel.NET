@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using Hypixel.NET.SkyblockApi.Profile.Objectives;
@@ -65,6 +65,9 @@ namespace Hypixel.NET.SkyblockApi.Profile
 
         [JsonProperty("last_death")]
         public long LastDeath { get; private set; }
+
+        [JsonProperty("crafted_generators")]
+        public List<string> CraftedGenerators { get; private set; }
 
         [JsonProperty("visited_zones")]
         public List<string> VisitedZones { get; private set; }
