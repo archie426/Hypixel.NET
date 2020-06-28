@@ -146,5 +146,9 @@ namespace Hypixel.NET.SkyblockApi.Profile
 
         [JsonProperty("slayer_bosses")]
         public SlayerBosses SlayerBosses { get; set; }
+
+        [JsonProperty("wardrobe_contents")]
+        public WardrobeContents WardrobeContents { get; set; }
+
     }
 }

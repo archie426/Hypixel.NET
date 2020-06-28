@@ -10,8 +10,8 @@
     <PackageProjectUrl>https://github.com/Bregann/Hypixel.NET</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Bregann/Hypixel.NET</RepositoryUrl>
     <PackageTags>Hypixel API Wrapper</PackageTags>
-    <PackageReleaseNotes>Added skyblock pets, slayer and API key checking</PackageReleaseNotes>
-    <Version>1.0.9</Version>
+    <PackageReleaseNotes>Extra Skyblock data</PackageReleaseNotes>
+    <Version>1.0.9.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
