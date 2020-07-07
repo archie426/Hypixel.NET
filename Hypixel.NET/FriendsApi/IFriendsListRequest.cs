@@ -3,12 +3,10 @@ using Hypixel.NET.FriendsApi.Record;
 
 namespace Hypixel.NET.FriendsApi
 {
-    public interface IFriendsListRequest
+    public interface IFriendsListRequest : IRequest
     {
         public bool FromCache { get; }
-        
-        public bool WasSuccessful { get; }
-        
+
         public List<Records> Records { get; }
         
         public string Cause { get; }

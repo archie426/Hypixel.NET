@@ -2,7 +2,7 @@
 
 namespace Hypixel.NET.WatchdogStatsApi
 {
-    public class GetWatchdogStats
+    public class WatchdogStatsRequest : IWatchdogStatsRequest
     {
         [JsonProperty("success")]
         public bool WasSuccessful { get; private set; }

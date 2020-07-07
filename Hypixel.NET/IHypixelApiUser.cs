@@ -31,7 +31,7 @@ namespace Hypixel.NET
 
         IKeyRequest GetApiKeyInformation(string apiKey);
 
-        GetWatchdogStats GetWatchdogStats();
+        WatchdogStatsRequest GetWatchdogStats();
 
         ILeaderboardsRequest GetLeaderboards();
 

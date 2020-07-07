@@ -455,7 +455,7 @@ namespace Hypixel.NET
         #endregion
 
         #region Watchdog
-        public GetWatchdogStats GetWatchdogStats()
+        public WatchdogStatsRequest GetWatchdogStats()
         {
             RateLimitCheck();
             //Create the request
@@ -464,7 +464,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = client.Execute(request);
-            var responseDeserialized = JsonConvert.DeserializeObject<GetWatchdogStats>(response.Content);
+            var responseDeserialized = JsonConvert.DeserializeObject<WatchdogStatsRequest>(response.Content);
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)
@@ -1219,7 +1219,7 @@ namespace Hypixel.NET
         #endregion
 
         #region Watchdog
-        public async Task <GetWatchdogStats> GetWatchdogStatsAsync()
+        public async Task <WatchdogStatsRequest> GetWatchdogStatsAsync()
         {
             RateLimitCheck();
             //Create the request
@@ -1228,7 +1228,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = await client.ExecuteTaskAsync(request).ConfigureAwait(false);
-            var responseDeserialized = await Task.Run(() => JsonConvert.DeserializeObject<GetWatchdogStats>(response.Content)).ConfigureAwait(false);
+            var responseDeserialized = await Task.Run(() => JsonConvert.DeserializeObject<WatchdogStatsRequest>(response.Content)).ConfigureAwait(false);
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)

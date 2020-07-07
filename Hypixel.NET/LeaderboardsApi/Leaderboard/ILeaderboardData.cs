@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Hypixel.NET.LeaderboardsApi
+namespace Hypixel.NET.LeaderboardsApi.Leaderboard
 {
     public interface ILeaderboardData
     {

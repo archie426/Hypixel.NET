@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Hypixel.NET.GuildApi.Guild;
+using Newtonsoft.Json;
 
 namespace Hypixel.NET.GuildApi
 {
@@ -10,7 +11,7 @@ namespace Hypixel.NET.GuildApi
         public bool WasSuccessful { get; private set; }
 
         [JsonProperty("guild")]
-        public Guild.Guild Guild { get; private set; }
+        public IGuild Guild { get; private set; }
 
         [JsonProperty("cause")]
         public string Cause { get; private set; }

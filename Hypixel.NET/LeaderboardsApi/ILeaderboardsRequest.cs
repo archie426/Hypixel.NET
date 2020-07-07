@@ -1,8 +1,7 @@
 namespace Hypixel.NET.LeaderboardsApi
 {
-    public interface ILeaderboardsRequest
+    public interface ILeaderboardsRequest : IRequest
     {
-        public bool WasSuccessful { get;}
         public string Cause { get; }
         
         public Leaderboard.Leaderboard Leaderboards { get; }
