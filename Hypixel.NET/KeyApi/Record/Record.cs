@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace Hypixel.NET.KeyApi.Record
 {
-    public class Record
+    public class Record : IRecord
     {
         [JsonProperty("ownerUuid")]
         public string OwnerUuid { get; private set; }

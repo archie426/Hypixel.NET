@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 namespace Hypixel.NET.GuildApi.Guild
 {
-    public class Guild
+    public class Guild : IGuild
     {
         [JsonProperty("_id")]
         public string Id { get; private set; }
@@ -53,6 +53,6 @@ namespace Hypixel.NET.GuildApi.Guild
         public string NameLower { get; private set; }
 
         [JsonProperty("guildExpByGameType")]
-        public GuildExpByGameType GuildExpByGameType;
+        public GuildGameExp GuildGameExp { get; private set; }
     }
 }

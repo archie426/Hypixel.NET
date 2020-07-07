@@ -2,7 +2,7 @@
 
 namespace Hypixel.NET.GuildApi.Guild.XpByGameType
 {
-    public class GuildExpByGameType
+    public class GuildGameExp : IGuildGameExp
     {
         [JsonProperty("QUAKECRAFT")]
         public int Quake { get; private set; }

@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace Hypixel.NET.GuildApi.Guild.Member
 {
-    public class Member
+    public class Member : IMember
     {
         [JsonProperty("uuid")]
         public string Uuid { get; private set; }

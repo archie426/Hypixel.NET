@@ -1,8 +1,9 @@
-﻿using Newtonsoft.Json;
+﻿using Hypixel.NET.KeyApi.Record;
+using Newtonsoft.Json;
 
 namespace Hypixel.NET.KeyApi
 {
-    public class GetKey
+    public class KeyRequest : IKeyRequest
     {
         [JsonProperty("success")]
         public bool WasSuccessful { get; private set; }
@@ -11,6 +12,6 @@ namespace Hypixel.NET.KeyApi
         public string Cause { get; private set; }
 
         [JsonProperty("record")]
-        public Record.Record Record { get; private set; }
+        public IRecord Record { get; private set; }
     }
 }

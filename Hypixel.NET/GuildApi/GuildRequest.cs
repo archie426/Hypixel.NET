@@ -2,7 +2,7 @@
 
 namespace Hypixel.NET.GuildApi
 {
-    public class GetGuild
+    public class GuildRequest : IGuildRequest
     {
         public bool FromCache;
 

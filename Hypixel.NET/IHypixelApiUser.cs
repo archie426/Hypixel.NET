@@ -23,13 +23,13 @@ namespace Hypixel.NET
         GetFriends GetPlayerFriendsByUuid(string uuid);
         GetFriends GetPlayerFriendsByPlayerName(string playerName);
 
-        GetGuild GetGuildByGuildName(string guildName);
-        GetGuild GetGuildByPlayerName(string playerName);
-        GetGuild GetGuildByUuid(string uuid);
+        GuildRequest GetGuildByGuildName(string guildName);
+        GuildRequest GetGuildByPlayerName(string playerName);
+        GuildRequest GetGuildByUuid(string uuid);
 
         GetBoosters GetBoosters();
 
-        GetKey GetApiKeyInformation(string apiKey);
+        IKeyRequest GetApiKeyInformation(string apiKey);
 
         GetWatchdogStats GetWatchdogStats();
 

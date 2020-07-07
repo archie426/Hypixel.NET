@@ -2,7 +2,7 @@
 
 namespace Hypixel.NET.GuildApi.Guild.Achievements
 {
-    public class Achievements
+    public class Achievements : IAchievements
     {
         [JsonProperty("WINNERS")]
         public int Winners { get; private set; }

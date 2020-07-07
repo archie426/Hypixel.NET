@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace Hypixel.NET.LeaderboardsApi.Leaderboard
 {
-    public class LeaderboardData
+    public class LeaderboardData : ILeaderboardData
     {
         [JsonProperty("prefix")]
         public string Prefix { get; private set; }

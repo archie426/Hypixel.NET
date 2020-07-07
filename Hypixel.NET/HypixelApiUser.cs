@@ -53,7 +53,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = client.Execute(request);
-            var responseDeserialized = JsonConvert.DeserializeObject<GetKey>(response.Content);
+            var responseDeserialized = JsonConvert.DeserializeObject<KeyRequest>(response.Content);
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)
@@ -285,7 +285,7 @@ namespace Hypixel.NET
         #endregion
 
         #region Guild
-        public GetGuild GetGuildByGuildName(string guildName)
+        public GuildRequest GetGuildByGuildName(string guildName)
         {
             var cacheGuild = guildName + "Type:GuildName";
 
@@ -297,7 +297,7 @@ namespace Hypixel.NET
                 //Verify that this isn't null - if is then will do API request as normal
                 if (getCacheItem != null)
                 {
-                    var deserializedResponseCache = JsonConvert.DeserializeObject<GetGuild>(getCacheItem.Value.ToString());
+                    var deserializedResponseCache = JsonConvert.DeserializeObject<GuildRequest>(getCacheItem.Value.ToString());
                     deserializedResponseCache.FromCache = true;
                     return deserializedResponseCache;
                 }
@@ -312,7 +312,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = client.Execute(request);
-            var responseDeserialized = JsonConvert.DeserializeObject<GetGuild>(response.Content);
+            var responseDeserialized = JsonConvert.DeserializeObject<GuildRequest>(response.Content);
 
             string message;
             ApplicationException hypixelException;
@@ -341,7 +341,7 @@ namespace Hypixel.NET
             throw hypixelException;
         }
 
-        public GetGuild GetGuildByPlayerName(string playerName)
+        public GuildRequest GetGuildByPlayerName(string playerName)
         {
             //convert the player name into a uuid - Hypixel doesn't allow guild requests by player names
             var playerUuid = GetUuidFromPlayerName(playerName);
@@ -356,7 +356,7 @@ namespace Hypixel.NET
             return GetGuildByUuid(playerUuid);
         }
 
-        public GetGuild GetGuildByUuid(string uuid)
+        public GuildRequest GetGuildByUuid(string uuid)
         {
             var cacheGuild = uuid + "Type:GuildPlayerUuid";
 
@@ -368,7 +368,7 @@ namespace Hypixel.NET
                 //Verify that this isn't null - if is then will do API request as normal
                 if (getCacheItem != null)
                 {
-                    var deserializedResponseCache = JsonConvert.DeserializeObject<GetGuild>(getCacheItem.Value.ToString());
+                    var deserializedResponseCache = JsonConvert.DeserializeObject<GuildRequest>(getCacheItem.Value.ToString());
                     deserializedResponseCache.FromCache = true;
                     return deserializedResponseCache;
                 }
@@ -383,7 +383,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = client.Execute(request);
-            var responseDeserialized = JsonConvert.DeserializeObject<GetGuild>(response.Content);
+            var responseDeserialized = JsonConvert.DeserializeObject<GuildRequest>(response.Content);
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)
@@ -429,7 +429,7 @@ namespace Hypixel.NET
         #endregion
 
         #region Api Key info
-        public GetKey GetApiKeyInformation(string apiKey)
+        public IKeyRequest GetApiKeyInformation(string apiKey)
         {
             RateLimitCheck();
             //Create the request
@@ -438,7 +438,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = client.Execute(request);
-            var responseDeserialized = JsonConvert.DeserializeObject<GetKey>(response.Content);
+            var responseDeserialized = JsonConvert.DeserializeObject<KeyRequest>(response.Content);
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)
@@ -1048,7 +1048,7 @@ namespace Hypixel.NET
         #endregion
 
         #region Guild
-        public async Task <GetGuild> GetGuildByGuildNameAsync(string guildName)
+        public async Task <GuildRequest> GetGuildByGuildNameAsync(string guildName)
         {
             var cacheGuild = guildName + "Type:GuildName";
 
@@ -1060,7 +1060,7 @@ namespace Hypixel.NET
                 //Verify that this isn't null - if is then will do API request as normal
                 if (getCacheItem != null)
                 {
-                    var deserializedResponseCache = await Task.Run(() => JsonConvert.DeserializeObject<GetGuild>(getCacheItem.Value.ToString())).ConfigureAwait(false);
+                    var deserializedResponseCache = await Task.Run(() => JsonConvert.DeserializeObject<GuildRequest>(getCacheItem.Value.ToString())).ConfigureAwait(false);
                     deserializedResponseCache.FromCache = true;
                     return deserializedResponseCache;
                 }
@@ -1075,7 +1075,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = await client.ExecuteTaskAsync(request).ConfigureAwait(false);
-            var responseDeserialized = await Task.Run(() => JsonConvert.DeserializeObject<GetGuild>(response.Content)).ConfigureAwait(false);
+            var responseDeserialized = await Task.Run(() => JsonConvert.DeserializeObject<GuildRequest>(response.Content)).ConfigureAwait(false);
 
             string message;
             ApplicationException hypixelException;
@@ -1104,7 +1104,7 @@ namespace Hypixel.NET
             throw hypixelException;
         }
 
-        public async Task<GetGuild> GetGuildByPlayerNameAsync(string playerName)
+        public async Task<GuildRequest> GetGuildByPlayerNameAsync(string playerName)
         {
             //convert the player name into a uuid - Hypixel doesn't allow guild requests by player names
             var playerUuid = await GetUuidFromPlayerNameAsync(playerName).ConfigureAwait(false);
@@ -1120,7 +1120,7 @@ namespace Hypixel.NET
             return await GetGuildByUuidAsync(playerUuid).ConfigureAwait(false);
         }
 
-        public async Task <GetGuild> GetGuildByUuidAsync(string uuid)
+        public async Task <GuildRequest> GetGuildByUuidAsync(string uuid)
         {
             var cacheGuild = uuid + "Type:GuildPlayerUuid";
 
@@ -1132,7 +1132,7 @@ namespace Hypixel.NET
                 //Verify that this isn't null - if is then will do API request as normal
                 if (getCacheItem != null)
                 {
-                    var deserializedResponseCache = await Task.Run(() => JsonConvert.DeserializeObject<GetGuild>(getCacheItem.Value.ToString())).ConfigureAwait(false);
+                    var deserializedResponseCache = await Task.Run(() => JsonConvert.DeserializeObject<GuildRequest>(getCacheItem.Value.ToString())).ConfigureAwait(false);
                     deserializedResponseCache.FromCache = true;
                     return deserializedResponseCache;
                 }
@@ -1147,7 +1147,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = await client.ExecuteTaskAsync(request).ConfigureAwait(false);
-            var responseDeserialized = await Task.Run(() => JsonConvert.DeserializeObject<GetGuild>(response.Content)).ConfigureAwait(false);
+            var responseDeserialized = await Task.Run(() => JsonConvert.DeserializeObject<GuildRequest>(response.Content)).ConfigureAwait(false);
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)
@@ -1193,7 +1193,7 @@ namespace Hypixel.NET
         #endregion
 
         #region Api Key info
-        public async Task <GetKey> GetApiKeyInformationAsync(string apiKey)
+        public async Task <IKeyRequest> GetApiKeyInformationAsync(string apiKey)
         {
             RateLimitCheck();
             //Create the request
@@ -1202,7 +1202,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = await client.ExecuteTaskAsync(request).ConfigureAwait(false);
-            var responseDeserialized = await Task.Run(() => JsonConvert.DeserializeObject<GetKey>(response.Content)).ConfigureAwait(false);
+            var responseDeserialized = await Task.Run(() => JsonConvert.DeserializeObject<KeyRequest>(response.Content)).ConfigureAwait(false);
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)
