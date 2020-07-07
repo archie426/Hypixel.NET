@@ -12,6 +12,7 @@
     <PackageTags>Hypixel API Wrapper</PackageTags>
     <PackageReleaseNotes>Extra Skyblock data</PackageReleaseNotes>
     <Version>1.0.9.1</Version>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>

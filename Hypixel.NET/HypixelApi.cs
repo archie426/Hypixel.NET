@@ -107,7 +107,7 @@ namespace Hypixel.NET
         #region synchronous
 
         #region Player
-        public GetPlayerData GetUserByUuid(string uuid)
+        public IPlayerDataRequest GetUserByUuid(string uuid)
         {
             ApplicationException hypixelException;
 
@@ -122,7 +122,7 @@ namespace Hypixel.NET
                 //Verify that this isn't null - if is then will do API request as normal
                 if (getCacheItem != null)
                 {
-                    var deserializedResponseCache = JsonConvert.DeserializeObject<GetPlayerData>(getCacheItem.Value.ToString().Replace(".0", ""));
+                    var deserializedResponseCache = JsonConvert.DeserializeObject<PlayerDataRequest>(getCacheItem.Value.ToString().Replace(".0", ""));
                     deserializedResponseCache.FromCache = true;
                     return deserializedResponseCache;
                 }
@@ -137,7 +137,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = client.Execute(request);
-            var responseDeserialized = JsonConvert.DeserializeObject<GetPlayerData>(response.Content.Replace(".0", ""));
+            var responseDeserialized = JsonConvert.DeserializeObject<PlayerDataRequest>(response.Content.Replace(".0", ""));
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful && responseDeserialized.Player != null)
@@ -162,7 +162,7 @@ namespace Hypixel.NET
             throw hypixelException;
         }
 
-        public GetPlayerData GetUserByPlayerName(string name)
+        public PlayerDataRequest GetUserByPlayerName(string name)
         {
             ApplicationException hypixelException;
 
@@ -174,7 +174,7 @@ namespace Hypixel.NET
                 //Verify that this isn't null - if is then will do API request as normal
                 if (getCacheItem != null)
                 {
-                    var deserializedResponseCache = JsonConvert.DeserializeObject<GetPlayerData>(getCacheItem.Value.ToString().Replace(".0", ""));
+                    var deserializedResponseCache = JsonConvert.DeserializeObject<PlayerDataRequest>(getCacheItem.Value.ToString().Replace(".0", ""));
                     deserializedResponseCache.FromCache = true;
                     return deserializedResponseCache;
                 }
@@ -198,7 +198,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = client.Execute(request);
-            var responseDeserialized = JsonConvert.DeserializeObject<GetPlayerData>(response.Content.Replace(".0", ""));
+            var responseDeserialized = JsonConvert.DeserializeObject<PlayerDataRequest>(response.Content.Replace(".0", ""));
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful && responseDeserialized.Player != null)
@@ -870,7 +870,7 @@ namespace Hypixel.NET
         #region Async
 
         #region Player
-        public async Task <GetPlayerData> GetUserByUuidAsync(string uuid)
+        public async Task <IPlayerDataRequest> GetUserByUuidAsync(string uuid)
         {
             ApplicationException hypixelException;
 
@@ -885,7 +885,7 @@ namespace Hypixel.NET
                 //Verify that this isn't null - if is then will do API request as normal
                 if (getCacheItem != null)
                 {
-                    var deserializedResponseCache = await Task.Run(() => JsonConvert.DeserializeObject<GetPlayerData>(getCacheItem.Value.ToString().Replace(".0", ""))).ConfigureAwait(false);
+                    var deserializedResponseCache = await Task.Run(() => JsonConvert.DeserializeObject<PlayerDataRequest>(getCacheItem.Value.ToString().Replace(".0", ""))).ConfigureAwait(false);
                     deserializedResponseCache.FromCache = true;
                     return deserializedResponseCache;
                 }
@@ -900,7 +900,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = await client.ExecuteTaskAsync(request).ConfigureAwait(false);
-            var responseDeserialized = await Task.Run(() => JsonConvert.DeserializeObject<GetPlayerData>(response.Content.Replace(".0", ""))).ConfigureAwait(false);
+            var responseDeserialized = await Task.Run(() => JsonConvert.DeserializeObject<PlayerDataRequest>(response.Content.Replace(".0", ""))).ConfigureAwait(false);
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful && responseDeserialized.Player != null)
@@ -925,7 +925,7 @@ namespace Hypixel.NET
             throw hypixelException;
         }
 
-        public async Task<GetPlayerData> GetUserByPlayerNameAsync(string name)
+        public async Task<IPlayerDataRequest> GetUserByPlayerNameAsync(string name)
         {
             ApplicationException hypixelException;
 
@@ -937,7 +937,7 @@ namespace Hypixel.NET
                 //Verify that this isn't null - if is then will do API request as normal
                 if (getCacheItem != null)
                 {
-                    var deserializedResponseCache = await Task.Run(() => JsonConvert.DeserializeObject<GetPlayerData>(getCacheItem.Value.ToString().Replace(".0", ""))).ConfigureAwait(false);
+                    var deserializedResponseCache = await Task.Run(() => JsonConvert.DeserializeObject<PlayerDataRequest>(getCacheItem.Value.ToString().Replace(".0", ""))).ConfigureAwait(false);
                     deserializedResponseCache.FromCache = true;
                     return deserializedResponseCache;
                 }
@@ -961,7 +961,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = await client.ExecuteTaskAsync(request).ConfigureAwait(false);
-            var responseDeserialized = await Task.Run(() => JsonConvert.DeserializeObject<GetPlayerData>(response.Content.Replace(".0", ""))).ConfigureAwait(false);
+            var responseDeserialized = await Task.Run(() => JsonConvert.DeserializeObject<PlayerDataRequest>(response.Content.Replace(".0", ""))).ConfigureAwait(false);
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful && responseDeserialized.Player != null)

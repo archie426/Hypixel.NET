@@ -2,10 +2,10 @@
 
 namespace Hypixel.NET.PlayerApi
 {
-    public class GetPlayerData
+    public class PlayerDataRequest : IPlayerDataRequest
     {
         [JsonProperty("player")]
-        public Player.Player Player { get; private set; }
+        public IPlayer Player { get; private set; }
 
         [JsonProperty("success")]
         public bool WasSuccessful { get; private set; }

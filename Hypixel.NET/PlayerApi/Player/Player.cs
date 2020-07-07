@@ -4,19 +4,29 @@ using Newtonsoft.Json;
 
 namespace Hypixel.NET.PlayerApi.Player
 {
-    public class Player
+    public class Player : IPlayer
     {
         /// <summary>
         /// General onetime unlock achievements
         /// </summary>
         [JsonProperty("achievementsOneTime")]
-        public List<object> AchievementsOneTime { get; private set; }
+        public List<object> AchievementsOneTime { get; set; }
 
         /// <summary>
         /// The display name of the player
         /// </summary>
         [JsonProperty("displayname")]
-        public string DisplayName { get; private set; }
+        private string DisplayName { get; set; }
+
+        /// <summary>
+        /// The display name of the player
+        /// </summary>
+        [JsonProperty("displayname")]
+        string IPlayer.DisplayName
+        {
+            get => this.DisplayName;
+            set => this.DisplayName = value;
+        }
 
         /// <summary>
         /// The First time the player logged into Hypixel
@@ -129,7 +139,7 @@ namespace Hypixel.NET.PlayerApi.Player
         public string RankPlusColor { get; private set; }
 
         [JsonProperty("voting")]
-        public Voting.Voting Voting;
+        public Voting.Voting Voting { get; set; }
 
         [JsonProperty("newPackageRank")]
         public string NewPackageRank { get; private set; }
