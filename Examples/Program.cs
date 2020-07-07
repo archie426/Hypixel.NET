@@ -8,7 +8,7 @@ namespace Examples
     {
         static async Task Main(string[] args)
         {
-            var hypixel = new HypixelApi("YOUR API KEY", 300);
+            var hypixel = new HypixelApiUser("YOUR API KEY", 300);
 
             #region Synchronous
             //Synchronous requests

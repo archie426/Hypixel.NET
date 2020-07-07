@@ -20,7 +20,7 @@ using RestSharp;
 
 namespace Hypixel.NET
 {
-    public class HypixelApi
+    public class HypixelApiUser : IHypixelApiUser
     {
         private readonly string _apiKey;
         private readonly int _cacheStoreTime;
@@ -28,7 +28,7 @@ namespace Hypixel.NET
         private static readonly MemoryCache ApiMemoryCache = MemoryCache.Default;
         private Timer _apiResetTimer;
 
-        public HypixelApi(string apiKey, int cacheTimeInSeconds)
+        public HypixelApiUser(string apiKey, int cacheTimeInSeconds)
         {
             _apiKey = apiKey;
             _cacheStoreTime = cacheTimeInSeconds;
@@ -162,7 +162,7 @@ namespace Hypixel.NET
             throw hypixelException;
         }
 
-        public PlayerDataRequest GetUserByPlayerName(string name)
+        public IPlayerDataRequest GetUserByPlayerName(string name)
         {
             ApplicationException hypixelException;
 
@@ -481,7 +481,7 @@ namespace Hypixel.NET
         #endregion
 
         #region Leaderboards
-        public GetLeaderboards GetLeaderboards()
+        public LeaderboardsRequest GetLeaderboards()
         {
             RateLimitCheck();
             //Create the request
@@ -490,7 +490,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = client.Execute(request);
-            var responseDeserialized = JsonConvert.DeserializeObject<GetLeaderboards>(response.Content);
+            var responseDeserialized = JsonConvert.DeserializeObject<LeaderboardsRequest>(response.Content);
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)
@@ -1245,7 +1245,7 @@ namespace Hypixel.NET
         #endregion
 
         #region Leaderboards
-        public async Task <GetLeaderboards> GetLeaderboardsAsync()
+        public async Task <LeaderboardsRequest> GetLeaderboardsAsync()
         {
             RateLimitCheck();
             //Create the request
@@ -1254,7 +1254,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = await client.ExecuteTaskAsync(request).ConfigureAwait(false);
-            var responseDeserialized = await Task.Run (() => JsonConvert.DeserializeObject<GetLeaderboards>(response.Content)).ConfigureAwait(false);
+            var responseDeserialized = await Task.Run (() => JsonConvert.DeserializeObject<LeaderboardsRequest>(response.Content)).ConfigureAwait(false);
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)
