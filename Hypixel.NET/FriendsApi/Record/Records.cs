@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace Hypixel.NET.FriendsApi.Record
 {
-    public class Records
+    public class Records : IRecords
     {
         [JsonProperty("uuidSender")]
         public string UuidSender { get; private set; }

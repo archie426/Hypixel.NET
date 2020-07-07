@@ -225,7 +225,7 @@ namespace Hypixel.NET
         #endregion
 
         #region Friends
-        public GetFriends GetPlayerFriendsByUuid(string uuid)
+        public IFriendsListRequest GetPlayerFriendsByUuid(string uuid)
         {
             var cacheUuid = uuid + "Type:Friends";
 
@@ -237,7 +237,7 @@ namespace Hypixel.NET
                 //Verify that this isn't null - if is then will do API request as normal
                 if (getCacheItem != null)
                 {
-                    var deserializedResponseCache = JsonConvert.DeserializeObject<GetFriends>(getCacheItem.Value.ToString());
+                    var deserializedResponseCache = JsonConvert.DeserializeObject<FriendsListRequest>(getCacheItem.Value.ToString());
                     deserializedResponseCache.FromCache = true;
                     return deserializedResponseCache;
                 }
@@ -252,7 +252,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = client.Execute(request);
-            var responseDeserialized = JsonConvert.DeserializeObject<GetFriends>(response.Content);
+            var responseDeserialized = JsonConvert.DeserializeObject<FriendsListRequest>(response.Content);
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)
@@ -269,7 +269,7 @@ namespace Hypixel.NET
             throw hypixelException;
         }
 
-        public GetFriends GetPlayerFriendsByPlayerName(string playerName)
+        public IFriendsListRequest GetPlayerFriendsByPlayerName(string playerName)
         {
             var playerUuid = GetUuidFromPlayerName(playerName);
 
@@ -285,7 +285,7 @@ namespace Hypixel.NET
         #endregion
 
         #region Guild
-        public GuildRequest GetGuildByGuildName(string guildName)
+        public IGuildRequest GetGuildByGuildName(string guildName)
         {
             var cacheGuild = guildName + "Type:GuildName";
 
@@ -341,7 +341,7 @@ namespace Hypixel.NET
             throw hypixelException;
         }
 
-        public GuildRequest GetGuildByPlayerName(string playerName)
+        public IGuildRequest GetGuildByPlayerName(string playerName)
         {
             //convert the player name into a uuid - Hypixel doesn't allow guild requests by player names
             var playerUuid = GetUuidFromPlayerName(playerName);
@@ -356,7 +356,7 @@ namespace Hypixel.NET
             return GetGuildByUuid(playerUuid);
         }
 
-        public GuildRequest GetGuildByUuid(string uuid)
+        public IGuildRequest GetGuildByUuid(string uuid)
         {
             var cacheGuild = uuid + "Type:GuildPlayerUuid";
 
@@ -402,7 +402,7 @@ namespace Hypixel.NET
         #endregion
 
         #region Boosters
-        public GetBoosters GetBoosters()
+        public BoostersRequest GetBoosters()
         {
             RateLimitCheck();
 
@@ -412,7 +412,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = client.Execute(request);
-            var responseDeserialized = JsonConvert.DeserializeObject<GetBoosters>(response.Content.Replace(".0", ""));
+            var responseDeserialized = JsonConvert.DeserializeObject<BoostersRequest>(response.Content.Replace(".0", ""));
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)
@@ -481,7 +481,7 @@ namespace Hypixel.NET
         #endregion
 
         #region Leaderboards
-        public LeaderboardsRequest GetLeaderboards()
+        public ILeaderboardsRequest GetLeaderboards()
         {
             RateLimitCheck();
             //Create the request
@@ -507,7 +507,7 @@ namespace Hypixel.NET
         #endregion
 
         #region Game Counts
-        public GetGameCounts GetGameCounts()
+        public IGameCountsRequest GetGameCounts()
         {
             RateLimitCheck();
 
@@ -517,7 +517,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = client.Execute(request);
-            var responseDeserialized = JsonConvert.DeserializeObject<GetGameCounts>(response.Content);
+            var responseDeserialized = JsonConvert.DeserializeObject<GameCountsRequest>(response.Content);
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)
@@ -988,7 +988,7 @@ namespace Hypixel.NET
         #endregion
 
         #region Friends
-        public async Task<GetFriends> GetPlayerFriendsByUuidAsync(string uuid)
+        public async Task<FriendsListRequest> GetPlayerFriendsByUuidAsync(string uuid)
         {
             var cacheUuid = uuid + "Type:Friends";
 
@@ -1000,7 +1000,7 @@ namespace Hypixel.NET
                 //Verify that this isn't null - if is then will do API request as normal
                 if (getCacheItem != null)
                 {
-                    var deserializedResponseCache = await Task.Run(() => JsonConvert.DeserializeObject<GetFriends>(getCacheItem.Value.ToString())).ConfigureAwait(false);
+                    var deserializedResponseCache = await Task.Run(() => JsonConvert.DeserializeObject<FriendsListRequest>(getCacheItem.Value.ToString())).ConfigureAwait(false);
                     deserializedResponseCache.FromCache = true;
                     return deserializedResponseCache;
                 }
@@ -1015,7 +1015,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = await client.ExecuteTaskAsync(request).ConfigureAwait(false);
-            var responseDeserialized = await Task.Run(() => JsonConvert.DeserializeObject<GetFriends>(response.Content)).ConfigureAwait(false);
+            var responseDeserialized = await Task.Run(() => JsonConvert.DeserializeObject<FriendsListRequest>(response.Content)).ConfigureAwait(false);
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)
@@ -1032,7 +1032,7 @@ namespace Hypixel.NET
             throw hypixelException;
         }
 
-        public async Task <GetFriends> GetPlayerFriendsByPlayerNameAsync(string playerName)
+        public async Task <FriendsListRequest> GetPlayerFriendsByPlayerNameAsync(string playerName)
         {
             var playerUuid = await GetUuidFromPlayerNameAsync(playerName).ConfigureAwait(false);
 
@@ -1166,7 +1166,7 @@ namespace Hypixel.NET
         #endregion
 
         #region Boosters
-        public async Task <GetBoosters> GetBoostersAsync()
+        public async Task <BoostersRequest> GetBoostersAsync()
         {
             RateLimitCheck();
 
@@ -1176,7 +1176,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = await client.ExecuteTaskAsync(request).ConfigureAwait(false);
-            var responseDeserialized = await Task.Run(() => JsonConvert.DeserializeObject<GetBoosters>(response.Content.Replace(".0", ""))).ConfigureAwait(false);
+            var responseDeserialized = await Task.Run(() => JsonConvert.DeserializeObject<BoostersRequest>(response.Content.Replace(".0", ""))).ConfigureAwait(false);
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)
@@ -1271,7 +1271,7 @@ namespace Hypixel.NET
         #endregion
 
         #region Game Counts
-        public async Task <GetGameCounts> GetGameCountsAsync()
+        public async Task <GameCountsRequest> GetGameCountsAsync()
         {
             RateLimitCheck();
 
@@ -1281,7 +1281,7 @@ namespace Hypixel.NET
 
             //Get the response and Deserialize
             var response = await client.ExecuteTaskAsync(request).ConfigureAwait(false);
-            var responseDeserialized = await Task.Run(() => JsonConvert.DeserializeObject<GetGameCounts>(response.Content)).ConfigureAwait(false);
+            var responseDeserialized = await Task.Run(() => JsonConvert.DeserializeObject<GameCountsRequest>(response.Content)).ConfigureAwait(false);
 
             //Verify that the request was successful
             if (responseDeserialized.WasSuccessful)

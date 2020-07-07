@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using Hypixel.NET.Booster;
 using Newtonsoft.Json;
 
 namespace Hypixel.NET.BoosterApi
 {
-    public class GetBoosters
+    public class BoostersRequest : IBoostersRequest
     {
         [JsonProperty("success")]
         public bool WasSuccessful { get; private set; }
@@ -12,6 +13,6 @@ namespace Hypixel.NET.BoosterApi
         public string Cause { get; private set; }
 
         [JsonProperty("boosters")]
-        public List<Booster.Booster> Boosters { get; private set; }
+        public List<IBooster> Boosters { get; private set; }
     }
 }

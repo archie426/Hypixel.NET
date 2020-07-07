@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Hypixel.NET.PlayerApi.Player.GameCounts
 {
-    public class GetGameCounts
+    public class GameCountsRequest : IGameCountsRequest
     {
         [JsonProperty("games")]
         public Games.Games Games { get; set; }

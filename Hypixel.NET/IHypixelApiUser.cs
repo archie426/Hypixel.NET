@@ -20,22 +20,22 @@ namespace Hypixel.NET
         IPlayerDataRequest GetUserByUuid(string uuid);
         IPlayerDataRequest GetUserByPlayerName(string name);
 
-        GetFriends GetPlayerFriendsByUuid(string uuid);
-        GetFriends GetPlayerFriendsByPlayerName(string playerName);
+        IFriendsListRequest GetPlayerFriendsByUuid(string uuid);
+        IFriendsListRequest GetPlayerFriendsByPlayerName(string playerName);
 
-        GuildRequest GetGuildByGuildName(string guildName);
-        GuildRequest GetGuildByPlayerName(string playerName);
-        GuildRequest GetGuildByUuid(string uuid);
+        IGuildRequest GetGuildByGuildName(string guildName);
+        IGuildRequest GetGuildByPlayerName(string playerName);
+        IGuildRequest GetGuildByUuid(string uuid);
 
-        GetBoosters GetBoosters();
+        BoostersRequest GetBoosters();
 
         IKeyRequest GetApiKeyInformation(string apiKey);
 
         GetWatchdogStats GetWatchdogStats();
 
-        LeaderboardsRequest GetLeaderboards();
+        ILeaderboardsRequest GetLeaderboards();
 
-        GetGameCounts GetGameCounts();
+        IGameCountsRequest GetGameCounts();
 
         GetSkyBlockProfile GetSkyblockProfileByProfileId(string skyblockProfileId);
         List<GetSkyBlockProfile> GetSkyblockProfilesByName(string username);

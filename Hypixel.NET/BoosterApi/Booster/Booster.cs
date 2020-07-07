@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace Hypixel.NET.Booster
 {
-    public class Booster
+    public class Booster : IBooster
     {
         [JsonProperty("purchaserUuid")]
         public string PurchaserUuid { get; private set; }

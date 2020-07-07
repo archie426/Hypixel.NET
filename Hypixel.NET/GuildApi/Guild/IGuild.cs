@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using Hypixel.NET.GuildApi.Guild.Achievements;
+using Hypixel.NET.GuildApi.Guild.Member;
 using Hypixel.NET.GuildApi.Guild.XpByGameType;
 using Newtonsoft.Json;
 
@@ -21,13 +23,13 @@ namespace Hypixel.NET.GuildApi.Guild
         
         public DateTime GuildCreatedDate { get; }
         
-        public List<Member.Member> Members { get; }
+        public List<IMember> Members { get; }
         
         public string Tag { get;  }
         
         public string TagColor { get;  }
         
-        public Achievements.Achievements Achievements { get;  }
+        public IAchievements Achievements { get;  }
         
         public long LegacyRanking { get;  }
         
@@ -35,6 +37,6 @@ namespace Hypixel.NET.GuildApi.Guild
         
         public string NameLower { get; }
         
-        public GuildGameExp GuildGameExp { get; }
+        public IGuildGameExp GuildGameExp { get; }
     }
 }
